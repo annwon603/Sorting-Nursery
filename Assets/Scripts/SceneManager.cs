@@ -10,7 +10,22 @@ public class SceneSwap : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void Controls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
+
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
     }
 
     // Update is called once per frame
