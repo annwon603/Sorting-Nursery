@@ -3,25 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragDop : MonoBehaviour
+public class DragDrop : MonoBehaviour
 {
     [SerializeField] private bool isDragging = false; 
 
-
-    // public GameObject correctForm; // The box we want to put in
-
     public bool finished ; //check if egg is in the box
-    // private CanvasGroup canvasGroup;
-    // public void OnPointerDown(PointerEventData eventData){
-    //     Debug.Log("OnPointerDown");
-    // }
 
     private Vector3 resetPosition; 
 
     private Color originalColor;
     private Color hover; //Intereaction for player to see if egg is hover over the box
 
-
+    public Egg egg;
     void Start()
     {
         resetPosition = this.transform.localPosition;
