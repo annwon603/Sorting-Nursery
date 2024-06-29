@@ -8,6 +8,11 @@ public class SceneSwap : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene("LevelSelect");
@@ -26,6 +31,11 @@ public class SceneSwap : MonoBehaviour
     public void Credits()
     {
         SceneManager.LoadScene("Credits");
+    }
+
+    public void Level1()
+    {
+        SceneManager.LoadScene("Level1");
     }
 
     // Update is called once per frame
