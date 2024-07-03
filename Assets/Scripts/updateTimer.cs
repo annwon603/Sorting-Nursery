@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class updateTimer : MonoBehaviour
 {
-    public Text TimeElapsed;
+    public TMP_Text TimeElapsed;
+    public TMP_Text SecondsText;
     private float timeCounter = 0f;
 
     // Start is called before the first frame update
@@ -20,5 +22,17 @@ public class updateTimer : MonoBehaviour
         timeCounter += Time.deltaTime;
         int secondsElapsed = Mathf.FloorToInt(timeCounter);
         TimeElapsed.text = secondsElapsed.ToString();
+
+        RectTransform rectTransform = SecondsText.GetComponent<RectTransform>();
+
+        if (secondsElapsed >= 100)
+        {
+            rectTransform.anchoredPosition = new Vector2(695, rectTransform.anchoredPosition.y);
+        }
+
+        else if (secondsElapsed >= 10)
+        {
+            rectTransform.anchoredPosition = new Vector2(670, rectTransform.anchoredPosition.y);
+        }
     }
 }
