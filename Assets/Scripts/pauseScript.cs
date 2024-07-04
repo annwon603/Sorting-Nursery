@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pauseScript : MonoBehaviour {
 
@@ -16,28 +17,39 @@ public class pauseScript : MonoBehaviour {
     // Update is called once per frame
     void Update() 
     {
-        if (Input.GetKeyDown(KeyCode."p"))
+        if (Input.GetKeyDown(KeyCode.P))
         {
+            gamePaused = true;
             if (gamePaused)
             {
-                Resume();
-            } else {
                 Pause();
+            } else {
+                Resume();
             }
         }
     }
 
-    void Resume()
+    public void Resume()
     {
         PauseMenu.SetActive(false);
         Time.timeScale = 1f;
         gamePaused = false;
     }
 
-    void Pause()
+    public void Pause()
     {
         PauseMenu.SetActive(true);
         Time.timeScale = 0f;
         gamePaused = true;
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
     }
 }
