@@ -1521,7 +1521,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1541,9 +1541,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.48283768, y: 0}
   serializedVersion: 2
-  m_Radius: 1.2949998
+  m_Radius: 1.7778376
 --- !u!50 &966424516
 Rigidbody2D:
   serializedVersion: 4
@@ -2269,7 +2269,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2289,9 +2289,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.37, y: 0}
+  m_Offset: {x: -1.4967326, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.86330044
 --- !u!61 &1858315425
 BoxCollider2D:
   m_ObjectHideFlags: 0
