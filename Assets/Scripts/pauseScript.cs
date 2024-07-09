@@ -11,7 +11,7 @@ public class pauseScript : MonoBehaviour {
     // Start is called before the first frame update
     void Start() 
     {
-        
+        Resume();
     }
 
     // Update is called once per frame
@@ -34,6 +34,16 @@ public class pauseScript : MonoBehaviour {
         PauseMenu.SetActive(false);
         Time.timeScale = 1f;
         gamePaused = false;
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            gamePaused = true;
+            if (gamePaused)
+            {
+                Pause();
+            } else {
+                Resume();
+            }
+        }
     }
 
     public void Pause()
