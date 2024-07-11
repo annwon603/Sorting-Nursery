@@ -27,12 +27,12 @@ public class updateTimer : MonoBehaviour
 
         if (secondsElapsed >= 100)
         {
-            rectTransform.anchoredPosition = new Vector2(695, rectTransform.anchoredPosition.y);
+            rectTransform.anchoredPosition = new Vector2(370, rectTransform.anchoredPosition.y);
         }
 
         else if (secondsElapsed >= 10)
         {
-            rectTransform.anchoredPosition = new Vector2(670, rectTransform.anchoredPosition.y);
+            rectTransform.anchoredPosition = new Vector2(350, rectTransform.anchoredPosition.y);
         }
     }
 }
