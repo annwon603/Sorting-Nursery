@@ -18,6 +18,11 @@ public class SceneSwap : MonoBehaviour
         SceneManager.LoadScene("LevelSelect");
     }
 
+    public void Settings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+
     public void Controls()
     {
         SceneManager.LoadScene("Controls");

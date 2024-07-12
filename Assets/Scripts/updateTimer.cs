@@ -8,7 +8,9 @@ public class updateTimer : MonoBehaviour
 {
     public TMP_Text TimeElapsed;
     public TMP_Text SecondsText;
+    public TMP_Text TimeText;
     private float timeCounter = 0f;
+    public Toggle Checkbox; 
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,12 @@ public class updateTimer : MonoBehaviour
         else if (secondsElapsed >= 10)
         {
             rectTransform.anchoredPosition = new Vector2(350, rectTransform.anchoredPosition.y);
+        }
+
+        if (!Checkbox.isOn) {
+            TimeElapsed.a = 0.0f;
+            SecondsText.a = 0.0f;
+            TimeText.a = 0.0f;
         }
     }
 }
