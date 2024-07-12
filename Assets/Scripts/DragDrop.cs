@@ -25,9 +25,6 @@ public class DragDrop : MonoBehaviour
         
     }
 
-    private void Awake(){
-        // canvasGroup = GetComponent<CanvasGroup>();
-    }
     void Update()
     {
         if(finished)
