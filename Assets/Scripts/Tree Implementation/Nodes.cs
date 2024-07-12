@@ -31,17 +31,19 @@ public class Nodes : MonoBehaviour
     {
         if(a != null){
             left = new Node(a);
-            Debug.Log(gameObject.name + " have left child");
-        }else{
-            Debug.Log(gameObject.name + " don't left child");
+            //Debug.Log(gameObject.name + " have left child");
         }
+        // else{
+        //     Debug.Log(gameObject.name + " don't left child");
+        // }
         // If the node have a right child, initialize Node right otherwise output "don't have child" 
         if(b != null){
             right = new Node(b);
-            Debug.Log(gameObject.name + " have right child");
-        }else{
-            Debug.Log(gameObject.name + " don't have right child");
+            // Debug.Log(gameObject.name + " have right child");
         }
+        // else{
+        //     Debug.Log(gameObject.name + " don't have right child");
+        // }
 
     }
 
