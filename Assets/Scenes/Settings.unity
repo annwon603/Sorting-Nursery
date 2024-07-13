@@ -766,13 +766,14 @@ GameObject:
   - component: {fileID: 1247445995}
   - component: {fileID: 1247445997}
   - component: {fileID: 1247445996}
+  - component: {fileID: 1247445998}
   m_Layer: 5
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1247445995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -830,6 +831,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247445994}
   m_CullTransparentMesh: 1
+--- !u!114 &1247445998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247445994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a00bb5c414f1441bb8af4a99bff189c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeElapsed: {fileID: 0}
+  SecondsText: {fileID: 0}
+  TimeText: {fileID: 0}
+  Toogle: {fileID: 0}
 --- !u!1 &1592105605
 GameObject:
   m_ObjectHideFlags: 0
