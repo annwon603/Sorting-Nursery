@@ -5,11 +5,12 @@ using UnityEngine;
 public class Snap : MonoBehaviour
 {
     // Start is called before the first frame update
-    public List<Transform> snapPoints;
-    public List<DragChick> dragScripts;
+    public List<Transform> snapPoints;  //Places to snap the chicken in place
+    public List<DragChick> dragScripts; //Scripts that are attached to the chicken object 
     public float snapRange = 0.5f;
     void Start()
     {
+        // Make a reference to the delegate in the DragChick script and assign it to SnapObject function
         foreach(DragChick script in dragScripts)
         {
             
@@ -18,8 +19,7 @@ public class Snap : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-
+    // If the chicken is less than or equal to the range, it changes position to the snap position I assign
     public void SnapObject(Transform obj)
     {
         foreach(Transform point in snapPoints)
@@ -32,8 +32,4 @@ public class Snap : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        
-    }
 }

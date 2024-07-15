@@ -11,7 +11,7 @@ public class Move : MonoBehaviour
 
     [SerializeField] private Vector2 target;    //Destination for egg to go to
 
-    [SerializeField] private bool doesTurn = false; //Determines whether egg turn left or right
+    public bool doesTurn = false; //Determines whether egg turn left or right
 
 
 
@@ -49,11 +49,11 @@ public class Move : MonoBehaviour
         }
         
         //If the chicken is present nearby, egg turns to right
-        if(other.gameObject.tag == "Chicken"){
-            doesTurn = true;
-        }else{
-            doesTurn = false;
-        }
+        // if(other.gameObject.tag == "Chicken"){
+        //     doesTurn = true;
+        // }else{
+        //     doesTurn = false;
+        // }
     }
 }
 
