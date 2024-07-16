@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   finished: 0
-  egg: {fileID: 11400000, guid: 48eb975aac70eb0479ce32e14ced08bc, type: 2}
+  egg: {fileID: 11400000, guid: 0e602d00b52738240a10c1347d0f50d1, type: 2}
 --- !u!114 &1726700851795352836
 MonoBehaviour:
   m_ObjectHideFlags: 0
