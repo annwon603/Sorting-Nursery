@@ -6,10 +6,13 @@ using TMPro;
 
 public class ScoreCounter : MonoBehaviour
 {
-    [SerializeField]
+    public static ScoreCounter instance;
     public TextMeshProUGUI scoreText;
-    private int scoreValue = 0;
+    public int scoreValue = 0;
     
+    private void Awake(){
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()

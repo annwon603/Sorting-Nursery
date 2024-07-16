@@ -17,13 +17,13 @@ public class IncubatorSlot : MonoBehaviour
 
    public Incubator incubator;
 
+
    private void Start()
    {
       z_Collider = GetComponent<Collider2D>();
       originalColor = GetComponent<SpriteRenderer>().color;
       hover = originalColor;
       hover.a = 0.9f;
-
    }
    
 
@@ -35,7 +35,8 @@ public class IncubatorSlot : MonoBehaviour
         {
             foreach (var o in z_CollidedObjects)
             {
-               OnCollided(o.gameObject);
+               // OnCollided(o.gameObject);
+               Debug.Log("Collided");
             }
         }
         else
@@ -45,23 +46,61 @@ public class IncubatorSlot : MonoBehaviour
       
    }
 
-   private void OnCollided(GameObject collidedObject)
+   public void OnTriggerStay2D(Collider2D other)
    {
-      // Debug.Log("Collided with " + collidedObject.name);
-      OnInteract();
-      if(Input.GetMouseButton(0) == false)
-      {
-         DragDrop dragDrop = collidedObject.GetComponent<DragDrop>();
-         ScoreCounter score = gameObject.GetComponent<ScoreCounter>();
-         if(incubator.Big && dragDrop.egg.Big){
-            Debug.Log("In the right box");
-            score.IncreaseScore();
-         }else{
-            Debug.Log("In the wrong box");
-         }
-         collidedObject.SetActive(false);
+      if(other.gameObject.tag == "Egg"){
+         OnInteract();
+         bool doesMatch = traitMatch(other.gameObject.GetComponent<DragDrop>().egg.Big);
+         if(Input.GetMouseButton(0) == false)
+         {
+            if(doesMatch == true){
+               Debug.Log("In the right box");
+               ScoreCounter.instance.IncreaseScore();
+            }else{
+               Debug.Log("In the wrong box");
+            }
+
+            other.gameObject.SetActive(false);
          
-         Debug.Log("Egg in the box");
+            Debug.Log("Egg in the box");
+
+         }
+         
+      }
+   }
+
+   // private void OnCollided(GameObject collidedObject)
+   // {
+   //    // Debug.Log("Collided with " + collidedObject.name);
+   //    OnInteract();
+   //    if(Input.GetMouseButton(0) == false)
+   //    {
+   //       DragDrop dragDrop = collidedObject.GetComponent<DragDrop>();
+   //       ScoreCounter score = gameObject.GetComponent<ScoreCounter>();
+   //       if((incubator.Big && dragDrop.egg.Big) == true){
+   //          Debug.Log("In the right box");
+   //          score.IncreaseScore();
+   //       }else if((incubator.Small && dragDrop.egg.Small) == true){
+   //          score.IncreaseScore();
+   //          Debug.Log("In the right box");
+   //       }else{
+   //          Debug.Log("In the wrong box");
+   //       }
+
+   //       collidedObject.SetActive(false);
+         
+   //       Debug.Log("Egg in the box");
+   //    }
+   // }
+
+   public bool traitMatch(bool trait)
+   {
+      if(trait && incubator.Big == true){
+         return true;
+      } else if(!(incubator.Big || trait)){
+         return true;
+      } else{
+         return false;
       }
    }
 

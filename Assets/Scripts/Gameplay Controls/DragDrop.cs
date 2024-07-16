@@ -7,7 +7,7 @@ public class DragDrop : MonoBehaviour
 {
     [SerializeField] private bool isDragging = false; 
 
-    public bool finished ; //check if egg is in the box
+    public bool finished ; //check if egg is in the basket
 
     private Vector3 resetPosition; 
 
@@ -18,22 +18,22 @@ public class DragDrop : MonoBehaviour
     void Start()
     {
         resetPosition = this.transform.localPosition;
-        Debug.Log("" + resetPosition.x);
+        // Debug.Log("" + resetPosition.x);
         // originalColor = correctForm.GetComponent<SpriteRenderer>().color;
         hover = originalColor;
         hover.a = 0.9f;
         
     }
 
-    private void Awake(){
-        // canvasGroup = GetComponent<CanvasGroup>();
-    }
     void Update()
     {
+        if(finished)
+        {
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        }
         if(isDragging)
         {
             transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
         }
         
     }
@@ -41,6 +41,7 @@ public class DragDrop : MonoBehaviour
     public void OnMouseDrag()
     {
         isDragging = true;
+
         // Detecting if the item is within the box 
 
         // if (Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 1.5f &&

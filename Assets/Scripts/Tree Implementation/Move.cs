@@ -1,0 +1,59 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Move : MonoBehaviour
+{
+    // Start is called before the first frame update
+
+    public GameObject currNode; 
+    [SerializeField] private float speed = 2.0f; 
+
+    [SerializeField] private Vector2 target;    //Destination for egg to go to
+
+    public bool doesTurn = false; //Determines whether egg turn left or right
+
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(doesTurn == false)
+        {
+            target = currNode.GetComponent<Nodes>().left.getPosition();
+        } else {
+            target = currNode.GetComponent<Nodes>().right.getPosition();
+        }
+
+        
+        if(GetComponent<DragDrop>().finished == false)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        }
+
+
+    }
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        //Switches currentNode to the node it interact with
+        if(other.gameObject.tag == "Node"){
+            currNode = other.gameObject;
+            Debug.Log("Tranvesed at " + other.gameObject.name);
+
+            //If the currentNode doesn't have any children, that means it reached to the basket
+            if(currNode.GetComponent<Nodes>().a == null && currNode.GetComponent<Nodes>().b == null)
+            {
+                GetComponent<DragDrop>().finished = true;
+                Debug.Log("Reached Basket");
+            }
+        }
+        
+        //If the chicken is present nearby, egg turns to right
+        // if(other.gameObject.tag == "Chicken"){
+        //     doesTurn = true;
+        // }else{
+        //     doesTurn = false;
+        // }
+    }
+}
+
