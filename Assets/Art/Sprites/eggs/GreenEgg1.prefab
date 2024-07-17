@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7400720199456935167}
   - component: {fileID: 3485077483878415710}
   - component: {fileID: 189595814572517244}
-  - component: {fileID: 5846803446816088502}
   - component: {fileID: 6452591435416108275}
   - component: {fileID: 6181039479782400183}
   m_Layer: 0
@@ -104,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   finished: 0
-  egg: {fileID: 11400000, guid: 48eb975aac70eb0479ce32e14ced08bc, type: 2}
+  trait: {fileID: 11400000, guid: 086a9c60b7899ff488d696f00e950c9c, type: 2}
 --- !u!114 &3485077483878415710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,19 +155,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.0968668
---- !u!114 &5846803446816088502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6924313841885012664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f565587a55bfc0643a76468ef4fb55f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  egg: {fileID: 11400000, guid: 48eb975aac70eb0479ce32e14ced08bc, type: 2}
 --- !u!50 &6452591435416108275
 Rigidbody2D:
   serializedVersion: 4

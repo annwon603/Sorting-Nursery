@@ -15,7 +15,7 @@ public class IncubatorSlot : MonoBehaviour
 
    private bool z_Intereacted = false; //Check if egg is over the incubator
 
-   public Incubator incubator;
+   public Traits IncuTrait;
 
 
    private void Start()
@@ -50,7 +50,8 @@ public class IncubatorSlot : MonoBehaviour
    {
       if(other.gameObject.tag == "Egg"){
          OnInteract();
-         bool doesMatch = traitMatch(other.gameObject.GetComponent<DragDrop>().egg.Big);
+         DragDrop egg = other.gameObject.GetComponent<DragDrop>();
+         bool doesMatch = traitMatch(egg.trait.isTraitActive, egg.trait.traitSet);
          if(Input.GetMouseButton(0) == false)
          {
             if(doesMatch == true){
@@ -69,39 +70,13 @@ public class IncubatorSlot : MonoBehaviour
       }
    }
 
-   // private void OnCollided(GameObject collidedObject)
-   // {
-   //    // Debug.Log("Collided with " + collidedObject.name);
-   //    OnInteract();
-   //    if(Input.GetMouseButton(0) == false)
-   //    {
-   //       DragDrop dragDrop = collidedObject.GetComponent<DragDrop>();
-   //       ScoreCounter score = gameObject.GetComponent<ScoreCounter>();
-   //       if((incubator.Big && dragDrop.egg.Big) == true){
-   //          Debug.Log("In the right box");
-   //          score.IncreaseScore();
-   //       }else if((incubator.Small && dragDrop.egg.Small) == true){
-   //          score.IncreaseScore();
-   //          Debug.Log("In the right box");
-   //       }else{
-   //          Debug.Log("In the wrong box");
-   //       }
-
-   //       collidedObject.SetActive(false);
-         
-   //       Debug.Log("Egg in the box");
-   //    }
-   // }
-
-   public bool traitMatch(bool trait)
+   public bool traitMatch(bool trait, string traitSet)
    {
-      if(trait && incubator.Big == true){
-         return true;
-      } else if(!(incubator.Big || trait)){
-         return true;
-      } else{
-         return false;
-      }
+      //First it checks if the boolean value "isTraitActive" of both incubator
+      //and egg matches. Then it checks if both strings matches
+      bool match = ((trait && IncuTrait.isTraitActive) || 
+                     !(IncuTrait.isTraitActive || trait));
+      return match && (traitSet == IncuTrait.traitSet);
    }
 
    private void OnNotCollided()

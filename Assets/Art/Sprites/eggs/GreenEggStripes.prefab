@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   finished: 0
-  egg: {fileID: 11400000, guid: 0e602d00b52738240a10c1347d0f50d1, type: 2}
+  trait: {fileID: 11400000, guid: 086a9c60b7899ff488d696f00e950c9c, type: 2}
 --- !u!114 &1726700851795352836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f565587a55bfc0643a76468ef4fb55f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  egg: {fileID: 11400000, guid: 48eb975aac70eb0479ce32e14ced08bc, type: 2}
+  trait: {fileID: 0}
 --- !u!50 &7665033733890328589
 Rigidbody2D:
   serializedVersion: 4
