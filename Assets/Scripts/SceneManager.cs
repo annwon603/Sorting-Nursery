@@ -23,6 +23,11 @@ public class SceneSwap : MonoBehaviour
         SceneManager.LoadScene("Controls");
     }
 
+    public void Settings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+
     public void HowToPlay()
     {
         SceneManager.LoadScene("HowToPlay");
@@ -36,6 +41,11 @@ public class SceneSwap : MonoBehaviour
     public void Level1()
     {
         SceneManager.LoadScene("Level1");
+    }
+
+    public void Gameplay()
+    {
+        SceneManager.LoadScene("Gameplay");
     }
 
     // Update is called once per frame
