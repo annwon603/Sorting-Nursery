@@ -27,6 +27,7 @@ public class Snap : MonoBehaviour
             if (Vector2.Distance(point.position,obj.position) <= snapRange)
             {
                 obj.position = point.position;
+                
                 return;
             }
         }

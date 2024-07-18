@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2926341255436401280}
   - component: {fileID: 3610933885632432238}
   - component: {fileID: 235119716096157104}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GreenEggBald
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -76,9 +76,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -1510937545
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1101864311, guid: 988b64e68f2821b48837f1dc76fab2c5, type: 3}
   m_Color: {r: 0.97599167, g: 0.97735846, b: 0.82430047, a: 1}
   m_FlipX: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   speed: 2
   target: {x: 0, y: 0}
   doesTurn: 0
+  changedNode: 0
 --- !u!58 &6758872359933927358
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -108,18 +108,114 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: ConveyorBelt_Diagonal
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 1072
+        width: 861
+        height: 1671
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e12abdc143255f4caf73cfc32e89966
+      internalID: 955076398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConveyorBeltHorizontal
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 288
+        width: 1914
+        height: 298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372c3a75f2234c94da2a0aa93eea6186
+      internalID: 946756690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConveyorBeltDiagonalSmall
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 1073
+        width: 582
+        height: 841
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24ce9d21f25dc04ba7a0b1ca373c0a3
+      internalID: -801367187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConveyorBelt_DiagonalSmallTop
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1900
+        width: 579
+        height: 843
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba1f02852a650d42ad9ddab58d61c9f
+      internalID: 869518940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -1372, y: -493}
+      - {x: -1372, y: 1433}
+      - {x: -122, y: 1433}
+      - {x: -122, y: -493}
+    - - {x: -1139, y: -1297}
+      - {x: -1139, y: -740}
+      - {x: 1073, y: -740}
+      - {x: 1073, y: -1297}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ConveyorBeltDiagonalSmall: -801367187
+      ConveyorBeltHorizontal: 946756690
+      ConveyorBelt_Diagonal: 955076398
+      ConveyorBelt_DiagonalSmallTop: 869518940
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
