@@ -2861,9 +2861,17 @@ PrefabInstance:
       propertyPath: TimeInfo
       value: 
       objectReference: {fileID: 1940587401}
+    - target: {fileID: 4968351411254927551, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
+      propertyPath: isTimerOn
+      value: 
+      objectReference: {fileID: 356231528784503841, guid: 26ea52f92c4bc4467afd35d826c916b4, type: 3}
     - target: {fileID: 6473066021535175829, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
       propertyPath: m_Name
       value: TimeInfo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473066021535175829, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7483529667245480883, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
       propertyPath: m_LocalPosition.x

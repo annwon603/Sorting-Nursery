@@ -182,7 +182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTimerOn: {fileID: 0}
-  TimerSetting: {fileID: 0}
   TimeInfo: {fileID: 6473066021535175829}
 --- !u!1 &6889721208061444205
 GameObject:
