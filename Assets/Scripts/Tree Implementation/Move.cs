@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public GameObject currNode; 
     [SerializeField] private float speed = 2.0f; 
 
     [SerializeField] private Vector2 target;    //Destination for egg to go to
 
-    public bool doesTurn = false; //Determines whether egg turn left or right
+    public bool doesTurn = false;               //Determines whether egg turn left or right
 
-
+    public bool changedNode = false;
 
     // Update is called once per frame
     void Update()
@@ -46,14 +44,16 @@ public class Move : MonoBehaviour
                 GetComponent<DragDrop>().finished = true;
                 Debug.Log("Reached Basket");
             }
+
+            changedNode = true;
         }
         
-        //If the chicken is present nearby, egg turns to right
-        // if(other.gameObject.tag == "Chicken"){
-        //     doesTurn = true;
-        // }else{
-        //     doesTurn = false;
-        // }
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        changedNode = false;
+        //Debug.Log("ChangedNode " + changedNode);
     }
 }
 

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2466167537424643953}
   - component: {fileID: 7665033733890328589}
   - component: {fileID: 940744149244276542}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GreenEggStripes
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -76,9 +76,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -1510937545
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1796640193, guid: 988b64e68f2821b48837f1dc76fab2c5, type: 3}
   m_Color: {r: 0.97599167, g: 0.97735846, b: 0.82430047, a: 1}
   m_FlipX: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   finished: 0
-  egg: {fileID: 11400000, guid: 0e602d00b52738240a10c1347d0f50d1, type: 2}
+  trait: {fileID: 11400000, guid: 086a9c60b7899ff488d696f00e950c9c, type: 2}
 --- !u!114 &1726700851795352836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   speed: 2
   target: {x: 0, y: 0}
   doesTurn: 0
+  changedNode: 0
 --- !u!58 &2425884940066481044
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f565587a55bfc0643a76468ef4fb55f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  egg: {fileID: 11400000, guid: 48eb975aac70eb0479ce32e14ced08bc, type: 2}
+  trait: {fileID: 0}
 --- !u!50 &7665033733890328589
 Rigidbody2D:
   serializedVersion: 4

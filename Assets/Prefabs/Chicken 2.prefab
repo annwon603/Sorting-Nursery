@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7161718775801499933}
   - component: {fileID: 7441333760376443166}
+  - component: {fileID: 9159483569082044375}
   - component: {fileID: 7893389392939367233}
   - component: {fileID: 4005223967248042743}
-  - component: {fileID: 9159483569082044375}
   - component: {fileID: 8210045839261104393}
   m_Layer: 0
   m_Name: Chicken 2
@@ -88,6 +88,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9159483569082044375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4466657000545308106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef948187e6f774c43a9dd2309fea544f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDragging: 0
 --- !u!58 &7893389392939367233
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -150,19 +163,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &9159483569082044375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4466657000545308106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef948187e6f774c43a9dd2309fea544f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDragging: 0
 --- !u!114 &8210045839261104393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +177,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ran: 0
   doesTurn: 0
-  isBig: 0
+  ChickTrait: {fileID: 0}
   doesMatch: 0
   adjustProp: 0

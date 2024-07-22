@@ -5,7 +5,7 @@ using UnityEngine;
 public class EggManager : MonoBehaviour
 {
     public GameObject[] Eggs;   // List of Eggs to spawn
-    GameObject root;            // Starting positiong
+    GameObject root;            // Starting position
     public float timeToSpawn;   
 
     int counter = 0;            // Limits how many times egg can spawn

@@ -20,6 +20,7 @@ public class DragChick : MonoBehaviour
         if(isDragging)
         {
             transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Foreground");
         }
     }
 
@@ -33,6 +34,7 @@ public class DragChick : MonoBehaviour
     {
         isDragging = false;
         dragEndedDelegate(this.transform);
+        GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Default");
     }
 
 }

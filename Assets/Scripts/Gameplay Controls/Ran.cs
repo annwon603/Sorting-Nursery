@@ -6,33 +6,36 @@ public class Ran : MonoBehaviour
 {
     [SerializeField] private float ran;             // Store random integer
     [SerializeField] private bool doesTurn = false; // Decides if chicken should move egg
-        
-    [SerializeField] private bool isBig;            // Set trait of chicken
 
-    [SerializeField] private bool doesMatch;        //Check if egg match chicken
-    // Chicken interaction with the egg 
+    public Traits ChickTrait;                       // The Trait it was assigned
 
-    [SerializeField] private int adjustProp;       //  Adjusting Probablity for chicken to mess up
+    [SerializeField] private bool doesMatch;        // Check if egg match chicken
+    
+    [Range(0.0f , 1.0f)]
+    public float adjustProp;                        // Adjusting Probablity for chicken to mess up
 
     private void Start()
     {
-        adjustProp = 20;        //Default probablity is 20%
+        adjustProp = 0.2f;        //Default probablity is 20%
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Egg"){
+        //If it detects an Egg that reached the node the chicken is currently at
+        if((other.gameObject.tag == "Egg") && other.gameObject.GetComponent<Move>().changedNode){
             
             ran = Random.value * 100;                
             Debug.Log(gameObject.name + " Random Value: " + ran);
             
             bool ranBool = ProbabilityCheck(ran);
-            bool doesMatch = traitCheck(other.gameObject.GetComponent<DragDrop>().egg.Big);
             Debug.Log(gameObject.name + " Is Random: " + ranBool);
+
+            DragDrop egg = other.gameObject.GetComponent<DragDrop>();
+            bool doesMatch = traitCheck(egg.trait.isTraitActive, egg.trait.traitSet);
             Debug.Log(gameObject.name + " does match: " + doesMatch);
 
             if(doesMatch ^ ranBool == true){
                 doesTurn = true;
-                Debug.Log(gameObject.name + " move egg to right");
+                Debug.Log(gameObject.name + " "+ ChickTrait.traitSet+ " move " + egg.trait.traitSet+ " egg to right");
             }else{
                 doesTurn = false;
                 Debug.Log(gameObject.name + " move egg to left");
@@ -43,21 +46,21 @@ public class Ran : MonoBehaviour
         }
     }
 
+    //Compares the random number the chicken generated and the percentage 
+    //we set the probablity
     public bool ProbabilityCheck(float ranVal)
     {
-        if (ranVal <= adjustProp)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        int probablity = (int)adjustProp * 100;
+        bool check = ranVal <= adjustProp;
+        return check; 
     }
 
-    public bool traitCheck(bool size)
+    //First it checks if the boolean value "isTraitActive" of both chicken
+    //and egg matches. Then it checks if both strings matches
+    public bool traitCheck(bool trait, string traitSet)
     {
-        bool match = (size && isBig);
-        return match;
+        bool match = ((ChickTrait.isTraitActive && trait) || 
+                    !(ChickTrait.isTraitActive || trait));
+        return match && (ChickTrait.traitSet == traitSet);
     }
 }

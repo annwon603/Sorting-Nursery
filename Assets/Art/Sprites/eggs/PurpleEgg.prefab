@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1103910195851076027}
   - component: {fileID: 4462230986094589935}
   - component: {fileID: 2250355344879324006}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PurpleEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -76,9 +76,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -1510937545
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 1806840218, guid: 988b64e68f2821b48837f1dc76fab2c5, type: 3}
   m_Color: {r: 0.97599167, g: 0.97735846, b: 0.82430047, a: 1}
   m_FlipX: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   finished: 0
-  egg: {fileID: 11400000, guid: 0e602d00b52738240a10c1347d0f50d1, type: 2}
+  trait: {fileID: 11400000, guid: bae55bd7c6dd39849b2c3734f26784fa, type: 2}
 --- !u!114 &4678998889092353019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   speed: 2
   target: {x: 0, y: 0}
   doesTurn: 0
+  changedNode: 0
 --- !u!58 &4138102210659782818
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f565587a55bfc0643a76468ef4fb55f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  egg: {fileID: 11400000, guid: 48eb975aac70eb0479ce32e14ced08bc, type: 2}
+  trait: {fileID: 11400000, guid: 20c89ebb15c98d74e9e6755867e9505a, type: 2}
 --- !u!50 &4462230986094589935
 Rigidbody2D:
   serializedVersion: 4
