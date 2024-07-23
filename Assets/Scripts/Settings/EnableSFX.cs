@@ -12,7 +12,8 @@ public class EnableSFX : MonoBehaviour
 
     public Toggle isSFXOn;
     public static bool SFXOn = true; //By default, the SFX should be on
-    public AudioSource ButtonClick;
+    //public StudioEventEmitter script;
+    //script = GetComponent<StudioEventEmitter>(); 
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +32,11 @@ public class EnableSFX : MonoBehaviour
     public void UpdateSFXSounds()
     {
         if (SFXOn) {
-            ButtonClick.Play();
+            //script.enabled = true;
             Debug.Log("SFX is on");
         }
         else {
+            //script.enabled = false;
             Debug.Log("SFX is off");
         }
     }

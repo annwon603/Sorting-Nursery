@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 20510175}
   - component: {fileID: 20510174}
   - component: {fileID: 20510177}
+  - component: {fileID: 20510178}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -270,6 +271,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1735708887}
+--- !u!114 &20510178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20510171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1238103522
+      Data2: 1297275475
+      Data3: 1931956882
+      Data4: -2040185880
+    Path: event:/UI/Button Click
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &72244025
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +407,7 @@ GameObject:
   - component: {fileID: 167960224}
   - component: {fileID: 167960223}
   - component: {fileID: 167960226}
+  - component: {fileID: 167960227}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -509,6 +542,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1735708887}
+--- !u!114 &167960227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167960220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1238103522
+      Data2: 1297275475
+      Data3: 1931956882
+      Data4: -2040185880
+    Path: event:/UI/Button Click
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &397446559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,7 +1313,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTimerOn: {fileID: 0}
-  TimerOption: {fileID: 0}
   TimeInfo: {fileID: 952937475}
 --- !u!1 &1619209655
 GameObject:
@@ -1761,6 +1824,7 @@ GameObject:
   - component: {fileID: 1809733513}
   - component: {fileID: 1809733512}
   - component: {fileID: 1809733515}
+  - component: {fileID: 1809733516}
   m_Layer: 5
   m_Name: LevelButton
   m_TagString: Untagged
@@ -1895,6 +1959,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1735708887}
+--- !u!114 &1809733516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809733509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1238103522
+      Data2: 1297275475
+      Data3: 1931956882
+      Data4: -2040185880
+    Path: event:/UI/Button Click
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1871801968
 GameObject:
   m_ObjectHideFlags: 0
