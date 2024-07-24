@@ -1408,6 +1408,19 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &982057425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982057418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6ff76a2c6234e8085ec566897d24b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSFXOn: {fileID: 6619142293988737877, guid: 2b206de54aeb6483ea03ff2653b8ffe4, type: 3}
 --- !u!1001 &1018889117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1831,6 +1844,19 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &1488546712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488546705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6ff76a2c6234e8085ec566897d24b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSFXOn: {fileID: 6619142293988737877, guid: 2b206de54aeb6483ea03ff2653b8ffe4, type: 3}
 --- !u!114 &1775415559 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5542644894986983216, guid: 09adee509367bdd4396755c2e8d93f98, type: 3}
@@ -1914,6 +1940,19 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &1918639098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918639091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6ff76a2c6234e8085ec566897d24b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSFXOn: {fileID: 6619142293988737877, guid: 2b206de54aeb6483ea03ff2653b8ffe4, type: 3}
 --- !u!1001 &1971772594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2309,12 +2348,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4920514805731687792, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1918639097}
+    - targetCorrespondingSourceObject: {fileID: 4920514805731687792, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1918639098}
     - targetCorrespondingSourceObject: {fileID: 2345442928951904549, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1488546711}
+    - targetCorrespondingSourceObject: {fileID: 2345442928951904549, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1488546712}
     - targetCorrespondingSourceObject: {fileID: 3210883098643142224, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 982057424}
+    - targetCorrespondingSourceObject: {fileID: 3210883098643142224, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 982057425}
   m_SourcePrefab: {fileID: 100100000, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
 --- !u!1001 &1175157054488877436
 PrefabInstance:

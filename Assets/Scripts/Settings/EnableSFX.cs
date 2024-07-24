@@ -12,13 +12,13 @@ public class EnableSFX : MonoBehaviour
 
     public Toggle isSFXOn;
     public static bool SFXOn = true; //By default, the SFX should be on
-    //public StudioEventEmitter script;
-    //script = GetComponent<StudioEventEmitter>(); 
+    FMODUnity.StudioEventEmitter script;
 
     // Start is called before the first frame update
     void Start()
     {
         isSFXOn.isOn = SFXOn;
+        script = GetComponent<FMODUnity.StudioEventEmitter>();
         UpdateSFXSounds();
     }
 
@@ -32,11 +32,11 @@ public class EnableSFX : MonoBehaviour
     public void UpdateSFXSounds()
     {
         if (SFXOn) {
-            //script.enabled = true;
-            Debug.Log("SFX is on");
+            script.enabled = true;
+            Debug.Log("SFX is on ");
         }
         else {
-            //script.enabled = false;
+            script.enabled = false;
             Debug.Log("SFX is off");
         }
     }
