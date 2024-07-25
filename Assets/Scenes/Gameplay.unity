@@ -1255,6 +1255,7 @@ GameObject:
   - component: {fileID: 915505657}
   - component: {fileID: 915505661}
   - component: {fileID: 915505662}
+  - component: {fileID: 915505663}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1372,6 +1373,37 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &915505663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915505656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 114792114
+      Data2: 1235249622
+      Data3: 645247165
+      Data4: -2099790147
+    Path: event:/Music/Background Music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &982057418 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3210883098643142224, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
@@ -1917,37 +1949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef948187e6f774c43a9dd2309fea544f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1775415565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264592469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 114792114
-      Data2: 1235249622
-      Data3: 645247165
-      Data4: -2099790147
-    Path: event:/Music/Background Music
-  Event: 
-  PlayEvent: 1
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!114 &1775415566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2193,9 +2194,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6729753414661286895, guid: 09adee509367bdd4396755c2e8d93f98, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1775415565}
-    - targetCorrespondingSourceObject: {fileID: 6729753414661286895, guid: 09adee509367bdd4396755c2e8d93f98, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1775415566}
     - targetCorrespondingSourceObject: {fileID: 6729753414661286895, guid: 09adee509367bdd4396755c2e8d93f98, type: 3}
       insertIndex: -1
@@ -2275,6 +2273,18 @@ PrefabInstance:
       value: Chicken 2
       objectReference: {fileID: 0}
     - target: {fileID: 7161718775801499933, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.52495
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161718775801499933, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52495
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161718775801499933, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.52495
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161718775801499933, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.54
       objectReference: {fileID: 0}
@@ -2292,15 +2302,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7161718775801499933, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7161718775801499933, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7161718775801499933, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7161718775801499933, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
