@@ -11,7 +11,6 @@ public class AdjustSounds : MonoBehaviour
 {
 
     public Slider volumeSlider;
-    public AudioSource MenusMusic;
     public static float menusMusicLevel = 7.0f;
 
     // Start is called before the first frame update
@@ -30,7 +29,6 @@ public class AdjustSounds : MonoBehaviour
 
     void UpdateMusicLevels()
     {
-        MenusMusic.volume = menusMusicLevel / 10;
-        Debug.Log("Volume is " + MenusMusic.volume);
+        Debug.Log("Volume is " + menusMusicLevel);
     }
 }

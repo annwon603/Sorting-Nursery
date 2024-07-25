@@ -1,5 +1,6 @@
 //Button click SFX got from https://pixabay.com/sound-effects/search/button-click/
 //Source used: https://www.youtube.com/watch?v=HtiWt0SWxk8&ab_channel=xxRafaelProductions-RafaelVicuna
+//https://pixabay.com/sound-effects/search/chicken/
 
 using System.Collections;
 using System.Collections.Generic;
@@ -32,12 +33,12 @@ public class EnableSFX : MonoBehaviour
     public void UpdateSFXSounds()
     {
         if (SFXOn) {
+            Debug.Log("ON" + script);
             script.enabled = true;
-            Debug.Log("SFX is on ");
         }
         else {
+            Debug.Log("OFF" + script);
             script.enabled = false;
-            Debug.Log("SFX is off");
         }
     }
 }

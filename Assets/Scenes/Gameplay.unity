@@ -690,7 +690,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9159483569082044375, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
   m_PrefabInstance: {fileID: 2058758986}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1615338811}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef948187e6f774c43a9dd2309fea544f, type: 3}
@@ -1857,6 +1857,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSFXOn: {fileID: 6619142293988737877, guid: 2b206de54aeb6483ea03ff2653b8ffe4, type: 3}
+--- !u!1 &1615338811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4466657000545308106, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
+  m_PrefabInstance: {fileID: 2058758986}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1615338817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615338811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1863312791
+      Data2: 1269703558
+      Data3: -759468913
+      Data4: 1495246389
+    Path: event:/UI/Chicken SFX
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1615338818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615338811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6ff76a2c6234e8085ec566897d24b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSFXOn: {fileID: 6619142293988737877, guid: 2b206de54aeb6483ea03ff2653b8ffe4, type: 3}
 --- !u!114 &1775415559 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5542644894986983216, guid: 09adee509367bdd4396755c2e8d93f98, type: 3}
@@ -1899,6 +1948,50 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &1775415566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264592469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1863312791
+      Data2: 1269703558
+      Data3: -759468913
+      Data4: 1495246389
+    Path: event:/UI/Chicken SFX
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1775415572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264592469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6ff76a2c6234e8085ec566897d24b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSFXOn: {fileID: 6619142293988737877, guid: 2b206de54aeb6483ea03ff2653b8ffe4, type: 3}
 --- !u!4 &1806458146 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6572468651635551756, guid: c8c811bf2336c484695ac50957f63862, type: 3}
@@ -2101,6 +2194,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6729753414661286895, guid: 09adee509367bdd4396755c2e8d93f98, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1775415565}
+    - targetCorrespondingSourceObject: {fileID: 6729753414661286895, guid: 09adee509367bdd4396755c2e8d93f98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1775415566}
+    - targetCorrespondingSourceObject: {fileID: 6729753414661286895, guid: 09adee509367bdd4396755c2e8d93f98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1775415572}
   m_SourcePrefab: {fileID: 100100000, guid: 09adee509367bdd4396755c2e8d93f98, type: 3}
 --- !u!1001 &2006745915
 PrefabInstance:
@@ -2238,7 +2337,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4466657000545308106, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1615338817}
+    - targetCorrespondingSourceObject: {fileID: 4466657000545308106, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1615338818}
   m_SourcePrefab: {fileID: 100100000, guid: 932a16f283362ea4fa8a8203f3262c3e, type: 3}
 --- !u!1 &86528631678411743 stripped
 GameObject:
