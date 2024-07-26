@@ -33,11 +33,9 @@ public class EnableSFX : MonoBehaviour
     public void UpdateSFXSounds()
     {
         if (SFXOn) {
-            Debug.Log("ON" + script);
             script.enabled = true;
         }
         else {
-            Debug.Log("OFF" + script);
             script.enabled = false;
         }
     }
