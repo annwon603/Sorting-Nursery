@@ -1135,8 +1135,8 @@ MonoBehaviour:
       Data4: -2099790147
     Path: event:/Music/Background Music
   Event: 
-  PlayEvent: 1
-  StopEvent: 2
+  PlayEvent: 0
+  StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
