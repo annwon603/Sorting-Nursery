@@ -31,6 +31,7 @@ public class DragDrop : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         }
+
         if(isDragging)
         {
             transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -41,7 +42,15 @@ public class DragDrop : MonoBehaviour
     public void OnMouseDrag()
     {
         isDragging = true;
-
+        if (!GetComponent<Move>().enabled)
+        {
+         return;
+        }
+        if(GetComponent<Move>().doesMove == false)
+        {
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            GetComponent<Move>().enabled = false;
+        }
         // Detecting if the item is within the box 
 
         // if (Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 1.5f &&

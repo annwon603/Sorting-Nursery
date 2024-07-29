@@ -8,6 +8,7 @@ TagManager:
   - Chicken
   - Node
   - Basket
+  - TutorialTask1
   layers:
   - Default
   - TransparentFX

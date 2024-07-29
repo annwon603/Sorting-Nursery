@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   finished: 0
-  trait: {fileID: 11400000, guid: bae55bd7c6dd39849b2c3734f26784fa, type: 2}
+  trait: {fileID: 11400000, guid: 086a9c60b7899ff488d696f00e950c9c, type: 2}
 --- !u!114 &4678998889092353019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +122,7 @@ MonoBehaviour:
   target: {x: 0, y: 0}
   doesTurn: 0
   changedNode: 0
+  doesMove: 0
 --- !u!58 &4138102210659782818
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -154,7 +155,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.026438717, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.096867
 --- !u!114 &1103910195851076027
