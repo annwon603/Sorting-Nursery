@@ -7,6 +7,7 @@ public class pauseScript : MonoBehaviour {
 
     public static bool gamePaused = false;
     public GameObject PauseMenu;
+    public GameObject ObjectivesMenu;
 
     // Start is called before the first frame update
     void Start() 
@@ -61,5 +62,12 @@ public class pauseScript : MonoBehaviour {
     public void LevelSelect()
     {
         SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void ShowObjectives()
+    {
+        PauseMenu.SetActive(false);
+        Time.timeScale = 0f;
+        ObjectivesMenu.SetActive(true);
     }
 }
