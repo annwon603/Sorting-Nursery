@@ -7,7 +7,7 @@ public class BasketCap : MonoBehaviour
     // Start is called before the first frame update
     public int eggCapacity;
     public bool isFull = false;
-    [SerializeField] private int counter = 0;
+    public int counter = 0;
 
     void Start()
     {

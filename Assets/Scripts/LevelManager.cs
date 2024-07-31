@@ -16,6 +16,10 @@ public class LevelManager : MonoBehaviour
         if(FindObjectOfType<DialogueManager>().counter == 5)
         {
            EggSpawn();
+           if(FindObjectOfType<EggManager>().areAllSpawn)
+           {
+            FindObjectOfType<DialogueManager>().showButton();
+           }
         }
 
    }

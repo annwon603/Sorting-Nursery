@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c621f9d323038954495096cffb6c3055, type: 3}
   m_Name: 7
   m_EditorClassIdentifier: 
-  dialouge: 'Good work! Deliver the second basket of eggs to the other incubator.
+  dialouge: 'Good work! Do the same for the other basket of eggs, but move them into
+    the other incubator this time.
 
 '
   needTaskComplete: 1

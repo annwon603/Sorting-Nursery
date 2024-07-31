@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c621f9d323038954495096cffb6c3055, type: 3}
   m_Name: 6
   m_EditorClassIdentifier: 
-  dialouge: Great! Now click and drag the one basket of eggs into the dragon or the
-    dinosaur incubator.
+  dialouge: 'Great! Now click on each basket to check their contents.
+
+'
   needTaskComplete: 1
