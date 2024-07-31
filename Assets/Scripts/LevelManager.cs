@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+
    void Update()
    {
 
@@ -35,5 +36,8 @@ public class LevelManager : MonoBehaviour
     {
         FindObjectOfType<EggManager>().enabled = true;
     }
+
+
+
 
 }

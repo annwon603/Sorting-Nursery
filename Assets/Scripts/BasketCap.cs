@@ -7,7 +7,7 @@ public class BasketCap : MonoBehaviour
     // Start is called before the first frame update
     public int eggCapacity;
     public bool isFull = false;
-    int counter = 0;
+    [SerializeField] private int counter = 0;
 
     void Start()
     {
@@ -17,23 +17,37 @@ public class BasketCap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(counter >= eggCapacity)
+        {
+            isFull = true;
+        }
+
         
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Egg" && other.isTrigger == true && counter < eggCapacity)
+        if (other.CompareTag("Egg"))
         {
-            ++counter;
-            Debug.Log("There is current " + counter + " eggs in this basket");
-
-        }else if(other.gameObject.tag == "Egg" && counter >= eggCapacity)
-        {
-            // Debug.Log("Basket is Full");
-            other.gameObject.GetComponent<Move>().enabled = false;
-            isFull = true;
-            Debug.Log(other.gameObject.name + " should stop moving");
+            // Check for trigger collision and if the basket is not full
+            if (other.isTrigger && counter < eggCapacity)
+            {
+                ++counter;
+                Debug.Log("There are currently " + counter + " eggs in this basket");
+            }
+            // Check if the basket is full
+            if (counter >= eggCapacity)
+            {
+                isFull = true;
+                // Get the Move component of the egg to have the egg to stop moving into the basket
+                Move moveComponent = other.gameObject.GetComponent<Move>();
+                moveComponent.StopMovement();
+                if(FindObjectOfType<LeverSwitch>() != null)
+                {
+                    FindObjectOfType<LeverSwitch>().Switch(); 
+                }
+            }
         }
-
     }
+
 }

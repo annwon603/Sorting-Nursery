@@ -48,6 +48,7 @@ public class EggManager : MonoBehaviour
         else
         {
             Debug.Log("Out of Eggs");
+            
         }
         
     }

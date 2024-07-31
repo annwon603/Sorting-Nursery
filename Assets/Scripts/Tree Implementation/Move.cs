@@ -23,19 +23,10 @@ public class Move : MonoBehaviour
     }
     void Update()
     {
-        if(doesTurn == false)
+        if(doesMove == true)
         {
-            target = currNode.GetComponent<Nodes>().left.getPosition();
-        } else {
-            target = currNode.GetComponent<Nodes>().right.getPosition();
+            Movement();
         }
-
-        
-        if(GetComponent<DragDrop>().finished == false && doesMove == true)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        }
-
 
     }
     public void OnTriggerEnter2D(Collider2D other)
@@ -62,6 +53,26 @@ public class Move : MonoBehaviour
     {
         changedNode = false;
         //Debug.Log("ChangedNode " + changedNode);
+    }
+
+    public void StopMovement()
+    {
+        doesMove = false;
+    }
+
+    public void Movement()
+    {
+        if(doesTurn == false)
+        {
+            target = currNode.GetComponent<Nodes>().left.getPosition();
+        } else {
+            target = currNode.GetComponent<Nodes>().right.getPosition();
+        }
+
+        if(GetComponent<DragDrop>().finished == false)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        }
     }
 }
 
