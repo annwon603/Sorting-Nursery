@@ -21,8 +21,8 @@ public class AdjustSounds : MonoBehaviour
         musicObject = GetComponent<FMODUnity.StudioEventEmitter>();
         //musicObject = FMODUnity.StudioEventEmitter.getEvent("event:/Music/Background Music");
         //DontDestroyOnLoad(GameObject.Find("FMODUnity.StudioEventEmitter"));
-        DontDestroyOnLoad(GameObject.Find())
-        UpdateMusicSounds();
+        //DontDestroyOnLoad(GameObject.Find());
+        //UpdateMusicSounds();
     }
 
     // Update is called once per frame

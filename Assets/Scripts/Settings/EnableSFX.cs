@@ -1,6 +1,9 @@
 //Button click SFX got from https://pixabay.com/sound-effects/search/button-click/
 //Source used: https://www.youtube.com/watch?v=HtiWt0SWxk8&ab_channel=xxRafaelProductions-RafaelVicuna
 //https://pixabay.com/sound-effects/search/chicken/
+//https://pixabay.com/sound-effects/search/hatch/
+//https://pixabay.com/sound-effects/search/crate/
+//https://pixabay.com/sound-effects/search/point/
 
 using System.Collections;
 using System.Collections.Generic;

@@ -6,13 +6,17 @@ using TMPro;
 
 public class objectivesScript : MonoBehaviour
 {
-
-    public static bool objectivesShown = true; //At the beginning of the level, the objectives should be shown
     public GameObject ObjectivesMenu;
+    public GameObject ObjectivesPanel;
+    public GameObject ShowObjectivesButton;
 
     // Start is called before the first frame update
     void Start()
     {
+        ObjectivesMenu.SetActive(true);
+        ObjectivesPanel.SetActive(false);
+        ShowObjectivesButton.SetActive(false);
+        GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = false;
         ShowObjectivesMenu();
     }
 
@@ -26,12 +30,26 @@ public class objectivesScript : MonoBehaviour
     {
         ObjectivesMenu.SetActive(true);
         Time.timeScale = 0f;
-        objectivesShown = true;
     }
 
     public void Play()
     {
         Time.timeScale = 1f;
+        GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = true;
         ObjectivesMenu.SetActive(false);
+        ShowObjectivesButton.SetActive(true);
+    }
+
+    public void ShowObjectivesPanel()
+    {
+        ShowObjectivesButton.SetActive(false);
+        ObjectivesPanel.SetActive(true);
+        ObjectivesMenu.SetActive(false);
+    }
+
+    public void CloseObjectivesPanel()
+    {
+        ObjectivesPanel.SetActive(false);
+        ShowObjectivesButton.SetActive(true);
     }
 }
