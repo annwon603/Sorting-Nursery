@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c621f9d323038954495096cffb6c3055, type: 3}
   m_Name: 8
   m_EditorClassIdentifier: 
-  dialouge: 'Good work! Do the same for the other basket of eggs, but move them into
-    the other incubator this time.
-
-'
+  dialouge: "<size=80%>When you open the basket, you might have noticed the buttons
+    there. The \u201CIncubator A\u201D button will move all the eggs in the basket
+    into Incubator A. Similarly, the \u201CIncubator B\u201D button will move all
+    of the eggs in the basket into Incubator B. Click either button"
   needTaskComplete: 1

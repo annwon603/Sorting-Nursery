@@ -71,6 +71,27 @@ public class IncubatorSlot : MonoBehaviour
       }
    }
 
+   //For just comparing the Egg through UI
+   public void Compare()
+   {
+      List<UIBasketItem> eggsToCompare = FindObjectOfType<BasketPage>().listOfBasketItems;
+      foreach(var egg in eggsToCompare)
+      {
+         bool doesMatch = traitMatch(egg.trait.isTraitActive, egg.trait.traitSet);
+         if(doesMatch == true){
+               Debug.Log("In the right box");
+               ScoreCounter.instance.IncreaseScore();
+            }else{
+               Debug.Log("In the wrong box");
+         }
+         egg.ResetData();
+         //egg.gameObject.SetActive(false);
+      }
+
+      FindObjectOfType<BasketPage>().ClearItem();
+      
+   }
+
    public bool traitMatch(bool trait, string traitSet)
    {
       //First it checks if the boolean value "isTraitActive" of both incubator
