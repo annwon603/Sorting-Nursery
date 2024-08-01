@@ -6,12 +6,13 @@ public class BasketControl : MonoBehaviour
 {
     [SerializeField]
     private BasketPage inventoryUI;
-
+    public bool canShow = false;
     public int inventorySize;
     // Start is called before the first frame update
     void Start()
     {
-        
+        inventorySize = transform.parent.gameObject.GetComponent<BasketCap>().eggCapacity;
+        //inventoryUI.InitBasketInventoryUI();
     }
 
     // Update is called once per frame
@@ -22,10 +23,17 @@ public class BasketControl : MonoBehaviour
 
     void OnMouseDown()
     {
-        inventorySize = transform.parent.gameObject.GetComponent<BasketCap>().counter;
-        inventoryUI.InitBasketInventoryUI(inventorySize);
-        inventoryUI.Show();
-        
-
+        if(canShow){
+            inventoryUI.Show();
+            inventoryUI.InitBasketInventoryUI(inventorySize);
+            Convert();  
+        }
     }
+
+    void Convert()
+    {
+        GameObject[] eggList = transform.parent.gameObject.GetComponent<BasketCap>().getEggList();
+        inventoryUI.UpdateItem(eggList);
+    }
+
 }

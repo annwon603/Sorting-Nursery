@@ -10,27 +10,61 @@ public class BasketPage : MonoBehaviour
     [SerializeField]
     private RectTransform contentPanel;
 
-    List<UIBasketItem> listOfBasketItems = new List<UIBasketItem>();
+    [SerializeField]
+    public List<UIBasketItem> listOfBasketItems = new List<UIBasketItem>();
+
+    //public UIBasketItem[] listOfBasketItems;
+
 
     public void Update()
     {
-        
+        foreach(var item in listOfBasketItems)
+        {
+            item.transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
 
     public void InitBasketInventoryUI(int inventorySize)
     {
-        for (int i = 0; i < inventorySize; i++)
+        for (int i = 0; i < 5; i++)
         {
             UIBasketItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
             uiItem.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
-            uiItem.transform.SetParent(contentPanel);
-            listOfBasketItems.Add(uiItem);
+            uiItem.transform.SetParent(contentPanel, false);
+            // listOfBasketItems.Add(uiItem);
+            listOfBasketItems[i] = uiItem;
             uiItem.OnItemClicked += HandleItemSelection;
             uiItem.OnItemBeginDrag += HandleBeginDrag;
             uiItem.OnItemDroppedOn += HandleSwap;
             uiItem.OnItemEndDrag += HandleEndDrag;
             
         }
+    }
+
+    public void UpdateItem(GameObject[] eggs)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            listOfBasketItems[i].SetData(eggs[i].GetComponent<SpriteRenderer>().sprite , eggs[i].GetComponent<DragDrop>().trait);
+        }
+    }
+
+    public void ClearItem()
+    {
+        foreach(var item in listOfBasketItems)
+        {
+            item.ResetData();
+        }
+
+        listOfBasketItems.Clear();
+        
+        foreach (Transform child in contentPanel)
+        {
+             Destroy(child.gameObject); // Destroy each child GameObject
+        }
+
+        
+        
     }
 
     private void HandleItemSelection(UIBasketItem obj)
@@ -53,6 +87,8 @@ public class BasketPage : MonoBehaviour
 
     }
 
+
+
     public void Show()
     {
         gameObject.SetActive(true);
@@ -61,5 +97,6 @@ public class BasketPage : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
+        ClearItem();
     }
 }

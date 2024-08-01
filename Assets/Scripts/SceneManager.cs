@@ -8,14 +8,16 @@ public class SceneSwap : MonoBehaviour
 {
     // Start is called before the first frame update
 
+
+
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("SampleMenu");
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("Gameplay");
     }
 
     public void Controls()

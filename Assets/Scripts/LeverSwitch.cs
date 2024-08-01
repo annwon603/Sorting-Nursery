@@ -6,14 +6,33 @@ public class LeverSwitch : MonoBehaviour
 {
     // Start is called before the first frame update
     public Sprite newSprite;
-
+    public Sprite oldSprite;
     bool isSwitched = false;
 
+    
+
     // Update is called once per frame
+    void Start()
+    {
+        oldSprite = GetComponent<SpriteRenderer>().sprite;
+    }
+
+    void OnMouseDown()
+    {
+        Switch();
+        Debug.Log("Got Switched");
+    }
     public void Switch()
     {
-        GetComponent<SpriteRenderer>().sprite = newSprite;
-        isSwitched = true;
+        if(!isSwitched)
+        {
+            GetComponent<SpriteRenderer>().sprite = newSprite;
+            isSwitched = true;
+        }else{
+            GetComponent<SpriteRenderer>().sprite = oldSprite;
+            isSwitched = false;
+        }
+       
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -22,6 +41,11 @@ public class LeverSwitch : MonoBehaviour
         if(other.CompareTag("Egg") && isSwitched == true && other.gameObject.GetComponent<Move>().changedNode)
         {
             other.GetComponent<Move>().doesTurn = true;
+        }
+
+        if(other.CompareTag("Egg") && isSwitched == false && other.gameObject.GetComponent<Move>().changedNode)
+        {
+            other.GetComponent<Move>().doesTurn = false;
         }
     }
 }

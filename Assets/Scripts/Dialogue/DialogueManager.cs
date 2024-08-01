@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
     [Range(-1, 100)]
     public int counter = -1;
 
+    public GameObject scorePanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,8 +61,10 @@ public class DialogueManager : MonoBehaviour
 
    void EndDialogue()
    {
-        Debug.Log("End of conversation");
-        counter = -1;
+        scorePanel.SetActive(true);
+     //    scorePanel.GetComponent<TextSetter>().Set();
+        
+        
         Debug.Log("Counter: " + counter);
    }
 

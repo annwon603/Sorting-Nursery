@@ -9,6 +9,8 @@ public class BasketCap : MonoBehaviour
     public bool isFull = false;
     public int counter = 0;
 
+    public List<GameObject> listOfEggs;
+
     void Start()
     {
         
@@ -32,7 +34,9 @@ public class BasketCap : MonoBehaviour
             // Check for trigger collision and if the basket is not full
             if (other.isTrigger && counter < eggCapacity)
             {
-                ++counter;
+                counter++;
+                listOfEggs.Add(other.gameObject);
+
                 Debug.Log("There are currently " + counter + " eggs in this basket");
             }
             // Check if the basket is full
@@ -42,12 +46,15 @@ public class BasketCap : MonoBehaviour
                 // Get the Move component of the egg to have the egg to stop moving into the basket
                 Move moveComponent = other.gameObject.GetComponent<Move>();
                 moveComponent.StopMovement();
-                if(FindObjectOfType<LeverSwitch>() != null)
-                {
-                    FindObjectOfType<LeverSwitch>().Switch(); 
-                }
+                
             }
         }
+    }
+
+    public GameObject[] getEggList()
+    {
+        GameObject[] eggArray = listOfEggs.ToArray(); 
+        return eggArray;
     }
 
 }

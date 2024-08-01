@@ -7,7 +7,8 @@ using UnityEngine.EventSystems;
 public class UIBasketItem : MonoBehaviour
 {
     [SerializeField]
-    private Image itemImage;
+    public Image itemImage;
+    public Traits trait; 
 
     public event Action<UIBasketItem> OnItemClicked, OnItemBeginDrag, OnItemEndDrag, 
                                         OnItemDroppedOn;
@@ -23,14 +24,18 @@ public class UIBasketItem : MonoBehaviour
     public void ResetData()
     {
         this.itemImage.gameObject.SetActive(false);
+        this.itemImage.sprite = null;
         empty = true;
+        Debug.Log("I got reseted");
     }
 
-    public void SetData(Sprite sprite, int quantity)
+    public void SetData(Sprite sprite, Traits newTrait)
     {
         this.itemImage.gameObject.SetActive(true);
         this.itemImage.sprite = sprite;
+        this.trait = newTrait;
         empty = false;
+        Debug.Log("I got Seted");
     }
 
     // ?. syntax means checking if it's not null
@@ -53,6 +58,8 @@ public class UIBasketItem : MonoBehaviour
 
     public void OnPointerClick(BaseEventData data)
     {
+        if(empty)
+            return;
         PointerEventData pointerData = (PointerEventData)data;
         if(pointerData.button == PointerEventData.InputButton.Left)
         {

@@ -37,19 +37,19 @@ public class DragDrop : MonoBehaviour
         
     }
 
-    public void OnMouseDrag()
-    {
-        isDragging = true;
-        if (!GetComponent<Move>().enabled)
-        {
-         return;
-        }
-        if(GetComponent<Move>().doesMove == false)
-        {
-            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            GetComponent<Move>().enabled = false;
-        }
-    }
+    // public void OnMouseDrag()
+    // {
+    //     isDragging = true;
+    //     if (!GetComponent<Move>().enabled)
+    //     {
+    //      return;
+    //     }
+    //     if(GetComponent<Move>().doesMove == false)
+    //     {
+    //         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+    //         GetComponent<Move>().enabled = false;
+    //     }
+    // }
 
     public void OnMouseUp()
     {
