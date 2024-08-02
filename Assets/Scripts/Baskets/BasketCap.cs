@@ -51,10 +51,6 @@ public class BasketCap : MonoBehaviour
         }
     }
 
-    public GameObject[] getEggList()
-    {
-        GameObject[] eggArray = listOfEggs.ToArray(); 
-        return eggArray;
-    }
+    
 
 }

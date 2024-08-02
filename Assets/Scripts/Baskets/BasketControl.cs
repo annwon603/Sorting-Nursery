@@ -32,8 +32,7 @@ public class BasketControl : MonoBehaviour
 
     void Convert()
     {
-        GameObject[] eggList = transform.parent.gameObject.GetComponent<BasketCap>().getEggList();
-        inventoryUI.UpdateItem(eggList);
+        inventoryUI.UpdateItem(transform.parent.gameObject.GetComponent<BasketCap>().listOfEggs);
     }
 
 }

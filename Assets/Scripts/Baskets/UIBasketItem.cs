@@ -10,6 +10,8 @@ public class UIBasketItem : MonoBehaviour
     public Image itemImage;
     public Traits trait; 
 
+    public GameObject eggPrefab; //directly refer to the actual egg in basket
+
     public event Action<UIBasketItem> OnItemClicked, OnItemBeginDrag, OnItemEndDrag, 
                                         OnItemDroppedOn;
 
@@ -25,15 +27,18 @@ public class UIBasketItem : MonoBehaviour
     {
         this.itemImage.gameObject.SetActive(false);
         this.itemImage.sprite = null;
+        // Destroy(eggPrefab);
+        this.eggPrefab = null;
         empty = true;
         Debug.Log("I got reseted");
     }
 
-    public void SetData(Sprite sprite, Traits newTrait)
+    public void SetData(GameObject egg)
     {
         this.itemImage.gameObject.SetActive(true);
-        this.itemImage.sprite = sprite;
-        this.trait = newTrait;
+        this.itemImage.sprite = egg.GetComponent<SpriteRenderer>().sprite;
+        this.trait = egg.GetComponent<DragDrop>().trait;
+        this.eggPrefab = egg;
         empty = false;
         Debug.Log("I got Seted");
     }

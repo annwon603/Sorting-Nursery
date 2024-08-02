@@ -3142,7 +3142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90.6, y: -124.7}
+  m_AnchoredPosition: {x: -181, y: -30}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009009954
@@ -3835,12 +3835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 6519783547210974346, guid: a4354cd6c79271b4ea2786c1b4608ad8, type: 3}
   contentPanel: {fileID: 426936057}
-  listOfBasketItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  listOfBasketItems: []
 --- !u!114 &1410735384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3891,8 +3886,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe3fe0e5baae254eac284ce73424eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonA: {fileID: 1512375908}
-  buttonB: {fileID: 1009009954}
+  A: {fileID: 1512375908}
+  B: {fileID: 1009009954}
 --- !u!1 &1444527931
 GameObject:
   m_ObjectHideFlags: 0
@@ -4287,7 +4282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -89.7, y: -125.4}
+  m_AnchoredPosition: {x: -181, y: 38}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1512375908
@@ -4401,7 +4396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1517989284
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5216,7 +5211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: timeToSpawn
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: Eggs.Array.size

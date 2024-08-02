@@ -74,6 +74,7 @@ public class IncubatorSlot : MonoBehaviour
    public void Compare()
    {
       List<UIBasketItem> eggsToCompare = FindObjectOfType<BasketPage>().listOfBasketItems;
+      Debug.Log("Found BasketUI");
       foreach(var egg in eggsToCompare)
       {
          bool doesMatch = traitMatch(egg.trait.isTraitActive, egg.trait.traitSet);
@@ -83,8 +84,8 @@ public class IncubatorSlot : MonoBehaviour
             }else{
                Debug.Log("In the wrong box");
          }
+         Destroy(egg.eggPrefab);
          egg.ResetData();
-         //egg.gameObject.SetActive(false);
       }
 
       FindObjectOfType<BasketPage>().ClearItem();

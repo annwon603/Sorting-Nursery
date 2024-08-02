@@ -31,6 +31,11 @@ public class LevelManager : MonoBehaviour
             FindObjectOfType<DialogueManager>().showButton();
         }
 
+        if(FindObjectOfType<DialogueManager>().counter == 8 && GameObject.FindWithTag("Egg") == null)
+        {
+            FindObjectOfType<DialogueManager>().showButton();
+        }
+
         if(FindObjectOfType<DialogueManager>().counter == 9)
         {
         //    AppendAlphaToExistingText(1.0f);

@@ -6,48 +6,45 @@ using UnityEngine.UI;
 public class TutorialButton : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Button buttonA;
-    public Button buttonB;
-    
-    private bool isButtonAActive = true; // Track the state of button A
+    public Button A, B;
 
-    private void Start()
+    bool useMyOnClickHandler = true;
+
+    void Start()
     {
-        // Ensure buttons are set up and add listeners
-        if (buttonA != null && buttonB != null)
-        {
-            // Add listeners to buttons
-            buttonA.onClick.AddListener(() => OnButtonClicked(buttonA));
-            buttonB.onClick.AddListener(() => OnButtonClicked(buttonB));
-        }
+        //Calls the TaskOnClick/TaskWithParameters/ButtonClicked method when you click the Button
+        A.onClick.AddListener(TaskOnClick);
+        B.onClick.AddListener(TaskOnClick);
     }
 
-    private void OnButtonClicked(Button clickedButton)
+    void TurnOffMyOnClickHandler()
     {
-        // Perform the button's action
-        NextDialogue();
-
-        // Unsubscribe the NextDialogue function from both buttons
-        UnsubscribeAll();
+        useMyOnClickHandler = false;
     }
 
-    private void NextDialogue()
+    void TaskOnClick()
     {
-        // Call the dialogue manager's method
+        if (!useMyOnClickHandler) return;
+
         FindObjectOfType<DialogueManager>().showButton();
+
+        TurnOffMyOnClickHandler();
+        //Output this to console when Button1 or Button3 is clicked
+        
     }
 
-    private void UnsubscribeAll()
+    void TaskWithParameters(string message)
     {
-        // Unsubscribe the NextDialogue method from both buttons
-        if (buttonA != null)
-        {
-            buttonA.onClick.RemoveListener(() => OnButtonClicked(buttonA));
-        }
-        if (buttonB != null)
-        {
-            buttonB.onClick.RemoveListener(() => OnButtonClicked(buttonB));
-        }
+        //Output this to console when the Button2 is clicked
+        Debug.Log(message);
     }
+
+    void ButtonClicked(int buttonNo)
+    {
+        //Output this to console when the Button3 is clicked
+        Debug.Log("Button clicked = " + buttonNo);
+    }
+
+    
 }
 

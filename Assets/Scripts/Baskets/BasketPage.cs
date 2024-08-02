@@ -18,21 +18,21 @@ public class BasketPage : MonoBehaviour
 
     public void Update()
     {
-        foreach(var item in listOfBasketItems)
-        {
-            item.transform.GetChild(0).gameObject.SetActive(true);
-        }
+        // foreach(var item in listOfBasketItems)
+        // {
+        //     item.transform.GetChild(0).gameObject.SetActive(true);
+        // }
     }
 
     public void InitBasketInventoryUI(int inventorySize)
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < inventorySize; i++)
         {
             UIBasketItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
             uiItem.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
             uiItem.transform.SetParent(contentPanel, false);
-            // listOfBasketItems.Add(uiItem);
-            listOfBasketItems[i] = uiItem;
+            listOfBasketItems.Add(uiItem);
+            // listOfBasketItems[i] = uiItem;
             uiItem.OnItemClicked += HandleItemSelection;
             uiItem.OnItemBeginDrag += HandleBeginDrag;
             uiItem.OnItemDroppedOn += HandleSwap;
@@ -41,12 +41,16 @@ public class BasketPage : MonoBehaviour
         }
     }
 
-    public void UpdateItem(GameObject[] eggs)
+    public void UpdateItem(List<GameObject> listofEggs)
     {
-        for (int i = 0; i < 5; i++)
+        for(int i = 0; i < listofEggs.Count; i++)
         {
-            listOfBasketItems[i].SetData(eggs[i].GetComponent<SpriteRenderer>().sprite , eggs[i].GetComponent<DragDrop>().trait);
+            listOfBasketItems[i].SetData(listofEggs[i]);
         }
+        // for (int i = 0; i < 5; i++)
+        // {
+        //     listOfBasketItems[i].SetData(eggs[i].GetComponent<SpriteRenderer>().sprite , eggs[i].GetComponent<DragDrop>().trait);
+        // }
     }
 
     public void ClearItem()
