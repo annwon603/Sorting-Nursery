@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class resultsScript : MonoBehaviour
 {
     public GameObject ResultsMenu;
     public GameObject ObjectivesPanel;
     public GameObject ShowObjectivesButton;
+    public TMP_Text EggsSortedCorrect;
+    public TMP_Text TotalEggs;
+    public TMP_Text AccuracyNumber;
 
     // Start is called before the first frame update
     void Start()
