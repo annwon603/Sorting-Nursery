@@ -15,12 +15,17 @@ public class IncubatorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //IncubatorSlot test = listOfIncubators[0];
+        // foreach (IncubatorSlot incubator in listOfIncubators)
+        // {
+        //     Debug.Log("NUMBER OF EGGS" + incubator.counter); //testing line
+        // }
+
+        int totalEggs = 0;
+
         foreach (IncubatorSlot incubator in listOfIncubators)
         {
-            Debug.Log("INCUBATORS " + incubator);
-            Debug.Log("NUMBER OF EGGS" + incubator.counter);
+            totalEggs += incubator.counter;
         }
-
+        Debug.Log("TOTAL NUMBER OF EGGS: " + totalEggs); 
     }
 }

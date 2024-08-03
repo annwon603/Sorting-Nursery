@@ -55,17 +55,15 @@ public class IncubatorSlot : MonoBehaviour
          if(Input.GetMouseButton(0) == false)
          {
             if(doesMatch == true){
-               counter++; //New line
-               Debug.Log("In the right box " + counter); //Added counter
+               Debug.Log("In the right box");
                ScoreCounter.instance.IncreaseScore();
 
             }else{
-               counter++; //New line
-               Debug.Log("In the wrong box " + counter); //Added counter
+               Debug.Log("In the wrong box");
             }
 
             other.gameObject.SetActive(false);
-            //counter++; //New line
+            counter++; //New line
             Debug.Log("Egg in the box");
 
          }

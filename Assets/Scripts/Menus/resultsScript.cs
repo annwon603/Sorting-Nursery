@@ -12,6 +12,8 @@ public class resultsScript : MonoBehaviour
     public TMP_Text EggsSortedCorrect;
     public TMP_Text TotalEggs;
     public TMP_Text AccuracyNumber;
+    private IncubatorManager eggsDroppedInIncubator;
+    private EggManager eggsInLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +24,12 @@ public class resultsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //When level is completed
+        // print("Eggs dropped: " + eggsDroppedInIncubator.totalEggs);
+        print("Eggs in level: " + eggsInLevel.counter);
+        // // if (eggsDroppedInIncubator.totalEggs == eggsInLevel.counter) {
+        // //     ShowResultsMenu();
+        // // }
     }
-
-    // public void Level2()
-    // {
-    //     SceneManager.LoadScene("Level2");
-    // }
 
     public void ShowResultsMenu() {
         ResultsMenu.SetActive(true);

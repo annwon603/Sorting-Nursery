@@ -8,7 +8,8 @@ public class EggManager : MonoBehaviour
     GameObject root;            // Starting position
     public float timeToSpawn;   
 
-    int counter = 0;            // Limits how many times egg can spawn
+    public int counter = 0;            // Limits how many times egg can spawn
+    //Edit by Harry: made counter public
 
     private float currentTimetoSpawn;
     // Start is called before the first frame update
