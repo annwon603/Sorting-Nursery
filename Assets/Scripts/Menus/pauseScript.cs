@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class pauseScript : MonoBehaviour {
 
@@ -49,6 +51,7 @@ public class pauseScript : MonoBehaviour {
     public void Pause()
     {
         PauseMenu.SetActive(true);
+        //GetComponent<DragChick>().enabled = false;
         Time.timeScale = 0f;
         gamePaused = true;
     }
