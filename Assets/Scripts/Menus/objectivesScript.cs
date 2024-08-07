@@ -10,6 +10,7 @@ public class objectivesScript : MonoBehaviour
     public GameObject ObjectivesPanel;
     public GameObject ShowObjectivesButton;
     public GameObject PauseButton;
+    Script dragChickenScript;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,8 @@ public class objectivesScript : MonoBehaviour
         ShowObjectivesButton.SetActive(false);
         PauseButton.SetActive(false);
         GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = false;
-        //GetComponent<DragChick>().enabled = false;
+        dragChickenScript = GetComponent<DragChick>();
+        dragChickenScript.enabled = false;
         ShowObjectivesMenu();
     }
 
@@ -32,7 +34,6 @@ public class objectivesScript : MonoBehaviour
     public void ShowObjectivesMenu()
     {
         ObjectivesMenu.SetActive(true);
-        Debug.Log("12345");
         Time.timeScale = 0f;
     }
 
@@ -40,8 +41,8 @@ public class objectivesScript : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = true;
-        //GetComponent<DragChick>().enabled = true;
-        //PauseButton.SetActive(true);
+        GetComponent<DragChick>().enabled = true;
+        PauseButton.SetActive(true);
         ObjectivesMenu.SetActive(false);
         ShowObjectivesButton.SetActive(true);
     }

@@ -9,6 +9,7 @@ public class pauseScript : MonoBehaviour {
 
     public static bool gamePaused = false;
     public GameObject PauseMenu;
+    public GameObject PauseButton;
 
     // Start is called before the first frame update
     void Start() 
@@ -34,6 +35,7 @@ public class pauseScript : MonoBehaviour {
     public void Resume()
     {
         PauseMenu.SetActive(false);
+        PauseButton.SetActive(true);
         Time.timeScale = 1f;
         gamePaused = false;
         if (Input.GetKeyDown(KeyCode.P))
@@ -51,7 +53,8 @@ public class pauseScript : MonoBehaviour {
     public void Pause()
     {
         PauseMenu.SetActive(true);
-        //GetComponent<DragChick>().enabled = false;
+        PauseButton.SetActive(false);
+        GetComponent<DragChick>().enabled = false;
         Time.timeScale = 0f;
         gamePaused = true;
     }
