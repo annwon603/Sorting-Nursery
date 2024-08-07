@@ -13,6 +13,8 @@ public class BasketPage : MonoBehaviour
     [SerializeField]
     public List<UIBasketItem> listOfBasketItems = new List<UIBasketItem>();
 
+
+
     //public UIBasketItem[] listOfBasketItems;
 
 
@@ -66,6 +68,8 @@ public class BasketPage : MonoBehaviour
         {
              Destroy(child.gameObject); // Destroy each child GameObject
         }
+
+        
 
         
         

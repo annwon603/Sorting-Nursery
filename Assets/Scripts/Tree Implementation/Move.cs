@@ -58,6 +58,7 @@ public class Move : MonoBehaviour
     public void StopMovement()
     {
         doesMove = false;
+        
     }
 
     public void Movement()

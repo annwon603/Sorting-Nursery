@@ -46,6 +46,10 @@ public class BasketCap : MonoBehaviour
                 // Get the Move component of the egg to have the egg to stop moving into the basket
                 Move moveComponent = other.gameObject.GetComponent<Move>();
                 moveComponent.StopMovement();
+                if(gameObject.scene.name == "Gameplay")
+                {
+                    GameObject.Find("Condition").GetComponent<DialogueTrigger>().enabled = true;
+                }
                 
             }
         }

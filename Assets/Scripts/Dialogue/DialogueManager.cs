@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour
         bool canButtonDisappear = sentence.needTaskComplete;
         dialogueText.text = sentence.dialouge;
         counter++;
-        Debug.Log("Dialogue #" + counter);
+        //Debug.Log("Dialogue #" + counter);
         if(canButtonDisappear == true)
         {
           hideButton();
@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
 
    void EndDialogue()
    {
-        scorePanel.SetActive(true);
+     //    scorePanel.SetActive(true);
      //    scorePanel.GetComponent<TextSetter>().Set();
         
         
