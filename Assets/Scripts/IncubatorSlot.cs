@@ -36,7 +36,7 @@ public class IncubatorSlot : MonoBehaviour
             foreach (var o in z_CollidedObjects)
             {
                // OnCollided(o.gameObject);
-               Debug.Log("Collided");
+               //Debug.Log("Collided");
             }
         }
         else

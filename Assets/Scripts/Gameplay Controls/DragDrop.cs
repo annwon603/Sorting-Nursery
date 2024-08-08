@@ -15,6 +15,8 @@ public class DragDrop : MonoBehaviour
     private Color hover; //Intereaction for player to see if egg is hover over the box
 
     public Traits trait;
+
+    public Traits size;
     void Start()
     {
         resetPosition = this.transform.localPosition;

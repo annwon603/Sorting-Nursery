@@ -38,14 +38,16 @@ public class LeverSwitch : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         //Move the egg if the switcdh got activated 
-        if(other.CompareTag("Egg") && isSwitched == true && other.gameObject.GetComponent<Move>().changedNode)
+        if(other.CompareTag("Egg") && isSwitched == true)
         {
             other.GetComponent<Move>().doesTurn = true;
+            Debug.Log("Egg Switching");
         }
 
-        if(other.CompareTag("Egg") && isSwitched == false && other.gameObject.GetComponent<Move>().changedNode)
+        if(other.CompareTag("Egg") && isSwitched == false)
         {
             other.GetComponent<Move>().doesTurn = false;
+            Debug.Log("Egg Not Switching");
         }
     }
 }
