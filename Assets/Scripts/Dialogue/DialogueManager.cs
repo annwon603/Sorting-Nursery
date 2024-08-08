@@ -13,10 +13,17 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private GameObject nextButton;
 
+    public GameObject retryButton;
+
+    public GameObject nextLevelButton;
+
     [Range(-1, 100)]
     public int counter = -1;
 
     public GameObject scorePanel;
+    public delegate void EndDialogueDelegate();
+
+    public EndDialogueDelegate endDialogueDelegate;
 
     // Start is called before the first frame update
     void Start()
@@ -44,8 +51,8 @@ public class DialogueManager : MonoBehaviour
    {
         if (sentences.Count == 0)
         {
-            EndDialogue();
-            return;
+          endDialogueDelegate();
+          return;
         }
 
         Text sentence = sentences.Dequeue();
@@ -59,14 +66,7 @@ public class DialogueManager : MonoBehaviour
         }
    }
 
-   void EndDialogue()
-   {
-     //    scorePanel.SetActive(true);
-     //    scorePanel.GetComponent<TextSetter>().Set();
-        
-        
-        Debug.Log("Counter: " + counter);
-   }
+
 
    public void hideButton()
    {
@@ -78,6 +78,8 @@ public class DialogueManager : MonoBehaviour
         nextButton.SetActive(true);
         DisplayNextSentence();
    }
+
+
 
    
 }

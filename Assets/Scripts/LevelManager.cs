@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public TextMeshProUGUI textMeshProUGUI;
     public GameObject scorePanel;
+
+    public GameObject QuotaPanel;
   
    void Update()
    {
@@ -45,7 +49,13 @@ public class LevelManager : MonoBehaviour
 
         if(FindObjectOfType<DialogueManager>().counter == 10)
         {
-           scorePanel.SetActive(true);
+           FindObjectOfType<DialogueManager>().endDialogueDelegate = ScoreActivate;
+        }
+
+        if(FindObjectOfType<DialogueManager>().counter == 14)
+        {
+            FindObjectOfType<DialogueManager>().endDialogueDelegate = null;
+            FindObjectOfType<DialogueManager>().endDialogueDelegate = GoNextLevel;
         }
 
 
@@ -63,12 +73,40 @@ public class LevelManager : MonoBehaviour
                 Debug.Log(transform.GetChild(i).gameObject.name + " got activated");
             }
         }
+
+        QuotaPanel.SetActive(true);
     }
 
     private void EggSpawn()
     {
         FindObjectOfType<EggManager>().enabled = true;
         FindObjectOfType<BasketManager>().enabled = true;
+    }
+
+    public void ScoreActivate()
+    {
+        scorePanel.SetActive(true);
+        FindObjectOfType<QuotaManager>().CompleteMandatory();
+        int score = int.Parse(scorePanel.GetComponent<TextSetter>().newText.text);
+        if(score >= 5){
+            GameObject.Find("QuotaExplaination").GetComponent<DialogueTrigger>().enabled = true;
+            FindObjectOfType<QuotaManager>().CompleteOpt();
+        }else{
+            GameObject.Find("Conditon2").GetComponent<DialogueTrigger>().enabled = true;
+            FindObjectOfType<DialogueManager>().retryButton.SetActive(true);
+            FindObjectOfType<DialogueManager>().nextLevelButton.SetActive(true);
+        }
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("TutorialRetry");
+        
+    }
+
+    public void GoNextLevel()
+    {
+        SceneManager.LoadScene("Tutorial2");
     }
 
     
