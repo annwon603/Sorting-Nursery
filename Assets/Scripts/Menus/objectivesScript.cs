@@ -10,7 +10,8 @@ public class objectivesScript : MonoBehaviour
     public GameObject ObjectivesPanel;
     public GameObject ShowObjectivesButton;
     public GameObject PauseButton;
-    Script dragChickenScript;
+    public DragChick[] AllChickens;
+    public GameObject[] AllEggs;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,19 @@ public class objectivesScript : MonoBehaviour
         ShowObjectivesButton.SetActive(false);
         PauseButton.SetActive(false);
         GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = false;
-        dragChickenScript = GetComponent<DragChick>();
-        dragChickenScript.enabled = false;
+
+        foreach (DragChick chicken in AllChickens) {
+            chicken.isPaused = true;
+        }
+        if (AllEggs == null) {
+            AllEggs = GameObject.FindGameObjectsWithTag("Egg");
+        }
+        foreach (GameObject egg in AllEggs)
+        {
+            egg.isPaused = true;
+        }
+
+        
         ShowObjectivesMenu();
     }
 
@@ -41,8 +53,15 @@ public class objectivesScript : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = true;
-        GetComponent<DragChick>().enabled = true;
         PauseButton.SetActive(true);
+
+        foreach (DragChick chicken in AllChickens) {
+            chicken.isPaused = false;
+        }
+        foreach (GameObject egg in AllEggs) {
+            egg.isPaused = false;
+        }
+
         ObjectivesMenu.SetActive(false);
         ShowObjectivesButton.SetActive(true);
     }

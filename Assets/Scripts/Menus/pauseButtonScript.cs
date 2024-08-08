@@ -7,6 +7,8 @@ public class pauseButton : MonoBehaviour
 {
     public GameObject PauseMenu;
     public GameObject PauseButton;
+    public DragChick[] AllChickens;
+    public DragDrop[] AllEggs;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +27,12 @@ public class pauseButton : MonoBehaviour
         PauseMenu.SetActive(true);
         PauseButton.SetActive(false);
         Time.timeScale = 0f;
+
+        foreach (DragChick chicken in AllChickens) {
+            chicken.isPaused = true;
+        }
+        foreach (DragDrop egg in AllEggs) {
+            egg.isPaused = true;
+        }
     }
 }

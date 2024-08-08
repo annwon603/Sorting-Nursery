@@ -15,6 +15,8 @@ public class DragDrop : MonoBehaviour
     private Color hover; //Intereaction for player to see if egg is hover over the box
 
     public Traits trait;
+    public bool isPaused = false; //New line
+
     void Start()
     {
         resetPosition = this.transform.localPosition;
@@ -31,7 +33,7 @@ public class DragDrop : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         }
-        if(isDragging)
+        if(isDragging && isPaused == false) //Edited line
         {
             transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }

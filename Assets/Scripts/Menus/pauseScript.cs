@@ -10,6 +10,8 @@ public class pauseScript : MonoBehaviour {
     public static bool gamePaused = false;
     public GameObject PauseMenu;
     public GameObject PauseButton;
+    public DragChick[] AllChickens;
+    public DragDrop[] AllEggs;
 
     // Start is called before the first frame update
     void Start() 
@@ -38,6 +40,14 @@ public class pauseScript : MonoBehaviour {
         PauseButton.SetActive(true);
         Time.timeScale = 1f;
         gamePaused = false;
+
+        foreach (DragChick chicken in AllChickens) {
+            chicken.isPaused = false;
+        }
+        foreach (DragDrop egg in AllEggs) {
+            egg.isPaused = false;
+        }
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             gamePaused = true;
@@ -54,7 +64,15 @@ public class pauseScript : MonoBehaviour {
     {
         PauseMenu.SetActive(true);
         PauseButton.SetActive(false);
-        GetComponent<DragChick>().enabled = false;
+        
+        foreach (DragChick chicken in AllChickens)
+        {
+            chicken.isPaused = true;
+        }
+        foreach (DragDrop egg in AllEggs) {
+            egg.isPaused = true;
+        }
+
         Time.timeScale = 0f;
         gamePaused = true;
     }
