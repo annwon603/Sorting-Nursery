@@ -16,8 +16,6 @@ public class DragDrop : MonoBehaviour
 
     public Traits trait;
     public bool isPaused = false; //New line
-
-
     public Traits size;
     void Start()
     {
