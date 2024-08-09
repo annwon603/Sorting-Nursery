@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42adfa133f72c10498e332d11d848bad, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
+  dialouge: <size=70%>Thank you for working with us on important Dragon and Dinosaur
+    conservation work. Because of increased poaching of these magnificent creatures,
+    their populations are declining, even in their natural habitats. This hatchery
+    is a way for us to try and stabilize the populations and give back to creatures
+    so vital to our world
+  needTaskComplete: 0

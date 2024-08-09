@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42adfa133f72c10498e332d11d848bad, type: 3}
   m_Name: 8
   m_EditorClassIdentifier: 
-  dialouge: 
-  needTaskComplete: 0
+  dialouge: Good work! Do the same for the other basket of eggs, but move them into
+    the other incubator this time
+  needTaskComplete: 1

@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42adfa133f72c10498e332d11d848bad, type: 3}
   m_Name: 0
   m_EditorClassIdentifier: 
+  dialouge: 'Welcome to the Sorting Egg hatchery and nursery! '
+  needTaskComplete: 0

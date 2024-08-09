@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1008198660252558362}
   - component: {fileID: 4714749783766026558}
   - component: {fileID: 3575140435651526997}
-  - component: {fileID: 8774417474954999947}
+  - component: {fileID: 4014512839116198203}
   m_Layer: 0
   m_Name: basket
   m_TagString: Untagged
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &8774417474954999947
+--- !u!60 &4014512839116198203
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -161,13 +161,13 @@ PolygonCollider2D:
     - - {x: 0.8901166, y: -4.78}
       - {x: -2.5403328, y: -4.76}
       - {x: -4.7506223, y: -3.3600001}
-      - {x: -6.1808095, y: 1.0699999}
-      - {x: -4.73062, y: -3.3799999}
-      - {x: -2.550334, y: -4.7999997}
-      - {x: 0.84011, y: -4.79}
-      - {x: 3.190418, y: -3.52}
+      - {x: -6.5208545, y: 1}
+      - {x: -4.2805605, y: 4.0299997}
+      - {x: -1.9902607, y: 4.63}
+      - {x: 1.1001441, y: 4.6400003}
+      - {x: 2.8503735, y: 4.34}
       - {x: 4.7806263, y: 1.1}
-      - {x: 3.2304232, y: -3.4800003}
+      - {x: 2.9703891, y: -3.63}
   m_UseDelaunayMesh: 0
 --- !u!1 &4283205568237113687
 GameObject:
@@ -179,6 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 348168508862691611}
   - component: {fileID: 4033156404292074720}
+  - component: {fileID: 5840180273967616213}
   m_Layer: 0
   m_Name: basket_overlay
   m_TagString: Untagged
@@ -253,3 +254,62 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &5840180273967616213
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4283205568237113687}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 23.603092, y: 16.4}
+    newSize: {x: 23.603092, y: 16.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.000131, y: -4.7200003}
+      - {x: -2.4103158, y: -4.8900003}
+      - {x: -5.0206575, y: -3.0700002}
+      - {x: -6.1708083, y: 0.66}
+      - {x: -5.7907586, y: 2.01}
+      - {x: -6.9709134, y: -0.08}
+      - {x: -5.640739, y: -4.45}
+      - {x: -3.100406, y: -6.0400004}
+      - {x: 2.0402672, y: -6.03}
+      - {x: 4.410578, y: -4.3}
+      - {x: 5.200681, y: -0.66}
+      - {x: 4.4605846, y: 1.83}
+      - {x: 4.2005506, y: -0.33}
+      - {x: 3.4604533, y: -3.3899999}
+  m_UseDelaunayMesh: 0
