@@ -16,7 +16,7 @@ public class IncubatorSlot : MonoBehaviour
    private bool z_Intereacted = false; //Check if egg is over the incubator
 
    public Traits IncuTrait;
-
+   public int counter = 0; //New line
 
    private void Start()
    {
@@ -57,39 +57,18 @@ public class IncubatorSlot : MonoBehaviour
             if(doesMatch == true){
                Debug.Log("In the right box");
                ScoreCounter.instance.IncreaseScore();
+
             }else{
                Debug.Log("In the wrong box");
             }
 
             other.gameObject.SetActive(false);
-         
+            counter++; //New line
             Debug.Log("Egg in the box");
 
          }
          
       }
-   }
-
-   //For just comparing the Egg through UI
-   public void Compare()
-   {
-      List<UIBasketItem> eggsToCompare = FindObjectOfType<BasketPage>().listOfBasketItems;
-      Debug.Log("Found BasketUI");
-      foreach(var egg in eggsToCompare)
-      {
-         bool doesMatch = traitMatch(egg.trait.isTraitActive, egg.trait.traitSet);
-         if(doesMatch == true){
-               Debug.Log("In the right box");
-               ScoreCounter.instance.IncreaseScore();
-            }else{
-               Debug.Log("In the wrong box");
-         }
-         Destroy(egg.eggPrefab);
-         egg.ResetData();
-      }
-
-      FindObjectOfType<BasketPage>().ClearItem();
-      
    }
 
    public bool traitMatch(bool trait, string traitSet)

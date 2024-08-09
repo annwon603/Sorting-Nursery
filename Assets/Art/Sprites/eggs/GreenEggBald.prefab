@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1218262835370548025}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.6399999, y: 0.21000004, z: 5.0260744}
   m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 0.49999997}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   finished: 0
-  trait: {fileID: 11400000, guid: e19b9edbc79425d4d9e80b60935d44a7, type: 2}
+  trait: {fileID: 11400000, guid: 20c89ebb15c98d74e9e6755867e9505a, type: 2}
 --- !u!114 &3615632961943336483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +122,6 @@ MonoBehaviour:
   target: {x: 0, y: 0}
   doesTurn: 0
   changedNode: 0
-  doesMove: 0
 --- !u!58 &6758872359933927358
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -170,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f565587a55bfc0643a76468ef4fb55f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trait: {fileID: 11400000, guid: 086a9c60b7899ff488d696f00e950c9c, type: 2}
+  trait: {fileID: 0}
 --- !u!50 &3610933885632432238
 Rigidbody2D:
   serializedVersion: 4

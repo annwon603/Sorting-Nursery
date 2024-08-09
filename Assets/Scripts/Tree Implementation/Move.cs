@@ -13,20 +13,22 @@ public class Move : MonoBehaviour
 
     public bool changedNode = false;
 
-    public bool doesMove = true;
-
     // Update is called once per frame
-
-    void Start()
-    {
-        doesMove = true;
-    }
     void Update()
     {
-        if(doesMove == true)
+        if(doesTurn == false)
         {
-            Movement();
+            target = currNode.GetComponent<Nodes>().left.getPosition();
+        } else {
+            target = currNode.GetComponent<Nodes>().right.getPosition();
         }
+
+        
+        if(GetComponent<DragDrop>().finished == false)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        }
+
 
     }
     public void OnTriggerEnter2D(Collider2D other)
@@ -35,10 +37,9 @@ public class Move : MonoBehaviour
         if(other.gameObject.tag == "Node"){
             currNode = other.gameObject;
             Debug.Log("Tranvesed at " + other.gameObject.name);
-            
 
-            //If the currentNode doesn't have any children, that means it reached to the basket. Checks if basket is full
-            if(currNode.GetComponent<Nodes>().a == null && currNode.GetComponent<Nodes>().b == null && currNode.GetComponent<BasketCap>().isFull == false)
+            //If the currentNode doesn't have any children, that means it reached to the basket
+            if(currNode.GetComponent<Nodes>().a == null && currNode.GetComponent<Nodes>().b == null)
             {
                 GetComponent<DragDrop>().finished = true;
                 Debug.Log("Reached Basket");

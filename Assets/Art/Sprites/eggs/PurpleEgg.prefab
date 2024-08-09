@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4928586347859310158}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.3199999, y: 0.22000003, z: 5.0260744}
   m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 0.49999997}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   finished: 0
-  trait: {fileID: 11400000, guid: 94ee6eb7543b3464a817b3a365e05f1c, type: 2}
+  trait: {fileID: 11400000, guid: bae55bd7c6dd39849b2c3734f26784fa, type: 2}
 --- !u!114 &4678998889092353019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +122,6 @@ MonoBehaviour:
   target: {x: 0, y: 0}
   doesTurn: 0
   changedNode: 0
-  doesMove: 0
 --- !u!58 &4138102210659782818
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -155,7 +154,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.026438717, y: 0}
   serializedVersion: 2
   m_Radius: 1.096867
 --- !u!114 &1103910195851076027

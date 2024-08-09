@@ -8,6 +8,7 @@ public class DragChick : MonoBehaviour
     [SerializeField] private bool isDragging = false; 
     public delegate void DragEndedDelegate(Transform transform);
     public DragEndedDelegate dragEndedDelegate;
+    public bool isPaused = false; //New line
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class DragChick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isDragging)
+        if(isDragging && isPaused == false) //Edited line
         {
             transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
             GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Foreground");

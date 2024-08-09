@@ -6,11 +6,10 @@ public class EggManager : MonoBehaviour
 {
     public GameObject[] Eggs;   // List of Eggs to spawn
     GameObject root;            // Starting position
-    public float timeToSpawn;  
+    public float timeToSpawn;   
 
-    public bool areAllSpawn;  
-
-    int counter = 0;            // Limits how many times egg can spawn
+    public int counter = 0;            // Limits how many times egg can spawn
+    //Edit by Harry: made counter public
 
     private float currentTimetoSpawn;
     // Start is called before the first frame update
@@ -49,8 +48,7 @@ public class EggManager : MonoBehaviour
         }
         else
         {
-            areAllSpawn = true;
-            
+            Debug.Log("Out of Eggs");
         }
         
     }
