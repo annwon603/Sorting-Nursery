@@ -12,6 +12,7 @@ public class objectivesScript : MonoBehaviour
     public GameObject PauseButton;
     public DragChick[] AllChickens;
     public GameObject[] AllEggs;
+    public DragDrop[] AllEggsInLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -28,11 +29,11 @@ public class objectivesScript : MonoBehaviour
         if (AllEggs == null) {
             AllEggs = GameObject.FindGameObjectsWithTag("Egg");
         }
-        foreach (GameObject egg in AllEggs)
-        {
-            egg.isPaused = true;
+        foreach (GameObject egg in AllEggs) {
+            foreach (DragDrop eggInLevel in AllEggsInLevel) {
+                eggInLevel.isPaused = true;
+            }
         }
-
         
         ShowObjectivesMenu();
     }
@@ -58,8 +59,13 @@ public class objectivesScript : MonoBehaviour
         foreach (DragChick chicken in AllChickens) {
             chicken.isPaused = false;
         }
+        if (AllEggs == null) {
+            AllEggs = GameObject.FindGameObjectsWithTag("Egg");
+        }
         foreach (GameObject egg in AllEggs) {
-            egg.isPaused = false;
+            foreach (DragDrop eggInLevel in AllEggsInLevel) {
+                eggInLevel.isPaused = false;
+            }
         }
 
         ObjectivesMenu.SetActive(false);
