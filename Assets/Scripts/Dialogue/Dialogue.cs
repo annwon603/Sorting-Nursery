@@ -11,7 +11,7 @@ public class Dialogue
 {
     public string name; //name of the npc that is talking
 
-    [TextArea(3,10)]
+    //[TextArea(3,10)]
     public Text[] sentences;  //List of dialouges
     
 }
