@@ -55,5 +55,26 @@ public class Move : MonoBehaviour
         changedNode = false;
         //Debug.Log("ChangedNode " + changedNode);
     }
+
+    public void StopMovement()
+    {
+        doesMove = false;
+        
+    }
+
+    public void Movement()
+    {
+        if(doesTurn == false)
+        {
+            target = currNode.GetComponent<Nodes>().left.getPosition();
+        } else {
+            target = currNode.GetComponent<Nodes>().right.getPosition();
+        }
+
+        if(GetComponent<DragDrop>().finished == false)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        }
+    }
 }
 

@@ -17,6 +17,8 @@ public class DragDrop : MonoBehaviour
     public Traits trait;
     public bool isPaused = false; //New line
 
+
+    public Traits size;
     void Start()
     {
         resetPosition = this.transform.localPosition;
@@ -42,23 +44,22 @@ public class DragDrop : MonoBehaviour
 
     public void OnMouseDrag()
     {
-        isDragging = true;
-
-        // Detecting if the item is within the box 
-
-        // if (Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 1.5f &&
-        //     Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 1.5f)
+        if(gameObject.scene.name == "Gameplay"){
+            // If the egg stop moving if it encountered a filled basket, egg now draggable
+            if(GetComponent<Move>().doesMove == false)
+            {
+                isDragging = true;
+            }
+        }
+        // isDragging = true;
+        // if (!GetComponent<Move>().enabled)
         // {
-        //     Debug.Log("At the box");
-        //     correctForm.GetComponent<SpriteRenderer>().color = hover;
-        //     finished = true;
-            
+        //  return;
         // }
-        // else
+        // if(GetComponent<Move>().doesMove == false)
         // {
-        //     Debug.Log("Not in the box");
-        //     correctForm.GetComponent<SpriteRenderer>().color = originalColor;
-        //     finished = false; 
+        //     GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        //     GetComponent<Move>().enabled = false;
         // }
     }
 
