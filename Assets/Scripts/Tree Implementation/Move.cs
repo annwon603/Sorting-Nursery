@@ -13,6 +13,8 @@ public class Move : MonoBehaviour
 
     public bool changedNode = false;
 
+    public bool doesMove = true;
+
     // Update is called once per frame
     void Update()
     {

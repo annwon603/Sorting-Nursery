@@ -49,5 +49,10 @@ public class LeverSwitch : MonoBehaviour
             other.GetComponent<Move>().doesTurn = false;
             Debug.Log("Egg Not Switching");
         }
+
+        if(other.CompareTag("Egg") && isSwitched == false && other.gameObject.GetComponent<Move>().changedNode)
+        {
+            other.GetComponent<Move>().doesTurn = false;
+        }
     }
 }
