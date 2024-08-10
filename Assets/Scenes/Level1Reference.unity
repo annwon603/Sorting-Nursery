@@ -2368,13 +2368,12 @@ MonoBehaviour:
   - {fileID: 534809588}
   - {fileID: 1108964633}
   AllEggs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  AllEggsInLevel: []
+  - {fileID: 6924313841885012664, guid: 5128e3c58bae5114da4cf985b3ddb2d3, type: 3}
+  - {fileID: 2511201587998364688, guid: 0b69d20c1f310e444be6ee823c3aec74, type: 3}
+  - {fileID: 1218262835370548025, guid: e11b130e133b4fc4cbdcbe58e2a495fa, type: 3}
+  - {fileID: 339273262146405823, guid: 592b7adccf9bbc44ca63146dc33cee80, type: 3}
+  - {fileID: 2549279113051980009, guid: 3fba1e601cbbea447881ebbbb62f4655, type: 3}
+  - {fileID: 4928586347859310158, guid: ae419311fcefaaa47bc5b570a0bed64a, type: 3}
 --- !u!210 &915505662
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -2425,8 +2424,13 @@ MonoBehaviour:
   - {fileID: 1775415559}
   - {fileID: 534809588}
   - {fileID: 1108964633}
-  AllEggs: []
-  AllEggsInLevel: []
+  AllEggs:
+  - {fileID: 6924313841885012664, guid: 5128e3c58bae5114da4cf985b3ddb2d3, type: 3}
+  - {fileID: 2511201587998364688, guid: 0b69d20c1f310e444be6ee823c3aec74, type: 3}
+  - {fileID: 1218262835370548025, guid: e11b130e133b4fc4cbdcbe58e2a495fa, type: 3}
+  - {fileID: 339273262146405823, guid: 592b7adccf9bbc44ca63146dc33cee80, type: 3}
+  - {fileID: 2549279113051980009, guid: 3fba1e601cbbea447881ebbbb62f4655, type: 3}
+  - {fileID: 4928586347859310158, guid: ae419311fcefaaa47bc5b570a0bed64a, type: 3}
 --- !u!114 &915505666
 MonoBehaviour:
   m_ObjectHideFlags: 0
