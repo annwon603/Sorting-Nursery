@@ -6,7 +6,7 @@ using TMPro;
 
 public class ScoreCounter : MonoBehaviour
 {
-    public static ScoreCounter instance;
+    public static ScoreCounter instance; 
     public TextMeshProUGUI scoreText;
     public int scoreValue = 0;
     

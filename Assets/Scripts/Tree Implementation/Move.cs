@@ -16,7 +16,7 @@ public class Move : MonoBehaviour
     public bool doesMove = true;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(doesMove == true)
         {
@@ -59,11 +59,11 @@ public class Move : MonoBehaviour
 
     public void Movement()
     {
-        if(doesTurn == false)
+        if(doesTurn == true)
         {
-            target = currNode.GetComponent<Nodes>().left.getPosition();
-        } else {
             target = currNode.GetComponent<Nodes>().right.getPosition();
+        } else {
+            target = currNode.GetComponent<Nodes>().left.getPosition();
         }
 
         if(GetComponent<DragDrop>().finished == false)

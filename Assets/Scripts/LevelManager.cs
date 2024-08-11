@@ -10,6 +10,8 @@ public class LevelManager : MonoBehaviour
     public GameObject scorePanel;
 
     public GameObject QuotaPanel;
+
+    public DialougeHover dialougeHover;
   
    void Update()
    {
@@ -37,14 +39,25 @@ public class LevelManager : MonoBehaviour
             // FindObjectOfType<DialogueManager>().showButton();
         }
 
-        if(FindObjectOfType<BasketPage>() != null && FindObjectOfType<DialogueManager>().counter == 7)
+        if(FindObjectOfType<DialogueManager>().counter == 7)
         {
-            FindObjectOfType<DialogueManager>().showButton();
+            if(FindObjectOfType<BasketPage>() != null)
+            {
+                FindObjectOfType<DialogueManager>().showButton();
+            }
+            
+            dialougeHover.canDisappear = true;
+
+        }
+        
+        if(FindObjectOfType<DialogueManager>().counter > 7){
+            dialougeHover.canDisappear = false;
         }
 
         if(FindObjectOfType<DialogueManager>().counter == 9 && GameObject.FindWithTag("Egg") == null)
         {
             FindObjectOfType<DialogueManager>().showButton();
+
         }
 
         if(FindObjectOfType<DialogueManager>().counter == 10)
@@ -100,7 +113,7 @@ public class LevelManager : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene("TutorialRetry");
+        SceneManager.LoadScene("Gameplay");
         
     }
 

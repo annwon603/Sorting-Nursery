@@ -44,7 +44,7 @@ public class EggManager : MonoBehaviour
         {
             Instantiate(Eggs[Random.Range(0, Eggs.Length)], root.transform.position, Quaternion.identity);
             counter++;
-            Debug.Log("Egg Spawn "+ counter + " times");
+            //Debug.Log("Egg Spawn "+ counter + " times");
         }
         else
         {

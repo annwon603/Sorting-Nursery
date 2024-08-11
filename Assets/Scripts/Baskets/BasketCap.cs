@@ -24,6 +24,14 @@ public class BasketCap : MonoBehaviour
             isFull = true;
         }
 
+        // Checks if there is missing eggs aka check if any egg went into the incubator
+        for(int i = listOfEggs.Count - 1; i >= 0; i--){
+            if(listOfEggs[i] == null){
+                listOfEggs.RemoveAt(i);
+            }
+        }
+
+        counter = listOfEggs.Count;
         
     }
 

@@ -84,6 +84,7 @@ public class IncubatorSlot : MonoBehaviour
             }else{
                Debug.Log("In the wrong box");
          }
+         Destroy(egg.eggPrefab);
          egg.ResetData();
          //egg.gameObject.SetActive(false);
       }

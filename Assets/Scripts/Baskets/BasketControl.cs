@@ -12,15 +12,15 @@ public class BasketControl : MonoBehaviour
     bool isDeleted = false;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        inventorySize = transform.parent.gameObject.GetComponent<BasketCap>().eggCapacity;  
-    }
+    // void Start()
+    // {
+    //     inventorySize = transform.parent.gameObject.GetComponent<BasketCap>().eggCapacity;  
+    // }
 
     // Update is called once per frame
     void Update()
     {
-        
+        inventorySize = transform.parent.gameObject.GetComponent<BasketCap>().counter;
     }
 
     void OnMouseDown()
