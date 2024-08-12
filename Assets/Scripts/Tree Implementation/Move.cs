@@ -20,6 +20,7 @@ public class Move : MonoBehaviour
     {
         if(doesMove == true)
         {
+            //StartCoroutine(MovementDelay());
             Movement();
         }
 
@@ -57,6 +58,21 @@ public class Move : MonoBehaviour
         Debug.Log("Stop Moving");
     }
 
+    // IEnumerator MovementDelay()
+    // {
+    //     if(doesTurn == true)
+    //     {
+    //         target = currNode.GetComponent<Nodes>().right.getPosition();
+    //     } else {
+    //         target = currNode.GetComponent<Nodes>().left.getPosition();
+    //     }
+    //     yield return null;
+
+    //     if(GetComponent<DragDrop>().finished == false)
+    //     {
+    //         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+    //     }
+    // }
     public void Movement()
     {
         if(doesTurn == true)

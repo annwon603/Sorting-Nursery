@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BasketCap : MonoBehaviour
@@ -44,7 +45,6 @@ public class BasketCap : MonoBehaviour
             {
                 counter++;
                 listOfEggs.Add(other.gameObject);
-
                 Debug.Log("There are currently " + counter + " eggs in this basket");
             }
             // Check if the basket is full
@@ -59,6 +59,18 @@ public class BasketCap : MonoBehaviour
                     GameObject.Find("Condition").GetComponent<DialogueTrigger>().enabled = true;
                 }
                 
+            }
+        }
+    }
+
+    //if the egg did stop and waiting to be dropped into the basket 
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.CompareTag("Egg"))
+        {
+            if(other.isTrigger && counter < eggCapacity)
+            {
+                other.gameObject.GetComponent<DragDrop>().finished = true;
             }
         }
     }

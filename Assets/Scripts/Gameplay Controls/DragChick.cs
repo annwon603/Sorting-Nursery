@@ -9,6 +9,7 @@ public class DragChick : MonoBehaviour
     public delegate void DragEndedDelegate(Transform transform);
     public DragEndedDelegate dragEndedDelegate;
     public bool isPaused = false; //New line
+    
 
     void Start()
     {
@@ -34,7 +35,9 @@ public class DragChick : MonoBehaviour
     public void OnMouseUp()
     {
         isDragging = false;
-        dragEndedDelegate(this.transform);
+        if(isPaused == false){
+            dragEndedDelegate(this.transform);
+        }
         GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Default");
     }
 

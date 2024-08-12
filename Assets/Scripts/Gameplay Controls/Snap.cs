@@ -8,6 +8,8 @@ public class Snap : MonoBehaviour
     public List<Transform> snapPoints;  //Places to snap the chicken in place
     public List<DragChick> dragScripts; //Scripts that are attached to the chicken object 
     public float snapRange = 0.5f;
+
+    public bool isSnapped = false;
     void Start()
     {
         // Make a reference to the delegate in the DragChick script and assign it to SnapObject function
@@ -27,6 +29,7 @@ public class Snap : MonoBehaviour
             if (Vector2.Distance(point.position,obj.position) <= snapRange)
             {
                 obj.position = point.position;
+                isSnapped = true;
                 
                 return;
             }

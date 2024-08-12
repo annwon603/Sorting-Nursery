@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
 
     [SerializeField]
-    private GameObject nextButton;
+    public GameObject nextButton;
 
     public GameObject retryButton;
 

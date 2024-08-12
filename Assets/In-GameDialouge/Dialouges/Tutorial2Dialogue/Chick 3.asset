@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67bfed6ea10ffc42af0f264bed75396, type: 3}
-  m_Name: Brown
+  m_Script: {fileID: 11500000, guid: 42adfa133f72c10498e332d11d848bad, type: 3}
+  m_Name: Chick 3
   m_EditorClassIdentifier: 
-  traitSet: PurpleBrown
-  isTraitActive: 0
+  dialouge: We were initially worried about a non-native species running loose, but
+    the chickens seem to prefer working jobs.
+  needTaskComplete: 0
