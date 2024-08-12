@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67bfed6ea10ffc42af0f264bed75396, type: 3}
   m_Name: Brown
   m_EditorClassIdentifier: 
-  traitSet: WhiteBrown
+  traitSet: PurpleBrown
   isTraitActive: 0

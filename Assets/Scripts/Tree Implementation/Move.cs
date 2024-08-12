@@ -13,20 +13,15 @@ public class Move : MonoBehaviour
 
     public bool changedNode = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(doesTurn == false)
-        {
-            target = currNode.GetComponent<Nodes>().left.getPosition();
-        } else {
-            target = currNode.GetComponent<Nodes>().right.getPosition();
-        }
+    public bool doesMove = true;
 
-        
-        if(GetComponent<DragDrop>().finished == false)
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if(doesMove == true)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            //StartCoroutine(MovementDelay());
+            Movement();
         }
 
 
@@ -39,7 +34,7 @@ public class Move : MonoBehaviour
             Debug.Log("Tranvesed at " + other.gameObject.name);
 
             //If the currentNode doesn't have any children, that means it reached to the basket
-            if(currNode.GetComponent<Nodes>().a == null && currNode.GetComponent<Nodes>().b == null)
+            if(currNode.GetComponent<Nodes>().a == null && currNode.GetComponent<Nodes>().b == null && currNode.GetComponent<BasketCap>().isFull == false)
             {
                 GetComponent<DragDrop>().finished = true;
                 Debug.Log("Reached Basket");
@@ -54,6 +49,43 @@ public class Move : MonoBehaviour
     {
         changedNode = false;
         //Debug.Log("ChangedNode " + changedNode);
+    }
+
+    public void StopMovement()
+    {
+        doesMove = false;
+
+        Debug.Log("Stop Moving");
+    }
+
+    // IEnumerator MovementDelay()
+    // {
+    //     if(doesTurn == true)
+    //     {
+    //         target = currNode.GetComponent<Nodes>().right.getPosition();
+    //     } else {
+    //         target = currNode.GetComponent<Nodes>().left.getPosition();
+    //     }
+    //     yield return null;
+
+    //     if(GetComponent<DragDrop>().finished == false)
+    //     {
+    //         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+    //     }
+    // }
+    public void Movement()
+    {
+        if(doesTurn == true)
+        {
+            target = currNode.GetComponent<Nodes>().right.getPosition();
+        } else {
+            target = currNode.GetComponent<Nodes>().left.getPosition();
+        }
+
+        if(GetComponent<DragDrop>().finished == false)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        }
     }
 }
 

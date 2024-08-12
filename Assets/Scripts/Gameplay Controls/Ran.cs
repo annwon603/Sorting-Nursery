@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class Ran : MonoBehaviour
 {
-    [SerializeField] private float ran;             // Store random integer
+    public enum TraitType  //Type of trait catergory the chicken needs to check for
+    {
+        Colors,   // 0
+        Patterns, // 1
+        Sizes,    // 2
+        Texture   // 3
+    }  
+
+    public TraitType traitType; 
+    [SerializeField] private float ranDom;             // Store random integer
     [SerializeField] private bool doesTurn = false; // Decides if chicken should move egg
 
     public Traits ChickTrait;                       // The Trait it was assigned
@@ -20,17 +29,19 @@ public class Ran : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
+        
         //If it detects an Egg that reached the node the chicken is currently at
-        if((other.gameObject.tag == "Egg") && other.gameObject.GetComponent<Move>().changedNode){
+        if(other.gameObject.tag == "Egg"){
             
-            ran = Random.value * 100;                
-            Debug.Log(gameObject.name + " Random Value: " + ran);
+            ranDom = Random.value * 100;                
+            Debug.Log(gameObject.name + " Random Value: " + ranDom);
             
-            bool ranBool = ProbabilityCheck(ran);
+            bool ranBool = ProbabilityCheck(ranDom);
             Debug.Log(gameObject.name + " Is Random: " + ranBool);
 
             DragDrop egg = other.gameObject.GetComponent<DragDrop>();
-            bool doesMatch = traitCheck(egg.trait.isTraitActive, egg.trait.traitSet);
+            bool doesMatch = traitCheck2(traitType,egg);
+            //bool doesMatch = traitCheck(egg.trait.isTraitActive, egg.trait.traitSet);
             Debug.Log(gameObject.name + " does match: " + doesMatch);
 
             if(doesMatch ^ ranBool == true){
@@ -53,6 +64,35 @@ public class Ran : MonoBehaviour
         int probablity = (int)adjustProp * 100;
         bool check = ranVal <= adjustProp;
         return check; 
+    }
+
+
+    // Determines which trait of the egg to check for corresponding to chicken trait category
+    public bool traitCheck2(TraitType traitType, DragDrop egg)
+    {
+        Traits eggTrait = null;
+        switch(traitType)
+        {
+            case TraitType.Colors:
+                eggTrait = egg.color;
+                break;
+            case TraitType.Sizes:
+                eggTrait = egg.size;
+                break;
+            case TraitType.Patterns:
+                eggTrait = egg.pattern;
+                break;
+            case TraitType.Texture:
+                eggTrait = egg.texture;
+                break;
+            default:
+                Debug.Log("traitCheck2 failed");
+                break;
+        }
+
+        bool match = traitCheck(eggTrait.isTraitActive, eggTrait.traitSet);
+
+        return match;
     }
 
     //First it checks if the boolean value "isTraitActive" of both chicken
