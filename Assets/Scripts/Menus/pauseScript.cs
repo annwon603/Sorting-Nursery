@@ -11,8 +11,6 @@ public class pauseScript : MonoBehaviour {
     public GameObject PauseMenu;
     public GameObject PauseButton;
     public DragChick[] AllChickens;
-    public GameObject[] AllEggs;
-    public DragDrop[] AllEggsInLevel;
 
     // Start is called before the first frame update
     void Start() 
@@ -41,19 +39,20 @@ public class pauseScript : MonoBehaviour {
         PauseButton.SetActive(true);
         Time.timeScale = 1f;
         gamePaused = false;
+        GameObject[] AllEggs = GameObject.FindGameObjectsWithTag("Egg");
 
         foreach (DragChick chicken in AllChickens) {
             chicken.isPaused = false;
         }
-        if (AllEggs == null) {
-            AllEggs = GameObject.FindGameObjectsWithTag("Egg");
-        }
-        Debug.Log("Game is resumed");
-        foreach (GameObject egg in AllEggs) {
-            Debug.Log("Layer eggs");
-            foreach (DragDrop eggInLevel in AllEggsInLevel) {
-                Debug.Log("Eggs is not paused");
-                eggInLevel.isPaused = false;
+        if (AllEggs != null) {
+            Debug.Log("Game is curr paused");
+            
+            // Loop through each egg and set isPaused to false
+            foreach (GameObject egg in AllEggs) {
+                DragDrop dragDrop = egg.GetComponent<DragDrop>();
+                if (dragDrop != null) {
+                    dragDrop.isPaused = false;  // Or true if the game is paused
+                }
             }
         }
 
@@ -73,17 +72,21 @@ public class pauseScript : MonoBehaviour {
     {
         PauseMenu.SetActive(true);
         PauseButton.SetActive(false);
+        GameObject[] AllEggs = GameObject.FindGameObjectsWithTag("Egg");
         
         foreach (DragChick chicken in AllChickens)
         {
             chicken.isPaused = true;
         }
-        if (AllEggs == null) {
-            AllEggs = GameObject.FindGameObjectsWithTag("Egg");
-        }
-        foreach (GameObject egg in AllEggs) {
-            foreach (DragDrop eggInLevel in AllEggsInLevel) {
-                eggInLevel.isPaused = true;
+        if (AllEggs != null) {
+            Debug.Log("Game is resumed");
+            
+            // Loop through each egg and set isPaused to false
+            foreach (GameObject egg in AllEggs) {
+                DragDrop dragDrop = egg.GetComponent<DragDrop>();
+                if (dragDrop != null) {
+                    dragDrop.isPaused = true;  // Or true if the game is paused
+                }
             }
         }
 
