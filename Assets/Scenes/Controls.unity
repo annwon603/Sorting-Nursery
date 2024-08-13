@@ -724,7 +724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press "P" on your keyboard to pause the game, or use the upper right hand
+  m_text: 'Press "P" on your keyboard to pause the game, or use the lower right hand
     pause button.
 
 

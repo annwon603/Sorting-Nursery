@@ -1447,6 +1447,7 @@ GameObject:
   - component: {fileID: 915505658}
   - component: {fileID: 915505657}
   - component: {fileID: 915505662}
+  - component: {fileID: 915505663}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1563,6 +1564,18 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &915505663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915505656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0483e1a063aadb14190c8785f7a8dd75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &995942070
 GameObject:
   m_ObjectHideFlags: 0
@@ -5308,7 +5321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4931267468891885097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5881,9 +5894,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 888069486}
-        m_TargetAssemblyTypeName: Tutorial2LevelManager, Assembly-CSharp
-        m_MethodName: NextLevel
+      - m_Target: {fileID: 915505663}
+        m_TargetAssemblyTypeName: SceneSwap, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
