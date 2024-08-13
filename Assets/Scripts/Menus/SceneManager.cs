@@ -12,12 +12,12 @@ public class SceneSwap : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("SampleMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void Controls()
