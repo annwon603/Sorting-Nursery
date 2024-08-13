@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42adfa133f72c10498e332d11d848bad, type: 3}
-  m_Name: Chick 7
+  m_Name: Lvl1_0
   m_EditorClassIdentifier: 
-  dialouge: 'Great! Now you''re ready. This chicken will help you automatically sort
-    the eggs based on the size! The basket capacity now increased to hold up to 10
-    eggs. '
+  dialouge: '<size=90%>This time, there will be some more types of eggs for you to
+    sort! Think about what patterns, sizes, and colors seem to go together when you
+    get your accuracy score. '
   needTaskComplete: 0
