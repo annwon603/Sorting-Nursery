@@ -38,6 +38,11 @@ public class Tutorial2LevelManager : MonoBehaviour
             dialogueManager.showButton();
         }
 
+        if(dialogueManager.counter == 8)
+        {
+            start.SetActive(true);
+        }
+
         if(isStart == true)
         {
             start.SetActive(false);
@@ -68,9 +73,14 @@ public class Tutorial2LevelManager : MonoBehaviour
     void TaskComplete()
     {
         GameObject.Find("ReadyText").GetComponent<DialogueTrigger>().enabled = true;
-        start.SetActive(true);
+        //dialogueManager.endDialogueDelegate = aboutStart;
 
     }
+
+    // void aboutStart()
+    // {
+    //     start.SetActive(true);
+    // }
 
     void CheckScore()
     {

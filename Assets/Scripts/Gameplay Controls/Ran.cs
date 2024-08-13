@@ -14,7 +14,7 @@ public class Ran : MonoBehaviour
 
     public TraitType traitType; 
     [SerializeField] private float ranDom;             // Store random integer
-    [SerializeField] private bool doesTurn = false; // Decides if chicken should move egg
+    public bool doesTurn = false; // Decides if chicken should move egg
 
     public Traits ChickTrait;                       // The Trait it was assigned
 
