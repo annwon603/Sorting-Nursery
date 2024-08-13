@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42adfa133f72c10498e332d11d848bad, type: 3}
   m_Name: Lvl1OptQuota
   m_EditorClassIdentifier: 
-  dialouge: Sort three metallic eggs correctly
+  dialouge: 'Sort three metallic eggs correctly (Optional)
+
+'
   needTaskComplete: 0

@@ -3972,6 +3972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 7847158133443449338, guid: 3f467ea7f19bcfe47a6e210946d87495, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7917769068084658426, guid: 3f467ea7f19bcfe47a6e210946d87495, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4556,7 +4560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6824079773105967807, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 7.7344055
+      value: 7.734436
       objectReference: {fileID: 0}
     - target: {fileID: 6824079773105967807, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

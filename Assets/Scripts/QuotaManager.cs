@@ -10,6 +10,8 @@ public class QuotaManager : MonoBehaviour
 
     public TextMeshProUGUI optQuotaText;
 
+    public GameObject quotaPanel;
+
     void Start()
     {
         

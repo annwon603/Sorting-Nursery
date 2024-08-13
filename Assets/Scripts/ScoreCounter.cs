@@ -6,7 +6,8 @@ using TMPro;
 
 public class ScoreCounter : MonoBehaviour
 {
-    public static ScoreCounter instance; 
+    public static ScoreCounter instance; // Total score in general
+
     public TextMeshProUGUI scoreText;
     public int scoreValue = 0;
     
