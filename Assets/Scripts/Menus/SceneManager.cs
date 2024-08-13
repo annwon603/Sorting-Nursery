@@ -40,6 +40,16 @@ public class SceneSwap : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
+    public void Tutorial1()
+    {
+        SceneManager.LoadScene("Gameplay");
+    }
+
+    public void Tutorial2()
+    {
+        SceneManager.LoadScene("Tutorial2");
+    }
+
     public void Level1()
     {
         SceneManager.LoadScene("Level1");

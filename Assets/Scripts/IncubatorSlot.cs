@@ -16,7 +16,7 @@ public class IncubatorSlot : MonoBehaviour
    private bool z_Intereacted = false; //Check if egg is over the incubator
 
    public Traits IncuTrait;
-   public int counter = 0; //New line
+   public int counter = 0; 
 
    private void Start()
    {
