@@ -7,17 +7,15 @@ using TMPro;
 public class objectivesScript : MonoBehaviour
 {
     public GameObject ObjectivesMenu;
-    //public GameObject ObjectivesPanel;
-    //public GameObject ShowObjectivesButton;
     public GameObject PauseButton;
     public DragChick[] AllChickens;
+    public GameObject TextBox;
+    public GameObject QuotaPanel;
 
     // Start is called before the first frame update
     void Start()
     {
         ObjectivesMenu.SetActive(true);
-        //ObjectivesPanel.SetActive(false);
-        //ShowObjectivesButton.SetActive(false);
         PauseButton.SetActive(false);
         //GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = false;
         //GameObject[] AllEggs = GameObject.FindGameObjectsWithTag("Egg");
@@ -65,6 +63,8 @@ public class objectivesScript : MonoBehaviour
         Time.timeScale = 1f;
         GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = true;
         PauseButton.SetActive(true);
+        TextBox.SetActive(true);
+        QuotaPanel.SetActive(true);
         GameObject[] AllEggs = GameObject.FindGameObjectsWithTag("Egg");
 
         foreach (DragChick chicken in AllChickens) {
@@ -83,20 +83,15 @@ public class objectivesScript : MonoBehaviour
         }
 
         ObjectivesMenu.SetActive(false);
-        //ShowObjectivesButton.SetActive(true);
     }
 
     public void ShowObjectivesPanel()
     {
-        //ShowObjectivesButton.SetActive(false);
-        //ObjectivesPanel.SetActive(true);
         ObjectivesMenu.SetActive(false);
     }
 
     public void CloseObjectivesPanel()
     {
-        //ObjectivesPanel.SetActive(false);
-        //ShowObjectivesButton.SetActive(true);
         ObjectivesMenu.SetActive(false);
         //PauseButton.SetActive(true);
     }

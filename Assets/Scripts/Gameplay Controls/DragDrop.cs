@@ -65,6 +65,11 @@ public class DragDrop : MonoBehaviour
         //     GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         //     GetComponent<Move>().enabled = false;
         // }
+        // if(GetComponent<Move>().doesMove == false)
+            // {
+            //     isDragging = true;
+            // }
+        isDragging = true;
     }
 
     public void OnMouseUp()
