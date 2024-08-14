@@ -12,6 +12,8 @@ public class LvlManager : MonoBehaviour
     public QuotaManager quotaManager;
     public EggManager eggManager;
 
+    public GameObject scorePanel;
+
     public GameObject beginLevel;
 
     //public GameObject ObjectiveManager;
@@ -42,10 +44,11 @@ public class LvlManager : MonoBehaviour
             quotaManager.quotaPanel.SetActive(true);
             // quotaManager.quotaPanel.GetComponent<QuotaTrigger>().enabled = true;
             eggManager.enabled = true;
-            CheckIfEggGone();
+            StartCoroutine(CheckIfEggGone());
            
         }else if(Global.CurrentGameState == Global.GameState.Score)
         {
+            scorePanel.SetActive(true);
             Debug.Log("You finished");
         }
     }
@@ -61,6 +64,7 @@ public class LvlManager : MonoBehaviour
         if(GameObject.FindWithTag("Egg") == null)
         {
             Global.CurrentGameState = Global.GameState.Score;
+            Debug.Log("Eggs are gone");
         }
     }
 
