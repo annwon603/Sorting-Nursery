@@ -40,6 +40,13 @@ public class LvlManager : MonoBehaviour
         {
             dialogueManager.TextBox.SetActive(false);
             quotaManager.quotaPanel.SetActive(true);
+            // quotaManager.quotaPanel.GetComponent<QuotaTrigger>().enabled = true;
+            eggManager.enabled = true;
+            CheckIfEggGone();
+           
+        }else if(Global.CurrentGameState == Global.GameState.Score)
+        {
+            Debug.Log("You finished");
         }
     }
 
@@ -47,6 +54,17 @@ public class LvlManager : MonoBehaviour
     {
         beginLevel.SetActive(true);
     }
+
+    IEnumerator CheckIfEggGone()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if(GameObject.FindWithTag("Egg") == null)
+        {
+            Global.CurrentGameState = Global.GameState.Score;
+        }
+    }
+
+
 
 
 }

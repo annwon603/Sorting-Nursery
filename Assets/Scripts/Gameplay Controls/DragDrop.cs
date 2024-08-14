@@ -48,7 +48,7 @@ public class DragDrop : MonoBehaviour
 
     public void OnMouseDrag()
     {
-        if(gameObject.scene.name == "Gameplay" || gameObject.scene.name == "Tutorial2"){
+        if(gameObject.scene.name == "Gameplay" || gameObject.scene.name == "Tutorial2" ){
             // If the egg stop moving if it encountered a filled basket, egg now draggable
             if(GetComponent<Move>().doesMove == false)
             {
