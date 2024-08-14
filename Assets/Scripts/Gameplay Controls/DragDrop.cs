@@ -48,13 +48,14 @@ public class DragDrop : MonoBehaviour
 
     public void OnMouseDrag()
     {
-        if(gameObject.scene.name == "Gameplay" || gameObject.scene.name == "Tutorial2"){
-            // If the egg stop moving if it encountered a filled basket, egg now draggable
-            if(GetComponent<Move>().doesMove == false)
-            {
-                isDragging = true;
-            }
-        }
+        // if(gameObject.scene.name == "Gameplay" || gameObject.scene.name == "Tutorial2" || 
+        //     gameObject.scene.name == "Level1") {
+        //     // If the egg stop moving if it encountered a filled basket, egg now draggable
+        //     if(GetComponent<Move>().doesMove == false)
+        //     {
+        //         isDragging = true;
+        //     }
+        // }
         // isDragging = true;
         // if (!GetComponent<Move>().enabled)
         // {
@@ -65,6 +66,11 @@ public class DragDrop : MonoBehaviour
         //     GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         //     GetComponent<Move>().enabled = false;
         // }
+        // if(GetComponent<Move>().doesMove == false)
+            // {
+            //     isDragging = true;
+            // }
+        isDragging = true;
     }
 
     public void OnMouseUp()
