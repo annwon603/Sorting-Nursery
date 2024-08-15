@@ -13,9 +13,19 @@ public class BasketPage : MonoBehaviour
     [SerializeField]
     public List<UIBasketItem> listOfBasketItems = new List<UIBasketItem>();
 
+    [SerializeField]
+    private MouseFollower mouseFollower;
+
+    public GameObject testEgg;
+
 
 
     //public UIBasketItem[] listOfBasketItems;
+    private void Awake()
+    {
+        Hide();
+        mouseFollower.Toggle(false);
+    }
 
 
     public void Update()
@@ -66,10 +76,8 @@ public class BasketPage : MonoBehaviour
         
         foreach (Transform child in contentPanel)
         {
-             Destroy(child.gameObject); // Destroy each child GameObject
+            Destroy(child.gameObject); // Destroy each child GameObject
         }
-
-        
 
         
         
@@ -78,11 +86,14 @@ public class BasketPage : MonoBehaviour
     private void HandleItemSelection(UIBasketItem obj)
     {
         Debug.Log(obj.name);
+        testEgg = obj.eggPrefab;
     }
 
     private void HandleBeginDrag(UIBasketItem obj)
     {
-
+        mouseFollower.Toggle(true);
+        testEgg = obj.eggPrefab;
+        mouseFollower.SetData(testEgg);
     }
 
     private void HandleSwap(UIBasketItem obj)
@@ -92,7 +103,7 @@ public class BasketPage : MonoBehaviour
 
     private void HandleEndDrag(UIBasketItem obj)
     {
-
+        mouseFollower.Toggle(false);
     }
 
 
@@ -107,4 +118,10 @@ public class BasketPage : MonoBehaviour
         gameObject.SetActive(false);
         ClearItem();
     }
+
+    public void ClearList()
+    {
+        listOfBasketItems.Clear();
+    }
+    
 }

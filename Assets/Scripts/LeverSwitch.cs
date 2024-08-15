@@ -5,34 +5,39 @@ using UnityEngine;
 public class LeverSwitch : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Sprite newSprite;
-    public Sprite oldSprite;
+    //public Sprite newSprite;
+    //public Sprite oldSprite;
     bool isSwitched = false;
 
     
 
     // Update is called once per frame
-    void Start()
-    {
-        oldSprite = GetComponent<SpriteRenderer>().sprite;
-    }
+    // void Start()
+    // {
+    //     oldSprite = GetComponent<SpriteRenderer>().sprite;
+    // }
 
-    void OnMouseDown()
-    {
-        Switch();
-        Debug.Log("Got Switched");
-    }
-    public void Switch()
-    {
-        if(!isSwitched)
-        {
-            GetComponent<SpriteRenderer>().sprite = newSprite;
-            isSwitched = true;
-        }else{
-            GetComponent<SpriteRenderer>().sprite = oldSprite;
-            isSwitched = false;
-        }
+    // void OnMouseDown()
+    // {
+    //     Switch();
+    //     Debug.Log("Got Switched");
+    // }
+    // public void Switch()
+    // {
+    //     if(!isSwitched)
+    //     {
+    //         GetComponent<SpriteRenderer>().sprite = newSprite;
+    //         isSwitched = true;
+    //     }else{
+    //         GetComponent<SpriteRenderer>().sprite = oldSprite;
+    //         isSwitched = false;
+    //     }
        
+    // }
+
+    void Update()
+    {
+        isSwitched = transform.parent.GetComponent<LeverSwitchSprite>().isSwitched;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
