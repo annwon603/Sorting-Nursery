@@ -26,15 +26,16 @@ public class BasketControl : MonoBehaviour
     void OnMouseDown()
     {
         if(canShow){
-            inventoryUI.Show();
             inventoryUI.InitBasketInventoryUI(inventorySize);
-            Convert();  
+            inventoryUI.Show();
+            StartCoroutine(Convert());
         }
     }
 
-    void Convert()
+    IEnumerator Convert()
     {
         isDeleted = checkIfNull();
+        yield return new WaitForSeconds(0.5f);
         if(isDeleted == false){
             inventoryUI.UpdateItem(transform.parent.gameObject.GetComponent<BasketCap>().listOfEggs);
         }

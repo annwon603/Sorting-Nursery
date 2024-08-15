@@ -16,8 +16,9 @@ public class BasketPage : MonoBehaviour
     [SerializeField]
     private MouseFollower mouseFollower;
 
-    public GameObject testEgg;
+    public GameObject testEgg ,testEgg2;
 
+    private int currentlyDraggedItemIndex = -1;
 
 
     //public UIBasketItem[] listOfBasketItems;
@@ -49,7 +50,7 @@ public class BasketPage : MonoBehaviour
             uiItem.OnItemBeginDrag += HandleBeginDrag;
             uiItem.OnItemDroppedOn += HandleSwap;
             uiItem.OnItemEndDrag += HandleEndDrag;
-            
+    
         }
     }
 
@@ -85,25 +86,50 @@ public class BasketPage : MonoBehaviour
 
     private void HandleItemSelection(UIBasketItem obj)
     {
-        Debug.Log(obj.name);
+        Debug.Log(obj.eggPrefab.name);
         testEgg = obj.eggPrefab;
+        testEgg2 = listOfBasketItems[1].eggPrefab;
+        
     }
 
     private void HandleBeginDrag(UIBasketItem obj)
     {
+        
+        int index = listOfBasketItems.IndexOf(obj);
+        if(index == -1)
+        {
+            return;
+        }
+        currentlyDraggedItemIndex = index;
+
         mouseFollower.Toggle(true);
-        testEgg = obj.eggPrefab;
-        mouseFollower.SetData(testEgg);
+        //testEgg = obj.eggPrefab;
+        mouseFollower.SetData(index == 0 ? testEgg : testEgg2);
+        //mouseFollower.SetData(testEgg);
     }
 
     private void HandleSwap(UIBasketItem obj)
     {
+        int index = listOfBasketItems.IndexOf(obj);
+        if (index == -1)
+        {
+            mouseFollower.Toggle(false);
+            currentlyDraggedItemIndex = -1;
+            return;
+        }
 
+        listOfBasketItems[currentlyDraggedItemIndex]
+            .SetData(index == 0 ? testEgg : testEgg2);
+        listOfBasketItems[index]
+            .SetData(currentlyDraggedItemIndex == 0 ? testEgg : testEgg2);
+        mouseFollower.Toggle(false);
+        currentlyDraggedItemIndex = -1;
+        Debug.Log("It swapped");
     }
 
     private void HandleEndDrag(UIBasketItem obj)
     {
-        mouseFollower.Toggle(false);
+        StartCoroutine(endDrag());
     }
 
 
@@ -111,6 +137,9 @@ public class BasketPage : MonoBehaviour
     public void Show()
     {
         gameObject.SetActive(true);
+
+//        listOfBasketItems[0].SetData(testEgg);
+
     }
 
     public void Hide()
@@ -122,6 +151,12 @@ public class BasketPage : MonoBehaviour
     public void ClearList()
     {
         listOfBasketItems.Clear();
+    }
+
+    IEnumerator endDrag()
+    {
+        yield return new WaitForSeconds(1.0f);
+        mouseFollower.Toggle(false);
     }
     
 }

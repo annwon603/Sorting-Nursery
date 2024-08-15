@@ -73,6 +73,8 @@ public class IncubatorSlot : MonoBehaviour
       }
    }
 
+   
+
    //For just comparing the Egg through UI
    public void Compare()
    {
