@@ -11,6 +11,7 @@ public class resultsScript : MonoBehaviour
     public TMP_Text TotalEggs;
     public TMP_Text AccuracyNumber;
     //private IncubatorManager eggsDroppedInIncubator;
+    [SerializeField]
     private EggManager eggsInLevel;
     public IncubatorSlot[] listOfIncubators;
 
@@ -47,14 +48,26 @@ public class resultsScript : MonoBehaviour
         foreach (IncubatorSlot incubator in listOfIncubators)
         {
             totalEggs += incubator.counter;
+            
         }
+        // Debug.Log("Stats: " + listOfIncubators[0].name + ": " + listOfIncubators[0].incubatorCorrect + "correct eggs");
+        // Debug.Log("Stats: " + listOfIncubators[1].name + ": " + listOfIncubators[1].incubatorCorrect + "correct eggs");
+        // Debug.Log("Stats: " + listOfIncubators[0].name + ": " + listOfIncubators[0].incubatorIncorrect + "incorrect eggs");
+        // Debug.Log("Stats: " + listOfIncubators[1].name + ": " + listOfIncubators[1].incubatorIncorrect + "incorrect eggs");
+        
         Debug.Log("TOTAL NUMBER OF EGGS: " + totalEggs);
-        // //Debug.Log("There are " + Eggs.Length + " in level"); //Test
-        // Debug.Log("There are aaaaaa" + eggsInLevel.Eggs.Length + " in level");
 
-        // if (totalEggs == 10) { //Note: this is just a placeholder. Above doesn't work
-        //     ShowScorePanel();
-        // }
+        if (totalEggs == eggsInLevel.Eggs.Length) {
+            //ShowScorePanel();
+            AYes.text = listOfIncubators[0].incubatorCorrect.ToString();
+            BYes.text = listOfIncubators[1].incubatorCorrect.ToString();
+            ANo.text = listOfIncubators[0].incubatorIncorrect.ToString();
+            BNo.text = listOfIncubators[1].incubatorIncorrect.ToString();
+            Debug.Log("Status AYes " + AYes.text);
+            Debug.Log("Status BYes " + BYes.text);
+            Debug.Log("Status ANo " + ANo.text);
+            Debug.Log("Status BNo " + BNo.text);
+        } 
     }
 
     public void ShowScorePanel() {
