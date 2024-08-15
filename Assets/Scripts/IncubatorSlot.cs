@@ -16,7 +16,13 @@ public class IncubatorSlot : MonoBehaviour
    private bool z_Intereacted = false; //Check if egg is over the incubator
 
    public Traits IncuTrait;
-   public int counter = 0; 
+   public int counter = 0;
+   public int incubatorACorrect = 0; //Added line (AL)
+   public int incubatorAIncorrect = 0; //AL
+   public int incubatorBCorrect = 0; //AL
+   public int incubatorBIncorrect = 0; //AL
+   public GameObject box;
+   public GameObject box2;
 
    private void Start()
    {
@@ -57,9 +63,24 @@ public class IncubatorSlot : MonoBehaviour
             if(doesMatch == true){
                Debug.Log("In the right box");
                ScoreCounter.instance.IncreaseScore();
-
+               //New code
+               if (other.GetComponent<Collider>().name == "box") {
+                  incubatorACorrect++;
+               }
+               if (other.GetComponent<Collider>().name == "box 2") {
+                  incubatorBCorrect++;
+               }
+               //End of new code
             }else{
                Debug.Log("In the wrong box");
+               //New code
+               if (other.GetComponent<Collider>().name == "box") {
+                  incubatorAIncorrect++;
+               }
+               if (other.GetComponent<Collider>().name == "box 2") {
+                  incubatorBIncorrect++;
+               }
+               //End of new code
             }
 
             other.gameObject.SetActive(false);

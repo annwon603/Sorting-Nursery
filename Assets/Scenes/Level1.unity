@@ -523,6 +523,12 @@ MonoBehaviour:
     maxNormalAngle: 0
   IncuTrait: {fileID: 11400000, guid: e19b9edbc79425d4d9e80b60935d44a7, type: 2}
   counter: 0
+  incubatorACorrect: 0
+  incubatorAIncorrect: 0
+  incubatorBCorrect: 0
+  incubatorBIncorrect: 0
+  box: {fileID: 0}
+  box2: {fileID: 0}
 --- !u!212 &62289888
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2407,6 +2413,12 @@ MonoBehaviour:
     maxNormalAngle: 0
   IncuTrait: {fileID: 11400000, guid: 94ee6eb7543b3464a817b3a365e05f1c, type: 2}
   counter: 0
+  incubatorACorrect: 0
+  incubatorAIncorrect: 0
+  incubatorBCorrect: 0
+  incubatorBIncorrect: 0
+  box: {fileID: 1392116252}
+  box2: {fileID: 62289884}
 --- !u!212 &1392116254
 SpriteRenderer:
   m_ObjectHideFlags: 0
