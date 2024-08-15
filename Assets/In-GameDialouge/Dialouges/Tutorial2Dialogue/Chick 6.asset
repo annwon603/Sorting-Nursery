@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42adfa133f72c10498e332d11d848bad, type: 3}
   m_Name: Chick 6
   m_EditorClassIdentifier: 
-  dialouge: 'Before we begin, please drag the chicken on top of the crate. '
+  dialouge: 'Before we begin, please drag the chicken on top of the stool. '
   needTaskComplete: 1

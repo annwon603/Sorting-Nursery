@@ -13,7 +13,9 @@ public class resultsScript : MonoBehaviour
     //private IncubatorManager eggsDroppedInIncubator;
     [SerializeField]
     private EggManager eggsInLevel;
-    public IncubatorSlot[] listOfIncubators;
+    public IncubatorSlot[] listOfIncubators; 
+
+    public int totalEggs = 0;
 
     public GameObject PauseButton;
     public GameObject TextBox;

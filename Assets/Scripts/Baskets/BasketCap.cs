@@ -43,8 +43,13 @@ public class BasketCap : MonoBehaviour
             // Check for trigger collision and if the basket is not full
             if (other.isTrigger && counter < eggCapacity)
             {
+                bool isunique = isUnique(other.gameObject);
+                Debug.Log(other.gameObject.GetInstanceID());
+                if (isunique){
+                    listOfEggs.Add(other.gameObject);
+                }
                 counter++;
-                listOfEggs.Add(other.gameObject);
+                other.GetComponent<DragDrop>().finished = true;
                 Debug.Log("There are currently " + counter + " eggs in this basket");
             }
             // Check if the basket is full
@@ -54,25 +59,71 @@ public class BasketCap : MonoBehaviour
                 // Get the Move component of the egg to have the egg to stop moving into the basket
                 Move moveComponent = other.gameObject.GetComponent<Move>();
                 moveComponent.StopMovement();
+                other.gameObject.GetComponent<DragDrop>().isWaiting = true;
+                other.gameObject.GetComponent<DragDrop>().resetPosition = other.transform.position;
                 if(gameObject.scene.name == "Gameplay")
                 {
                     GameObject.Find("Condition").GetComponent<DialogueTrigger>().enabled = true;
                 }
-                
             }
         }
     }
 
     //if the egg did stop and waiting to be dropped into the basket 
-    public void OnTriggerStay2D(Collider2D other)
+    public void OnCollisonStay2D(Collision2D other)
     {
-        if(other.CompareTag("Egg"))
+        if(other.gameObject.CompareTag("Egg") && other.gameObject.GetComponent<DragDrop>().isWaiting == true)
         {
-            if(other.isTrigger && counter < eggCapacity)
+            if(counter < eggCapacity)
             {
+                //other.gameObject.GetComponent<DragDrop>().finished = true;
+                Debug.Log("Egg that is waiting dropped in");
+                bool isunique = isUnique(other.gameObject);
+                Debug.Log(other.gameObject.GetInstanceID());
+                if (isunique){
+                    listOfEggs.Add(other.gameObject);
+                }
                 other.gameObject.GetComponent<DragDrop>().finished = true;
+                other.gameObject.GetComponent<DragDrop>().isWaiting = false;
+                counter++;
+                //counter++;
             }
         }
+    }
+
+    bool isUnique(GameObject egg)
+    {
+        //If the list doesn't have that egg yet
+        if(!listOfEggs.Contains(egg))
+        {
+            return true;
+        }
+
+        //If list does contain that egg type, need to check if the InstanceID is the same
+        if(listOfEggs.Contains(egg))
+        {
+            int id = egg.gameObject.GetInstanceID();
+            if(Resources.InstanceIDIsValid(id) == false)
+            {
+                return true;
+            }
+            foreach(var item in listOfEggs)
+            {
+                if(Resources.InstanceIDIsValid(item.GetInstanceID()) == false)
+                {
+                    return true;
+                }
+                if(item.gameObject.GetInstanceID() == id)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        Debug.Log("Invalid");
+        return false;
+
     }
 
     

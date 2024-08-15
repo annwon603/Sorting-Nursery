@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LvlManager : MonoBehaviour
 {
@@ -10,14 +11,16 @@ public class LvlManager : MonoBehaviour
     //public GameEvent testing;
     public DialogueManager dialogueManager;
     public QuotaManager quotaManager;
+
+    public ObjectiveManager objectiveManager;
     public EggManager eggManager;
+
+    public GameObject scorePanel;
 
     public GameObject beginLevel;
 
-    //public GameObject ObjectiveManager;
-
-
-
+    [SerializeField]
+    private string nextLevelName;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +43,14 @@ public class LvlManager : MonoBehaviour
         {
             dialogueManager.TextBox.SetActive(false);
             quotaManager.quotaPanel.SetActive(true);
+            // quotaManager.quotaPanel.GetComponent<QuotaTrigger>().enabled = true;
+            eggManager.enabled = true;
+            StartCoroutine(CheckIfEggGone());
+    
+        }else if(Global.CurrentGameState == Global.GameState.Score)
+        {
+            scorePanel.SetActive(true);
+            Debug.Log("You finished");
         }
     }
 
@@ -47,6 +58,29 @@ public class LvlManager : MonoBehaviour
     {
         beginLevel.SetActive(true);
     }
+
+    IEnumerator CheckIfEggGone()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if(GameObject.FindWithTag("Egg") == null)
+        {
+            Global.CurrentGameState = Global.GameState.Score;
+            Debug.Log("Eggs are gone");
+        }
+    }
+
+    IEnumerator CheckIfCompleteManObj()
+    {
+        yield return null;
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(nextLevelName);
+    }
+
+
+
 
 
 }

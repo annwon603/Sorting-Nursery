@@ -17,10 +17,8 @@ public class objectivesScript : MonoBehaviour
     {
         ObjectivesMenu.SetActive(true);
         PauseButton.SetActive(false);
-        TextBox.SetActive(false);
-        QuotaPanel.SetActive(false);
-        GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = false;
-        GameObject[] AllEggs = GameObject.FindGameObjectsWithTag("Egg");
+        //GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = false;
+        //GameObject[] AllEggs = GameObject.FindGameObjectsWithTag("Egg");
 
         foreach (DragChick chicken in AllChickens) {
             chicken.isPaused = true;
@@ -34,17 +32,17 @@ public class objectivesScript : MonoBehaviour
         //     }
         // }
 
-        if (AllEggs != null) {
-            Debug.Log("Game is curr paused");
+        // if (AllEggs != null) {
+        //     Debug.Log("Game is curr paused");
             
-            // Loop through each egg and set isPaused to false
-            foreach (GameObject egg in AllEggs) {
-                DragDrop dragDrop = egg.GetComponent<DragDrop>();
-                if (dragDrop != null) {
-                    dragDrop.isPaused = true;  // Or true if the game is paused
-                }
-            }
-        }
+        //     // Loop through each egg and set isPaused to false
+        //     foreach (GameObject egg in AllEggs) {
+        //         DragDrop dragDrop = egg.GetComponent<DragDrop>();
+        //         if (dragDrop != null) {
+        //             dragDrop.isPaused = true;  // Or true if the game is paused
+        //         }
+        //     }
+        // }
         ShowObjectivesMenu();
         Global.CurrentGameState = Global.GameState.ShowObjective;
     }
@@ -95,6 +93,6 @@ public class objectivesScript : MonoBehaviour
     public void CloseObjectivesPanel()
     {
         ObjectivesMenu.SetActive(false);
-        PauseButton.SetActive(true);
+        //PauseButton.SetActive(true);
     }
 }

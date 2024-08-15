@@ -21,6 +21,8 @@ public class EggManager : MonoBehaviour
         {
             egg.GetComponent<Move>().currNode = root; 
         }
+
+       
     }
 
     // Update is called once per frame

@@ -31,6 +31,8 @@ public class pauseScript : MonoBehaviour {
                 Resume();
             }
         }
+
+        
     }
 
     public void Resume()
@@ -44,7 +46,7 @@ public class pauseScript : MonoBehaviour {
         foreach (DragChick chicken in AllChickens) {
             chicken.isPaused = false;
         }
-        if (AllEggs != null) {
+        if (AllEggs != null && Global.CurrentGameState == Global.GameState.Gameplay) {
             Debug.Log("Game is curr paused");
             
             // Loop through each egg and set isPaused to false
