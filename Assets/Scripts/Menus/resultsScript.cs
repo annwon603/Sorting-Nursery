@@ -6,7 +6,7 @@ using TMPro;
 
 public class resultsScript : MonoBehaviour
 {
-    public GameObject ResultsMenu;
+    public GameObject ScorePanel;
     public TMP_Text EggsSortedCorrect;
     public TMP_Text TotalEggs;
     public TMP_Text AccuracyNumber;
@@ -14,10 +14,19 @@ public class resultsScript : MonoBehaviour
     private EggManager eggsInLevel;
     public IncubatorSlot[] listOfIncubators;
 
+    public GameObject PauseButton;
+    public GameObject TextBox;
+    public GameObject QuotaPanel;
+
+    public TMP_Text AYes;
+    public TMP_Text ANo;
+    public TMP_Text BYes;
+    public TMP_Text BNo;
+
     // Start is called before the first frame update
     void Start()
     {
-        ResultsMenu.SetActive(false);
+        ScorePanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,11 +48,20 @@ public class resultsScript : MonoBehaviour
         {
             totalEggs += incubator.counter;
         }
-        Debug.Log("TOTAL NUMBER OF EGGS: " + totalEggs); 
+        Debug.Log("TOTAL NUMBER OF EGGS: " + totalEggs);
+        // //Debug.Log("There are " + Eggs.Length + " in level"); //Test
+        // Debug.Log("There are aaaaaa" + eggsInLevel.Eggs.Length + " in level");
+
+        // if (totalEggs == 10) { //Note: this is just a placeholder. Above doesn't work
+        //     ShowScorePanel();
+        // }
     }
 
-    public void ShowResultsMenu() {
-        ResultsMenu.SetActive(true);
+    public void ShowScorePanel() {
+        ScorePanel.SetActive(true);
+        PauseButton.SetActive(false);
+        TextBox.SetActive(false);
+        QuotaPanel.SetActive(false);
         GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = false;
         Time.timeScale = 0f;
     }
