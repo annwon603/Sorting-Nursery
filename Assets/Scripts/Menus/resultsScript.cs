@@ -12,7 +12,9 @@ public class resultsScript : MonoBehaviour
     public TMP_Text AccuracyNumber;
     //private IncubatorManager eggsDroppedInIncubator;
     private EggManager eggsInLevel;
-    public IncubatorSlot[] listOfIncubators;
+    public IncubatorSlot[] listOfIncubators; 
+
+    public int totalEggs = 0;
 
     // Start is called before the first frame update
     void Start()

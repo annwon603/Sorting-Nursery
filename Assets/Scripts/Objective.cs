@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Objective 
 {
-    public Text manObj;
+    public Obj manObj;
 
-    public Text optObj;
+    public Obj optObj;
 }

@@ -12,6 +12,8 @@ public class ObjectiveManager : MonoBehaviour
 
     public GameObject objMenu;
 
+    Objective GetObjective;
+
     void Start()
     {
         
@@ -19,8 +21,18 @@ public class ObjectiveManager : MonoBehaviour
 
     public void SetObjective(Objective objective)
     {
-        manObjtext.text = objective.manObj.dialouge;
-        optObjtext.text = objective.optObj.dialouge;
+        manObjtext.text = objective.manObj.objText.dialouge;
+        optObjtext.text = objective.optObj.objText.dialouge;
+        this.GetObjective = objective;
     }
+
+    public Objective getObjective()
+    {
+        return this.GetObjective;
+    }
+
+
+
+
 
 }
