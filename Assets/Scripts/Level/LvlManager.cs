@@ -26,6 +26,7 @@ public class LvlManager : MonoBehaviour
     void Start()
     {
         //testing.Raise();
+        Global.CurrentGameState = Global.GameState.ShowObjective;
         dialogueManager.endDialogueDelegate = ShowStartButton;
 
     }
@@ -37,6 +38,7 @@ public class LvlManager : MonoBehaviour
         {
             dialogueManager.TextBox.SetActive(true);
             quotaManager.quotaPanel.SetActive(false);
+            Debug.Log("I'm in ShowObjective State");
             //beginLevel.SetActive(false);
 
         }else if(Global.CurrentGameState == Global.GameState.Gameplay)
@@ -44,6 +46,7 @@ public class LvlManager : MonoBehaviour
             dialogueManager.TextBox.SetActive(false);
             quotaManager.quotaPanel.SetActive(true);
             // quotaManager.quotaPanel.GetComponent<QuotaTrigger>().enabled = true;
+            Debug.Log("I'm in Gameplay State");
             eggManager.enabled = true;
             StartCoroutine(CheckIfEggGone());
     

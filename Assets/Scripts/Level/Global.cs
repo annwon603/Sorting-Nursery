@@ -17,7 +17,7 @@ public class Global : MonoBehaviour
     public static GameState CurrentGameState = GameState.ShowObjective;
     void Start()
     {
-        
+        CurrentGameState = GameState.ShowObjective;
     }
 
     // Update is called once per frame
