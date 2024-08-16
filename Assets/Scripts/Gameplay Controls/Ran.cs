@@ -101,6 +101,7 @@ public class Ran : MonoBehaviour
     {
         bool match = ((ChickTrait.isTraitActive && trait) || 
                     !(ChickTrait.isTraitActive || trait));
+    
         return match && (ChickTrait.traitSet == traitSet);
     }
 }
