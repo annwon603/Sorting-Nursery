@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 4714749783766026558}
   - component: {fileID: 3575140435651526997}
   - component: {fileID: 4014512839116198203}
+  - component: {fileID: 2241727501716701368}
+  - component: {fileID: 1195943566031572190}
   m_Layer: 0
   m_Name: basket
-  m_TagString: Untagged
+  m_TagString: Basket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,10 +29,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240851219769371347}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.21, y: -0.89, z: 4.5919795}
-  m_LocalScale: {x: 0.1634838, y: 0.1634838, z: 0.1634838}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.17999999, y: 0.16348377, z: 0.16348377}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 348168508862691611}
   m_Father: {fileID: 0}
@@ -162,13 +164,66 @@ PolygonCollider2D:
       - {x: -2.5403328, y: -4.76}
       - {x: -4.7506223, y: -3.3600001}
       - {x: -6.5208545, y: 1}
+      - {x: -5.490458, y: 3.1091316}
       - {x: -4.2805605, y: 4.0299997}
       - {x: -1.9902607, y: 4.63}
+      - {x: -0.40027362, y: 5.32328}
       - {x: 1.1001441, y: 4.6400003}
       - {x: 2.8503735, y: 4.34}
+      - {x: 4.129184, y: 3.217395}
       - {x: 4.7806263, y: 1.1}
       - {x: 2.9703891, y: -3.63}
   m_UseDelaunayMesh: 0
+--- !u!114 &2241727501716701368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240851219769371347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2855c58b8192cbc45b6af60e24ac20c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryUI: {fileID: 0}
+  canShow: 1
+  inventorySize: 0
+--- !u!70 &1195943566031572190
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240851219769371347}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.63, y: 1.7566359}
+  m_Size: {x: 9.463896, y: 6.906738}
+  m_Direction: 1
 --- !u!1 &4283205568237113687
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,8 +363,8 @@ PolygonCollider2D:
       - {x: -3.100406, y: -6.0400004}
       - {x: 2.0402672, y: -6.03}
       - {x: 4.410578, y: -4.3}
-      - {x: 5.200681, y: -0.66}
-      - {x: 4.4605846, y: 1.83}
+      - {x: 6.6663327, y: -0.54473436}
+      - {x: 4.774654, y: 2.3294847}
       - {x: 4.2005506, y: -0.33}
       - {x: 3.4604533, y: -3.3899999}
   m_UseDelaunayMesh: 0
