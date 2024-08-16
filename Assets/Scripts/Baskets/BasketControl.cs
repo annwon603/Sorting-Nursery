@@ -9,13 +9,9 @@ public class BasketControl : MonoBehaviour
     public bool canShow = false;
     public int inventorySize;
 
-    bool isDeleted = false;
 
-    // Start is called before the first frame update
-    // void Start()
-    // {
-    //     inventorySize = transform.parent.gameObject.GetComponent<BasketCap>().eggCapacity;  
-    // }
+
+    bool isDeleted = false;
 
     // Update is called once per frame
     void Update()
@@ -36,6 +32,7 @@ public class BasketControl : MonoBehaviour
     {
         isDeleted = checkIfNull();
         yield return new WaitForSeconds(0.5f);
+        yield return null;
         if(isDeleted == false){
             inventoryUI.UpdateItem(transform.parent.gameObject.GetComponent<BasketCap>().listOfEggs);
         }
@@ -56,7 +53,7 @@ public class BasketControl : MonoBehaviour
         }
 
         return isNull;
-        
     }
+
 
 }

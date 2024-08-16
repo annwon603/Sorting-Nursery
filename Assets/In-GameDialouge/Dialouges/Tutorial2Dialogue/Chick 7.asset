@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Chick 7
   m_EditorClassIdentifier: 
   dialouge: 'Great! Now you''re ready. This chicken will help you automatically sort
-    the eggs based on the size! The basket capacity now increased to hold up to 10
-    eggs. '
+    the eggs based on the size! But it can make mistakes sometimes. '
   needTaskComplete: 0

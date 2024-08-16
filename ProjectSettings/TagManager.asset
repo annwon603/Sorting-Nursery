@@ -8,6 +8,8 @@ TagManager:
   - Chicken
   - Node
   - Basket
+  - TutorialTask1
+  - Incubator
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - Egg
   - Water
   - UI
-  - 
+  - Incubator
   - 
   - 
   - 

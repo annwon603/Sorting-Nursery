@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
@@ -11,10 +12,13 @@ public class MouseFollower : MonoBehaviour
     private Camera mainCamera;
 
     [SerializeField]
-    private UIBasketItem item;
+    public UIBasketItem item;
 
     [SerializeField]
     private LayerMask detectionLayer; // Layer to detect
+
+    public BasketPage basketPage;
+
 
     public void Awake()
     {
@@ -97,6 +101,14 @@ public class MouseFollower : MonoBehaviour
         // For example, you might drop an item onto it, trigger an event, etc.
         Debug.Log($"Handling release over: {releasedOverObject.name}");
         // Add your custom logic here
+        if (releasedOverObject.CompareTag("Incubator"));
+        {
+            Debug.Log("You dropped into the incubator!");
+            IncubatorSlot incubator = releasedOverObject.GetComponent<IncubatorSlot>();
+           
+            incubator.CompareIndividual(item);
+
+        }
     }
 
     
