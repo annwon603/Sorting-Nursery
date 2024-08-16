@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BasketPage : MonoBehaviour
@@ -14,10 +15,13 @@ public class BasketPage : MonoBehaviour
     public List<UIBasketItem> listOfBasketItems = new List<UIBasketItem>();
 
     [SerializeField]
-    private MouseFollower mouseFollower;
+    public MouseFollower mouseFollower;
 
-    public GameObject testEgg;
+    public GameObject testEgg ,testEgg2;
 
+    private int currentlyDraggedItemIndex = -1;
+
+    public bool isDisplay = false;
 
 
     //public UIBasketItem[] listOfBasketItems;
@@ -28,12 +32,35 @@ public class BasketPage : MonoBehaviour
     }
 
 
-    public void Update()
+    public void FixedUpdate()
     {
         // foreach(var item in listOfBasketItems)
         // {
         //     item.transform.GetChild(0).gameObject.SetActive(true);
-        // }
+        // }   
+        if(isDisplay)
+        {
+            StartCoroutine(checkForMissingEggs());
+        }
+    }
+
+    //Updates the BasketUI if the player dragged the egg to the incubator 
+    IEnumerator checkForMissingEggs()
+    {
+        yield return new WaitForSeconds(1.0f);
+        for (int i = listOfBasketItems.Count - 1; i >= 0; i--)
+        {
+            if (listOfBasketItems[i].eggPrefab == null)
+            {
+                listOfBasketItems.RemoveAt(i);
+                if (i < contentPanel.childCount)
+                {
+                    Transform child = contentPanel.GetChild(i);
+                    Destroy(child.gameObject);
+                }
+            }
+        }
+
     }
 
     public void InitBasketInventoryUI(int inventorySize)
@@ -49,7 +76,7 @@ public class BasketPage : MonoBehaviour
             uiItem.OnItemBeginDrag += HandleBeginDrag;
             uiItem.OnItemDroppedOn += HandleSwap;
             uiItem.OnItemEndDrag += HandleEndDrag;
-            
+    
         }
     }
 
@@ -59,11 +86,8 @@ public class BasketPage : MonoBehaviour
         {
             listOfBasketItems[i].SetData(listofEggs[i]);
         }
-        // for (int i = 0; i < 5; i++)
-        // {
-        //     listOfBasketItems[i].SetData(eggs[i].GetComponent<SpriteRenderer>().sprite , eggs[i].GetComponent<DragDrop>().trait);
-        // }
     }
+
 
     public void ClearItem()
     {
@@ -80,19 +104,29 @@ public class BasketPage : MonoBehaviour
         }
 
         
-        
     }
 
     private void HandleItemSelection(UIBasketItem obj)
     {
-        Debug.Log(obj.name);
-        testEgg = obj.eggPrefab;
+        Debug.Log(obj.eggPrefab.name);
+        
     }
 
     private void HandleBeginDrag(UIBasketItem obj)
     {
-        mouseFollower.Toggle(true);
+        
+        int index = listOfBasketItems.IndexOf(obj);
+        if(index == -1)
+        {
+            return;
+        }
+        currentlyDraggedItemIndex = index;
+        Debug.Log(obj.eggPrefab.name);
         testEgg = obj.eggPrefab;
+
+        mouseFollower.Toggle(true);
+        //testEgg = obj.eggPrefab;
+        //mouseFollower.SetData(index == 0 ? testEgg : testEgg2);
         mouseFollower.SetData(testEgg);
     }
 
@@ -103,19 +137,38 @@ public class BasketPage : MonoBehaviour
 
     private void HandleEndDrag(UIBasketItem obj)
     {
+        StartCoroutine(endDrag());
+    }
+
+    IEnumerator endDrag()
+    {
+        yield return new WaitForSeconds(0.2f);
         mouseFollower.Toggle(false);
     }
 
+    public void OnItemDroppedOn()
+    {
+        for (int i = listOfBasketItems.Count - 1; i >= 0; i--)
+        {
+            if (listOfBasketItems[i].eggPrefab == null)
+            {
+                listOfBasketItems.RemoveAt(i); 
+                Debug.Log("Updated Basket Page");
+            }
+        }
+    }
 
 
     public void Show()
     {
         gameObject.SetActive(true);
+        isDisplay = true;
     }
 
     public void Hide()
     {
         gameObject.SetActive(false);
+        isDisplay = false;
         ClearItem();
     }
 
@@ -123,5 +176,8 @@ public class BasketPage : MonoBehaviour
     {
         listOfBasketItems.Clear();
     }
+
+    
+    
     
 }

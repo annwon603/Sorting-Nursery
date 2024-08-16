@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42adfa133f72c10498e332d11d848bad, type: 3}
-  m_Name: Chick 7
+  m_Name: Chick 9
   m_EditorClassIdentifier: 
-  dialouge: 'Great! Now you''re ready. This chicken will help you automatically sort
-    the eggs based on the size! But it can make mistakes sometimes. '
+  dialouge: Click the start button to begin!
   needTaskComplete: 0

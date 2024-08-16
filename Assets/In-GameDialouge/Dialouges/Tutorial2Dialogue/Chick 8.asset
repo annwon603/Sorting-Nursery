@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42adfa133f72c10498e332d11d848bad, type: 3}
   m_Name: Chick 8
   m_EditorClassIdentifier: 
-  dialouge: Click the start button to begin!
-  needTaskComplete: 1
+  dialouge: 'The basket capacity now increased to hold up to 10 eggs. '
+  needTaskComplete: 0

@@ -38,7 +38,7 @@ public class Tutorial2LevelManager : MonoBehaviour
             dialogueManager.showButton();
         }
 
-        if(dialogueManager.counter == 8)
+        if(dialogueManager.counter == 9)
         {
             start.SetActive(true);
         }
@@ -55,7 +55,7 @@ public class Tutorial2LevelManager : MonoBehaviour
             dialogueManager.endDialogueDelegate = goNextLevel;
         }
 
-        if(dialogueManager.counter == 10)
+        if(dialogueManager.counter == 11)
         {
             goNextLevel();
         }

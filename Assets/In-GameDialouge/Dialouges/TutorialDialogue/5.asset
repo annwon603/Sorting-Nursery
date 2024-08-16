@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialouge: Start with sorting these ten eggs into the two baskets; each basket will
     only hold five eggs.
-  needTaskComplete: 1
+  needTaskComplete: 0

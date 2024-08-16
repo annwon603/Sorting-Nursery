@@ -76,7 +76,9 @@ public class IncubatorSlot : MonoBehaviour
       }
    }
 
-   //For just comparing the Egg through UI
+   
+
+   //For just comparing the all eggs in BasketUI
    public void Compare()
    {
       List<UIBasketItem> eggsToCompare = FindObjectOfType<BasketPage>().listOfBasketItems;
@@ -96,6 +98,20 @@ public class IncubatorSlot : MonoBehaviour
 
       FindObjectOfType<BasketPage>().ClearItem();
       
+   }
+
+   public void CompareIndividual(UIBasketItem egg)
+   {
+      bool doesMatch = traitMatch(egg.trait.isTraitActive,egg.trait.traitSet);
+      if(doesMatch == true){
+            Debug.Log("In the right box");
+            ScoreCounter.instance.IncreaseScore();
+         }else{
+            Debug.Log("In the wrong box");
+      }
+      Destroy(egg.eggPrefab);
+      egg.ResetData();
+   
    }
 
    public bool traitMatch(bool trait, string traitSet)
