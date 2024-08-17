@@ -7,9 +7,8 @@ using TMPro;
 public class resultsScript : MonoBehaviour
 {
     public GameObject ScorePanel;
-    public TMP_Text EggsSortedCorrect;
-    public TMP_Text TotalEggs;
-    public TMP_Text AccuracyNumber;
+    //public TMP_Text EggsSortedCorrect;
+    //public TMP_Text TotalEggs;
     //private IncubatorManager eggsDroppedInIncubator;
     [SerializeField]
     private EggManager eggsInLevel;
@@ -25,6 +24,7 @@ public class resultsScript : MonoBehaviour
     public TMP_Text ANo;
     public TMP_Text BYes;
     public TMP_Text BNo;
+    public TMP_Text percent;
 
     // Start is called before the first frame update
     void Start()
@@ -66,10 +66,13 @@ public class resultsScript : MonoBehaviour
             BYes.text = listOfIncubators[1].incubatorCorrect.ToString();
             ANo.text = listOfIncubators[0].incubatorIncorrect.ToString();
             BNo.text = listOfIncubators[1].incubatorIncorrect.ToString();
-            Debug.Log("Status AYes " + AYes.text);
-            Debug.Log("Status BYes " + BYes.text);
-            Debug.Log("Status ANo " + ANo.text);
-            Debug.Log("Status BNo " + BNo.text);
+            // Debug.Log("Status AYes " + AYes.text);
+            // Debug.Log("Status BYes " + BYes.text);
+            // Debug.Log("Status ANo " + ANo.text);
+            // Debug.Log("Status BNo " + BNo.text);
+            int percentCorrect = (listOfIncubators[0].incubatorCorrect + listOfIncubators[1].incubatorCorrect) /
+                                totalEggs * 100;
+            Debug.Log("percent correct is " + percentCorrect);
         } 
     }
 
