@@ -23,9 +23,11 @@ public class Ran : MonoBehaviour
     [Range(0.0f , 1.0f)]
     public float adjustProp;                        // Adjusting Probablity for chicken to mess up
 
+    [SerializeField] private bool ranBool;
+
     private void Start()
     {
-        adjustProp = 0.75f;        //Default probablity is 20%
+        adjustProp = 0.25f;        //Default probablity is 20%
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -36,11 +38,11 @@ public class Ran : MonoBehaviour
             ranDom = Random.value * 100;                
             Debug.Log(gameObject.name + " Random Value: " + ranDom);
             
-            bool ranBool = ProbabilityCheck(ranDom);
+            ranBool = ProbabilityCheck(ranDom);
             Debug.Log(gameObject.name + " Is Random: " + ranBool);
 
             DragDrop egg = other.gameObject.GetComponent<DragDrop>();
-            bool doesMatch = traitCheck2(traitType,egg);
+            doesMatch = traitCheck2(traitType,egg);
             //bool doesMatch = traitCheck(egg.trait.isTraitActive, egg.trait.traitSet);
             Debug.Log(gameObject.name + " does match: " + doesMatch);
 
@@ -61,9 +63,13 @@ public class Ran : MonoBehaviour
     //we set the probablity
     public bool ProbabilityCheck(float ranVal)
     {
-        int probablity = (int)adjustProp * 100;
-        bool check = ranVal <= probablity;
-        return check; 
+        float probablity = adjustProp * 100;
+        if(ranVal <= probablity)
+        {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
@@ -90,18 +96,19 @@ public class Ran : MonoBehaviour
                 break;
         }
 
-        bool match = traitCheck(eggTrait.isTraitActive, eggTrait.traitSet);
-
-        return match;
+        bool match = (ChickTrait.isTraitActive && eggTrait.isTraitActive) || 
+                    !(ChickTrait.isTraitActive || eggTrait.isTraitActive);
+                    
+        return match && (ChickTrait.traitSet == eggTrait.traitSet);
     }
 
     //First it checks if the boolean value "isTraitActive" of both chicken
     //and egg matches. Then it checks if both strings matches
-    public bool traitCheck(bool trait, string traitSet)
-    {
-        bool match = ((ChickTrait.isTraitActive && trait) || 
-                    !(ChickTrait.isTraitActive || trait));
+    // public bool traitCheck(bool trait, string traitSet)
+    // {
+    //     bool match = ((ChickTrait.isTraitActive && trait) || 
+    //                 !(ChickTrait.isTraitActive || trait));
     
-        return match && (ChickTrait.traitSet == traitSet);
-    }
+    //     return match && (ChickTrait.traitSet == traitSet);
+    // }
 }
