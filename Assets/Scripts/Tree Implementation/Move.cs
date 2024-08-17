@@ -15,6 +15,8 @@ public class Move : MonoBehaviour
 
     public bool doesMove = true;
 
+    public bool isNearChicken = false;
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -28,6 +30,10 @@ public class Move : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.CompareTag("Chicken"))
+        {
+            isNearChicken = true;
+        }
         //Switches currentNode to the node it interact with
         if(other.gameObject.tag == "Node"){
             currNode = other.gameObject;
@@ -41,15 +47,33 @@ public class Move : MonoBehaviour
             }
 
             changedNode = true;
+
+            StartCoroutine(CheckTwoTrigger());
         }
+
+
         
+    }
+
+    IEnumerator CheckTwoTrigger()
+    {
+        if((changedNode && isNearChicken) == false)
+        {
+            yield return null;
+    
+            doesTurn = false;
+        }
     }
 
     public void OnTriggerExit2D(Collider2D other)
     {
         changedNode = false;
         //Debug.Log("ChangedNode " + changedNode);
+        isNearChicken = false;
+
     }
+
+    
 
     public void StopMovement()
     {
@@ -58,21 +82,7 @@ public class Move : MonoBehaviour
         Debug.Log("Stop Moving");
     }
 
-    // IEnumerator MovementDelay()
-    // {
-    //     if(doesTurn == true)
-    //     {
-    //         target = currNode.GetComponent<Nodes>().right.getPosition();
-    //     } else {
-    //         target = currNode.GetComponent<Nodes>().left.getPosition();
-    //     }
-    //     yield return null;
 
-    //     if(GetComponent<DragDrop>().finished == false)
-    //     {
-    //         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-    //     }
-    // }
     public void Movement()
     {
         if(doesTurn == true)

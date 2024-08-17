@@ -250,7 +250,8 @@ MonoBehaviour:
     maxNormalAngle: 0
   IncuTrait: {fileID: 11400000, guid: e19b9edbc79425d4d9e80b60935d44a7, type: 2}
   counter: 0
-  numOfCorrectEggs: 0
+  incubatorCorrect: 0
+  incubatorIncorrect: 0
 --- !u!212 &62289888
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -463,7 +464,8 @@ MonoBehaviour:
     maxNormalAngle: 0
   IncuTrait: {fileID: 11400000, guid: 086a9c60b7899ff488d696f00e950c9c, type: 2}
   counter: 0
-  numOfCorrectEggs: 0
+  incubatorCorrect: 0
+  incubatorIncorrect: 0
 --- !u!212 &192909103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -908,7 +910,8 @@ MonoBehaviour:
     maxNormalAngle: 0
   IncuTrait: {fileID: 11400000, guid: 20c89ebb15c98d74e9e6755867e9505a, type: 2}
   counter: 0
-  numOfCorrectEggs: 0
+  incubatorCorrect: 0
+  incubatorIncorrect: 0
 --- !u!212 &607841294
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2200,7 +2203,8 @@ MonoBehaviour:
     maxNormalAngle: 0
   IncuTrait: {fileID: 11400000, guid: 94ee6eb7543b3464a817b3a365e05f1c, type: 2}
   counter: 0
-  numOfCorrectEggs: 0
+  incubatorCorrect: 0
+  incubatorIncorrect: 0
 --- !u!212 &1392116254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3927,6 +3931,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2241727501716701368, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
+      propertyPath: inventoryUI
+      value: 
+      objectReference: {fileID: 1410735382}
     - target: {fileID: 7967031596161260262, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       propertyPath: inventoryUI
       value: 
@@ -4709,6 +4717,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapPoints:
   - {fileID: 7345465212821953619}
+  snapHitPoints:
+  - {fileID: 4511239675479358396}
   dragScripts:
   - {fileID: 5705832703687328309}
   snapRange: 1.5
@@ -6073,7 +6083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0387aa58a632341b040db297b2e7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eggCapacity: 5
+  eggCapacity: 10
   isFull: 0
   counter: 0
   listOfEggs: []
@@ -6196,7 +6206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0387aa58a632341b040db297b2e7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eggCapacity: 5
+  eggCapacity: 10
   isFull: 0
   counter: 0
   listOfEggs: []

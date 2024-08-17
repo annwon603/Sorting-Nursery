@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4073943075920284215}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.92, y: 1.46, z: 0.10494137}
   m_LocalScale: {x: 0.1154681, y: 0.1154681, z: 0.1154681}
   m_ConstrainProportionsScale: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
-  isPaused: 1
+  isPaused: 0
 --- !u!58 &1576487511823579932
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -192,9 +192,9 @@ Transform:
   m_GameObject: {fileID: 7461445180050979501}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.977396, y: -1.8397734, z: 0}
-  m_LocalScale: {x: 4.546278, y: 4.546278, z: 4.546278}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 2.5981221, y: -3.4641604, z: 0}
+  m_LocalScale: {x: 8.660401, y: 8.660401, z: 8.660401}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1956636636711143909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -232,7 +232,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.45
+  m_Radius: 0.276431
 --- !u!114 &5107316537088300762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +251,7 @@ MonoBehaviour:
   ChickTrait: {fileID: 11400000, guid: 086a9c60b7899ff488d696f00e950c9c, type: 2}
   doesMatch: 0
   adjustProp: 0
+  ranBool: 0
 --- !u!114 &3706291816919670231
 MonoBehaviour:
   m_ObjectHideFlags: 0

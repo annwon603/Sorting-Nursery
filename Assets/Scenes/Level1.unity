@@ -1672,41 +1672,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2911573486484961651, guid: 99659fc893b7cbd4c83f7fbe95606132, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 8.660401
-      objectReference: {fileID: 0}
-    - target: {fileID: 2911573486484961651, guid: 99659fc893b7cbd4c83f7fbe95606132, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 8.660401
-      objectReference: {fileID: 0}
-    - target: {fileID: 2911573486484961651, guid: 99659fc893b7cbd4c83f7fbe95606132, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 8.660401
-      objectReference: {fileID: 0}
-    - target: {fileID: 2911573486484961651, guid: 99659fc893b7cbd4c83f7fbe95606132, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.5981221
-      objectReference: {fileID: 0}
-    - target: {fileID: 2911573486484961651, guid: 99659fc893b7cbd4c83f7fbe95606132, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.4641604
-      objectReference: {fileID: 0}
-    - target: {fileID: 2911573486484961651, guid: 99659fc893b7cbd4c83f7fbe95606132, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4073943075920284215, guid: 99659fc893b7cbd4c83f7fbe95606132, type: 3}
       propertyPath: m_Name
       value: Vaccuum Chicken
-      objectReference: {fileID: 0}
-    - target: {fileID: 7155011915186026752, guid: 99659fc893b7cbd4c83f7fbe95606132, type: 3}
-      propertyPath: isPaused
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7201141441298821502, guid: 99659fc893b7cbd4c83f7fbe95606132, type: 3}
-      propertyPath: m_Radius
-      value: 0.276431
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3855,7 +3823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: timeToSpawn
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: Eggs.Array.size
@@ -4279,10 +4247,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left:
     pos: {x: 0, y: 0}
-  a: {fileID: 3762950733234699360}
+  a: {fileID: 1865425726572578612}
   right:
     pos: {x: 0, y: 0}
-  b: {fileID: 1865425726572578612}
+  b: {fileID: 3762950733234699360}
 --- !u!1001 &1175157054488877436
 PrefabInstance:
   m_ObjectHideFlags: 0

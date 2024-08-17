@@ -103,7 +103,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   finished: 0
+  isWaiting: 0
+  resetPosition: {x: 0, y: 0, z: 0}
   trait: {fileID: 11400000, guid: e19b9edbc79425d4d9e80b60935d44a7, type: 2}
+  isPaused: 0
+  size: {fileID: 11400000, guid: 086a9c60b7899ff488d696f00e950c9c, type: 2}
+  pattern: {fileID: 11400000, guid: fc429fe6347bc154e9ccf1618e543355, type: 2}
+  color: {fileID: 11400000, guid: f3f226ae40e67664598e3860c25fc53a, type: 2}
+  texture: {fileID: 11400000, guid: bae55bd7c6dd39849b2c3734f26784fa, type: 2}
 --- !u!114 &2599007076350302150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +129,7 @@ MonoBehaviour:
   doesTurn: 0
   changedNode: 0
   doesMove: 1
+  isNearChicken: 0
 --- !u!50 &3100770143452376686
 Rigidbody2D:
   serializedVersion: 4
