@@ -58,6 +58,7 @@ public class resultsScript : MonoBehaviour
         // Debug.Log("Stats: " + listOfIncubators[1].name + ": " + listOfIncubators[1].incubatorIncorrect + "incorrect eggs");
         
         Debug.Log("TOTAL NUMBER OF EGGS: " + totalEggs);
+        Debug.Log("EGGS IN LEVEL IS: " + eggsInLevel.Eggs.Length);
 
         if (totalEggs == eggsInLevel.Eggs.Length) {
             //ShowScorePanel();

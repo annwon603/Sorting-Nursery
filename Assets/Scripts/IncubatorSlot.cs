@@ -19,8 +19,6 @@ public class IncubatorSlot : MonoBehaviour
    public int counter = 0; //AL
    public int incubatorCorrect = 0; //Added line (AL)
    public int incubatorIncorrect = 0; //AL
-   public GameObject box; //AL
-   public GameObject box2; //AL
 
    private void Start()
    {
@@ -87,10 +85,13 @@ public class IncubatorSlot : MonoBehaviour
          bool doesMatch = traitMatch(egg.trait.isTraitActive, egg.trait.traitSet);
          if(doesMatch == true){
                Debug.Log("In the right box");
+               incubatorCorrect++; //AL
                ScoreCounter.instance.IncreaseScore();
             }else{
                Debug.Log("In the wrong box");
+               incubatorIncorrect++; //AL
          }
+         counter++; //AL
          Destroy(egg.eggPrefab);
          egg.ResetData();
          //egg.gameObject.SetActive(false);
@@ -105,10 +106,13 @@ public class IncubatorSlot : MonoBehaviour
       bool doesMatch = traitMatch(egg.trait.isTraitActive,egg.trait.traitSet);
       if(doesMatch == true){
             Debug.Log("In the right box");
+            incubatorCorrect++; //AL
             ScoreCounter.instance.IncreaseScore();
          }else{
             Debug.Log("In the wrong box");
+            incubatorIncorrect++; //AL
       }
+      counter++; //AL
       Destroy(egg.eggPrefab);
       egg.ResetData();
    
