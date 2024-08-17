@@ -9,6 +9,8 @@ public class DragChick : MonoBehaviour
     public delegate void DragEndedDelegate(Transform transform);
     public DragEndedDelegate dragEndedDelegate;
     public bool isPaused = false; //New line
+
+    private Vector3 offset;
     
 
     void Start()
@@ -21,7 +23,8 @@ public class DragChick : MonoBehaviour
     {
         if(isDragging && isPaused == false) //Edited line
         {
-            transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = mousePosition + (Vector2)offset;
             GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Foreground");
         }
     }
@@ -32,8 +35,22 @@ public class DragChick : MonoBehaviour
 
     }
 
+    public void OnMouseDown()
+    {
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+
+        if (hit.collider != null && hit.collider.transform == transform)
+        {
+            isDragging = true;
+            offset = transform.position - (Vector3)mousePosition;  // Calculate the offset
+            Debug.Log("Left button is being held down on " + gameObject.name);
+        }
+    }
+
     public void OnMouseUp()
     {
+        Debug.Log("I'm clicking on this chicken");
         isDragging = false;
         if(isPaused == false){
             dragEndedDelegate(this.transform);
