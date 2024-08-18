@@ -10,6 +10,8 @@ public class IncubatorSlot : MonoBehaviour
    private ContactFilter2D z_Filter; //contains a set of parameters for filtering contact results
    private List<Collider2D> z_CollidedObjects = new List<Collider2D>(1); //Should only have the egg in the list
 
+   public List<GameObject> EgginIncubator = new List<GameObject>();
+
    private Color originalColor;
    private Color hover; //Intereaction for player to see if egg is hover over the box
 
@@ -65,6 +67,13 @@ public class IncubatorSlot : MonoBehaviour
                Debug.Log("In the wrong box");
             }
 
+            if(isUnique(other.gameObject))
+            {
+               GameObject clonedEgg = Instantiate(other.gameObject);
+               clonedEgg.SetActive(false);
+               EgginIncubator.Add(clonedEgg);
+            }
+
             other.gameObject.SetActive(false);
             counter++; //New line
             Debug.Log("Egg in the box");
@@ -80,6 +89,7 @@ public class IncubatorSlot : MonoBehaviour
    public void Compare()
    {
       List<UIBasketItem> eggsToCompare = FindObjectOfType<BasketPage>().listOfBasketItems;
+   
       foreach(var egg in eggsToCompare)
       {
          bool doesMatch = traitMatch(egg.trait.isTraitActive, egg.trait.traitSet);
@@ -90,6 +100,12 @@ public class IncubatorSlot : MonoBehaviour
             }else{
                Debug.Log("In the wrong box");
                incubatorIncorrect++; //AL
+         }
+         if(isUnique(egg.eggPrefab))
+         {
+            GameObject clonedEgg = Instantiate(egg.eggPrefab);
+            clonedEgg.SetActive(false);
+            EgginIncubator.Add(clonedEgg);
          }
          counter++; //AL
          Destroy(egg.eggPrefab);
@@ -112,6 +128,15 @@ public class IncubatorSlot : MonoBehaviour
             Debug.Log("In the wrong box");
             incubatorIncorrect++; //AL
       }
+
+      if(isUnique(egg.eggPrefab))
+      {
+         GameObject clonedEgg = Instantiate(egg.eggPrefab);
+         clonedEgg.SetActive(false);
+         EgginIncubator.Add(clonedEgg);
+      }
+      
+      
       counter++; //AL
       Destroy(egg.eggPrefab);
       egg.ResetData();
@@ -144,6 +169,41 @@ public class IncubatorSlot : MonoBehaviour
       }
       
    }
+
+   bool isUnique(GameObject egg)
+    {
+        //If the list doesn't have that egg yet
+        if(!EgginIncubator.Contains(egg))
+        {
+            return true;
+        }
+
+        //If list does contain that egg type, need to check if the InstanceID is the same
+        if(EgginIncubator.Contains(egg))
+        {
+            int id = egg.GetInstanceID();
+            if(Resources.InstanceIDIsValid(id) == false)
+            {
+                return true;
+            }
+            foreach(var item in EgginIncubator)
+            {
+                if(Resources.InstanceIDIsValid(item.GetInstanceID()) == false)
+                {
+                    return true;
+                }
+                if(item.GetInstanceID() == id)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        Debug.Log("Invalid");
+        return false;
+
+    }
 
    
 }

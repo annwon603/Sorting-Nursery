@@ -292,6 +292,10 @@ MonoBehaviour:
   itemPrefab: {fileID: 6519783547210974346, guid: a4354cd6c79271b4ea2786c1b4608ad8, type: 3}
   contentPanel: {fileID: 6438555562997493986}
   listOfBasketItems: []
+  mouseFollower: {fileID: 0}
+  testEgg: {fileID: 0}
+  testEgg2: {fileID: 0}
+  isDisplay: 0
 --- !u!114 &8825760224874612538
 MonoBehaviour:
   m_ObjectHideFlags: 0

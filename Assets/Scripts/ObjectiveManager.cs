@@ -23,12 +23,12 @@ public class ObjectiveManager : MonoBehaviour
     {
         manObjtext.text = objective.manObj.objText.dialouge;
         optObjtext.text = objective.optObj.objText.dialouge;
-        this.GetObjective = objective;
+        GetObjective = objective;
     }
 
     public Objective getObjective()
     {
-        return this.GetObjective;
+        return GetObjective;
     }
 
 

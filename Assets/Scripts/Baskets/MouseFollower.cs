@@ -101,11 +101,10 @@ public class MouseFollower : MonoBehaviour
         // For example, you might drop an item onto it, trigger an event, etc.
         Debug.Log($"Handling release over: {releasedOverObject.name}");
         // Add your custom logic here
-        if (releasedOverObject.CompareTag("Incubator"));
+        if (releasedOverObject.CompareTag("Incubator"))
         {
             Debug.Log("You dropped into the incubator!");
             IncubatorSlot incubator = releasedOverObject.GetComponent<IncubatorSlot>();
-           
             incubator.CompareIndividual(item);
 
         }

@@ -220,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7164911289996707272, guid: 4e89264e193804fb9813d2a6b62b5fa4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 191.3
+      value: -197
       objectReference: {fileID: 0}
     - target: {fileID: 7164911289996707272, guid: 4e89264e193804fb9813d2a6b62b5fa4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -273,8 +273,8 @@ GameObject:
   - component: {fileID: 62289886}
   - component: {fileID: 62289885}
   m_Layer: 6
-  m_Name: box 2
-  m_TagString: TutorialTask1
+  m_Name: IncubatorB
+  m_TagString: Incubator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -384,6 +384,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  EgginIncubator: []
   IncuTrait: {fileID: 11400000, guid: e19b9edbc79425d4d9e80b60935d44a7, type: 2}
   counter: 0
   incubatorCorrect: 0
@@ -1403,12 +1404,8 @@ MonoBehaviour:
   dialogue:
     name: Cecil
     sentences:
-    - {fileID: 11400000, guid: b6a795b6a5b97a14891ad9e488facd8b, type: 2}
-    - {fileID: 11400000, guid: 5bb7976aa0559454eba02435974218a7, type: 2}
-    - {fileID: 11400000, guid: a5615d7d9ad444d4995f838ae4a0b61f, type: 2}
-    - {fileID: 11400000, guid: 7e1cf95710af4ac41b20a38733c936ff, type: 2}
-    - {fileID: 11400000, guid: b2bffdfa8abebe84ba9237e7b148c288, type: 2}
-    - {fileID: 11400000, guid: 77a740b91029f8b49ab39ce9d9291971, type: 2}
+    - {fileID: 11400000, guid: e7c95d381edefa24e8ba1869bd989c1e, type: 2}
+    - {fileID: 11400000, guid: 7959174df39e6524fa716875fb3085cf, type: 2}
 --- !u!1001 &720613122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1925,10 +1922,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 665327356}
   quotaManager: {fileID: 1509874118}
-  objectiveManager: {fileID: 0}
+  objectiveManager: {fileID: 1833333239}
   eggManager: {fileID: 1852192598}
   scorePanel: {fileID: 5231493096030337610}
+  Result: {fileID: 915505667}
   beginLevel: {fileID: 1293416722}
+  objective:
+    manObj: {fileID: 0}
+    optObj: {fileID: 0}
   nextLevelName: 
 --- !u!1 &915505656
 GameObject:
@@ -2744,8 +2745,8 @@ GameObject:
   - component: {fileID: 1392116256}
   - component: {fileID: 1392116257}
   m_Layer: 6
-  m_Name: box
-  m_TagString: TutorialTask1
+  m_Name: IncubatorA
+  m_TagString: Incubator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2776,6 +2777,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  EgginIncubator: []
   IncuTrait: {fileID: 11400000, guid: 94ee6eb7543b3464a817b3a365e05f1c, type: 2}
   counter: 0
   incubatorCorrect: 0
@@ -2841,7 +2843,7 @@ Transform:
   m_GameObject: {fileID: 1392116252}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 5.42, y: -1.14, z: 0.053985253}
+  m_LocalPosition: {x: 5.42, y: -0.55, z: 0.053985253}
   m_LocalScale: {x: 0.15773182, y: 0.15773182, z: 0.15773182}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2995,6 +2997,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectiveText2
       objectReference: {fileID: 0}
+    - target: {fileID: 1266853168966386066, guid: e152a7dfa08df47edb525d8998cf152a, type: 3}
+      propertyPath: objective.manObj
+      value: 
+      objectReference: {fileID: 11400000, guid: 227dc5d7b2c532f4c8d57f6611c6661a, type: 2}
+    - target: {fileID: 1266853168966386066, guid: e152a7dfa08df47edb525d8998cf152a, type: 3}
+      propertyPath: objective.optObj
+      value: 
+      objectReference: {fileID: 11400000, guid: e6669981e5ef47e408f63c8712640353, type: 2}
     - target: {fileID: 1461523331079015715, guid: e152a7dfa08df47edb525d8998cf152a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3657,6 +3667,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1833333239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5811166953381975678, guid: 024b272dd09839a489415f32890239f9, type: 3}
+  m_PrefabInstance: {fileID: 1069581575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7cb1926a7f5b74fb1af1bcdf38b990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1852192598 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
@@ -4605,8 +4626,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1862068172075856231, guid: b0cf51f9a98c3944fbaccbbff66fe039, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2204422008702570134, guid: b0cf51f9a98c3944fbaccbbff66fe039, type: 3}
+      propertyPath: quota.manQuote
+      value: 
+      objectReference: {fileID: 11400000, guid: b3fe10ca7aaf6e84faaa49f62df32290, type: 2}
+    - target: {fileID: 2204422008702570134, guid: b0cf51f9a98c3944fbaccbbff66fe039, type: 3}
+      propertyPath: quota.optQuote
+      value: 
+      objectReference: {fileID: 11400000, guid: 267b9fac13776704d9c7ee216c02d2c5, type: 2}
     - target: {fileID: 2765109003424808200, guid: b0cf51f9a98c3944fbaccbbff66fe039, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4669,7 +4698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2765109003424808200, guid: b0cf51f9a98c3944fbaccbbff66fe039, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 156
+      value: 226
       objectReference: {fileID: 0}
     - target: {fileID: 2765109003424808200, guid: b0cf51f9a98c3944fbaccbbff66fe039, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5099,6 +5128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasketUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4716979532733248821, guid: 3907ba5612cbf1a4c80612e4a79152f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8202994832806484935, guid: 3907ba5612cbf1a4c80612e4a79152f2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5179,7 +5212,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8825760224874612538, guid: 3907ba5612cbf1a4c80612e4a79152f2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
