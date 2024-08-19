@@ -17,7 +17,7 @@ public class objectivesScript : MonoBehaviour
     {
         ObjectivesMenu.SetActive(true);
         PauseButton.SetActive(false);
-        //GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = false;
+        GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = false;
         //GameObject[] AllEggs = GameObject.FindGameObjectsWithTag("Egg");
 
         foreach (DragChick chicken in AllChickens) {
