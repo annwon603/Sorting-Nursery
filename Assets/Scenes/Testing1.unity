@@ -1756,9 +1756,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScorePanel: {fileID: 349481807}
-  EggsSortedCorrect: {fileID: 0}
-  TotalEggs: {fileID: 0}
-  AccuracyNumber: {fileID: 0}
   eggsInLevel: {fileID: 6203398994086941391}
   listOfIncubators:
   - {fileID: 1392116253}
@@ -1771,6 +1768,7 @@ MonoBehaviour:
   ANo: {fileID: 751793894124439408}
   BYes: {fileID: 751793894124439407}
   BNo: {fileID: 751793894124439406}
+  percent: {fileID: 0}
 --- !u!1 &995942070
 GameObject:
   m_ObjectHideFlags: 0
@@ -6104,7 +6102,7 @@ MonoBehaviour:
   - {fileID: 2496137530214564580, guid: a47d344d7c651f54bbed3655d3ccc90e, type: 3}
   - {fileID: 1128814657893581407, guid: 181c881ff2efec24ea7f1bbf5e86c6b9, type: 3}
   - {fileID: 2496137530214564580, guid: a47d344d7c651f54bbed3655d3ccc90e, type: 3}
-  timeToSpawn: 2
+  timeToSpawn: 1
   counter: 0
 --- !u!50 &6240495859275248037
 Rigidbody2D:

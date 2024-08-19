@@ -66,6 +66,9 @@ public class resultsScript : MonoBehaviour
             BYes.text = listOfIncubators[1].incubatorCorrect.ToString();
             ANo.text = listOfIncubators[0].incubatorIncorrect.ToString();
             BNo.text = listOfIncubators[1].incubatorIncorrect.ToString();
+            QuotaPanel.SetActive(false);
+            TextBox.SetActive(false);
+            PauseButton.SetActive(false);
             // Debug.Log("Status AYes " + AYes.text);
             // Debug.Log("Status BYes " + BYes.text);
             // Debug.Log("Status ANo " + ANo.text);
@@ -78,9 +81,6 @@ public class resultsScript : MonoBehaviour
 
     public void ShowScorePanel() {
         ScorePanel.SetActive(true);
-        PauseButton.SetActive(false);
-        TextBox.SetActive(false);
-        QuotaPanel.SetActive(false);
         GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = false;
         Time.timeScale = 0f;
     }
