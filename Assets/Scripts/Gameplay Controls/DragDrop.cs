@@ -107,6 +107,7 @@ public class DragDrop : MonoBehaviour
         if(other.CompareTag("Node"))
         {
             Debug.Log("Away from node");
+            
         }
     }
 

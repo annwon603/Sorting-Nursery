@@ -91,6 +91,27 @@ public class BasketCap : MonoBehaviour
         }
     }
 
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Egg") && other.gameObject.GetComponent<DragDrop>().isWaiting == true)
+        {
+            if(counter < eggCapacity)
+            {
+                //other.gameObject.GetComponent<DragDrop>().finished = true;
+                Debug.Log("Egg that is waiting dropped in");
+                bool isunique = isUnique(other.gameObject);
+                Debug.Log(other.gameObject.GetInstanceID());
+                if (isunique){
+                    listOfEggs.Add(other.gameObject);
+                }
+                other.gameObject.GetComponent<DragDrop>().finished = true;
+                other.gameObject.GetComponent<DragDrop>().isWaiting = false;
+                counter++;
+                //counter++;
+            }
+        }
+    }
+
     bool isUnique(GameObject egg)
     {
         //If the list doesn't have that egg yet

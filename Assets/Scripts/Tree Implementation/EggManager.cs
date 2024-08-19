@@ -22,6 +22,8 @@ public class EggManager : MonoBehaviour
             egg.GetComponent<Move>().currNode = root; 
         }
 
+        ShuffleArray(Eggs);
+
        
     }
 
@@ -44,7 +46,7 @@ public class EggManager : MonoBehaviour
     {
         if(counter < Eggs.Length)
         {
-            Instantiate(Eggs[Random.Range(0, Eggs.Length)], root.transform.position, Quaternion.identity);
+            Instantiate(Eggs[counter], root.transform.position, Quaternion.identity);
             counter++;
             //Debug.Log("Egg Spawn "+ counter + " times");
         }
@@ -52,6 +54,20 @@ public class EggManager : MonoBehaviour
         {
             Debug.Log("Out of Eggs");
         }
-        
+    }
+
+    void ShuffleArray(GameObject[] array)
+    {
+        // Fisher-Yates shuffle algorithm (Knuth Shuffle)
+        System.Random rng = new System.Random();
+        int n = array.Length;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            GameObject value = array[k];
+            array[k] = array[n];
+            array[n] = value;
+        }
     }
 }

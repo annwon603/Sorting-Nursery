@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class Ran : MonoBehaviour
 {
-    public enum TraitType  //Type of trait catergory the chicken needs to check for
-    {
-        Colors,   // 0
-        Patterns, // 1
-        Sizes,    // 2
-        Texture   // 3
-    }  
 
     public TraitType traitType; 
     [SerializeField] private float ranDom;             // Store random integer

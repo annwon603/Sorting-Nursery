@@ -27,11 +27,17 @@ public class DragChick : MonoBehaviour
             transform.position = mousePosition + (Vector2)offset;
             GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Foreground");
         }
+        if(isDragging)
+        {
+            transform.GetChild(0).GetComponent<ChickenHitBox>().target = null;
+        }
     }
 
     public void OnMouseDrag()
     {
         isDragging = true;
+        
+
 
     }
 
@@ -45,6 +51,7 @@ public class DragChick : MonoBehaviour
             isDragging = true;
             offset = transform.position - (Vector3)mousePosition;  // Calculate the offset
             Debug.Log("Left button is being held down on " + gameObject.name);
+           
         }
     }
 
