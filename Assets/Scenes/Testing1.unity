@@ -248,6 +248,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  EgginIncubator: []
   IncuTrait: {fileID: 11400000, guid: e19b9edbc79425d4d9e80b60935d44a7, type: 2}
   counter: 0
   incubatorCorrect: 0
@@ -462,6 +463,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  EgginIncubator: []
   IncuTrait: {fileID: 11400000, guid: 086a9c60b7899ff488d696f00e950c9c, type: 2}
   counter: 0
   incubatorCorrect: 0
@@ -871,6 +873,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  EgginIncubator: []
   IncuTrait: {fileID: 11400000, guid: 20c89ebb15c98d74e9e6755867e9505a, type: 2}
   counter: 0
   incubatorCorrect: 0
@@ -1558,7 +1561,11 @@ MonoBehaviour:
   objectiveManager: {fileID: 1450684232}
   eggManager: {fileID: 6203398994086941391}
   scorePanel: {fileID: 349481807}
+  Result: {fileID: 0}
   beginLevel: {fileID: 1461523329477614860}
+  objective:
+    manObj: {fileID: 0}
+    optObj: {fileID: 0}
   nextLevelName: Level1
 --- !u!1 &915505656
 GameObject:
@@ -1768,7 +1775,7 @@ MonoBehaviour:
   ANo: {fileID: 751793894124439408}
   BYes: {fileID: 751793894124439407}
   BNo: {fileID: 751793894124439406}
-  percent: {fileID: 0}
+  percent: {fileID: 751793894124439410}
 --- !u!1 &995942070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,6 +2235,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  EgginIncubator: []
   IncuTrait: {fileID: 11400000, guid: 94ee6eb7543b3464a817b3a365e05f1c, type: 2}
   counter: 0
   incubatorCorrect: 0
@@ -3055,7 +3063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1735702691681994347, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1818795935750873829, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4015,6 +4023,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 915505660}
     m_Modifications:
+    - target: {fileID: 425968851476039443, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_text
+      value: X
+      objectReference: {fileID: 0}
     - target: {fileID: 560021921124437985, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: m_SizeDelta.x
       value: 56.07
@@ -4051,6 +4063,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueText
       objectReference: {fileID: 0}
+    - target: {fileID: 3320883142367923478, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_text
+      value: 'Eggs sorted correctly:       /10 (       %)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868949663874423413, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 84.20499
+      objectReference: {fileID: 0}
     - target: {fileID: 5562484775711835725, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: m_SizeDelta.x
       value: 38.12
@@ -4071,10 +4091,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewScorePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 5803260444624507958, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 888069486}
+    - target: {fileID: 7249770184310205645, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 93
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249770184310205645, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11.670004
+      objectReference: {fileID: 0}
     - target: {fileID: 7844802395142051197, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: newText
       value: 
@@ -4208,6 +4240,17 @@ MonoBehaviour:
 --- !u!114 &751793894124439409 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2490994580830001613, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+  m_PrefabInstance: {fileID: 751793894124439405}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &751793894124439410 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3637339501467619015, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
   m_PrefabInstance: {fileID: 751793894124439405}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -5264,6 +5307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapPoints:
   - {fileID: 7345465212821953619}
+  snapHitPoints: []
   dragScripts:
   - {fileID: 1409098060}
   snapRange: 1.5

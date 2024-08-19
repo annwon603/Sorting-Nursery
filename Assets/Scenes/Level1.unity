@@ -577,7 +577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1735702691681994347, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1818795935750873829, guid: 6ab3697334375486bacb5f1c61b44a2a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -915,7 +915,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: text
+  m_text: 15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2130,9 +2130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScorePanel: {fileID: 5231493096030337610}
-  EggsSortedCorrect: {fileID: 0}
-  TotalEggs: {fileID: 517539740}
-  AccuracyNumber: {fileID: 0}
   eggsInLevel: {fileID: 1852192598}
   listOfIncubators:
   - {fileID: 1392116253}
@@ -2145,6 +2142,7 @@ MonoBehaviour:
   ANo: {fileID: 6858521237079120431}
   BYes: {fileID: 4999247242068325340}
   BNo: {fileID: 1620860798795663823}
+  percent: {fileID: 1958648008}
 --- !u!1001 &920830459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2333,27 +2331,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3560709578451897397, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 46.5204
+      value: 82.55705
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560709578451897397, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 18.9401
       objectReference: {fileID: 0}
     - target: {fileID: 3560709578451897397, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5.4166
+      value: 6.217211
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560709578451897397, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.121478
       objectReference: {fileID: 0}
     - target: {fileID: 6473066021535175829, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
       propertyPath: m_Name
       value: TimeInfo
       objectReference: {fileID: 0}
     - target: {fileID: 7483529667245480883, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483529667245480883, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483529667245480883, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483529667245480883, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -256
+      value: -459
       objectReference: {fileID: 0}
     - target: {fileID: 7483529667245480883, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 74
+      value: -332
       objectReference: {fileID: 0}
     - target: {fileID: 7483529667245480883, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 99.454056
+      value: -1000
       objectReference: {fileID: 0}
     - target: {fileID: 7483529667245480883, guid: 231e4931140de42de8bd2f8043abe8df, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3694,6 +3712,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1174076732000210842, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
   m_PrefabInstance: {fileID: 5217405710276614461}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1958648008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3637339501467619015, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+  m_PrefabInstance: {fileID: 8170202695491329395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1960874232
 GameObject:
   m_ObjectHideFlags: 0
@@ -3844,7 +3873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: timeToSpawn
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: Eggs.Array.size
@@ -5773,7 +5802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3320883142367923478, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: m_text
-      value: 'Eggs sorted correctly:          /      (     %)'
+      value: 'Eggs sorted correctly:          /      (       %)'
       objectReference: {fileID: 0}
     - target: {fileID: 4192380082060623278, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: newText
