@@ -143,12 +143,12 @@ public class LvlManager : MonoBehaviour
         Debug.Log("Current Optional Eggs:" + currOptEggs);
         Debug.Log("Required Optional Eggs:" + reqeuiredoptEggs);
 
-        if(currManEggs == requiredManEggs)
+        if(currManEggs >= requiredManEggs)
         {
             quotaManager.CompleteMandatory();
         }
 
-        if(currOptEggs == reqeuiredoptEggs)
+        if(currOptEggs >= reqeuiredoptEggs)
         {
             quotaManager.CompleteOpt();
         }
