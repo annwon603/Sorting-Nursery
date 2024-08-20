@@ -248,9 +248,11 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  EgginIncubator: []
   IncuTrait: {fileID: 11400000, guid: e19b9edbc79425d4d9e80b60935d44a7, type: 2}
   counter: 0
-  numOfCorrectEggs: 0
+  incubatorCorrect: 0
+  incubatorIncorrect: 0
 --- !u!212 &62289888
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -466,9 +468,11 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  EgginIncubator: []
   IncuTrait: {fileID: 11400000, guid: 086a9c60b7899ff488d696f00e950c9c, type: 2}
   counter: 0
-  numOfCorrectEggs: 0
+  incubatorCorrect: 0
+  incubatorIncorrect: 0
 --- !u!212 &192909103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -806,6 +810,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1897044798970343667, guid: 4db706036efec344186b668b20542830, type: 3}
   m_PrefabInstance: {fileID: 1866614537}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &489354461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3811723069332053680, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
+  m_PrefabInstance: {fileID: 5217405710276614461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &515161702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2263629347181288922, guid: 4e89264e193804fb9813d2a6b62b5fa4, type: 3}
@@ -1104,9 +1113,11 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  EgginIncubator: []
   IncuTrait: {fileID: 11400000, guid: 20c89ebb15c98d74e9e6755867e9505a, type: 2}
   counter: 0
-  numOfCorrectEggs: 0
+  incubatorCorrect: 0
+  incubatorIncorrect: 0
 --- !u!212 &607841294
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1285,7 +1296,7 @@ MonoBehaviour:
   nextLevelButton: {fileID: 1371349680}
   counter: -1
   scorePanel: {fileID: 349481807}
-  TextBox: {fileID: 0}
+  TextBox: {fileID: 489354461}
 --- !u!1 &666840829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1700,7 +1711,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3497196622542657608, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
   m_PrefabInstance: {fileID: 5217405710276614461}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 489354461}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce92a8a96b37b864890062be3a6a5df3, type: 3}
@@ -2676,9 +2687,11 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  EgginIncubator: []
   IncuTrait: {fileID: 11400000, guid: 94ee6eb7543b3464a817b3a365e05f1c, type: 2}
   counter: 0
-  numOfCorrectEggs: 0
+  incubatorCorrect: 0
+  incubatorIncorrect: 0
 --- !u!212 &1392116254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3073,7 +3086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manQuotaText: {fileID: 1631164066}
   optQuotaText: {fileID: 1610942632}
-  quotaPanel: {fileID: 0}
+  quotaPanel: {fileID: 301380453}
 --- !u!4 &1509874119
 Transform:
   m_ObjectHideFlags: 0
@@ -4749,7 +4762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6824079773105967807, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 7.7345276
+      value: 7.734558
       objectReference: {fileID: 0}
     - target: {fileID: 6824079773105967807, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

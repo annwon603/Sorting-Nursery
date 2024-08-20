@@ -4548,7 +4548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: timeToSpawn
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: Eggs.Array.size
