@@ -93,6 +93,7 @@ public class objectivesScript : MonoBehaviour
     public void CloseObjectivesPanel()
     {
         ObjectivesMenu.SetActive(false);
+        GameObject.Find("Canvas").GetComponent<pauseScript>().enabled = true;
         //PauseButton.SetActive(true);
     }
 }

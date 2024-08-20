@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class resultsScript : MonoBehaviour
 {
@@ -65,7 +66,7 @@ public class resultsScript : MonoBehaviour
             AYes.text = listOfIncubators[0].incubatorCorrect.ToString();
             BYes.text = listOfIncubators[1].incubatorCorrect.ToString();
             ANo.text = listOfIncubators[0].incubatorIncorrect.ToString();
-            BNo.text = listOfIncubators[1].incubatorIncorrect.ToString();
+            BNo.text = listOfIncubators[1].incubatorIncorrect.ToString(); 
             QuotaPanel.SetActive(false);
             TextBox.SetActive(false);
             PauseButton.SetActive(false);
@@ -73,9 +74,11 @@ public class resultsScript : MonoBehaviour
             // Debug.Log("Status BYes " + BYes.text);
             // Debug.Log("Status ANo " + ANo.text);
             // Debug.Log("Status BNo " + BNo.text);
-            int percentCorrect = (listOfIncubators[0].incubatorCorrect + listOfIncubators[1].incubatorCorrect) /
+            float percentCorrect = ((float)(listOfIncubators[0].incubatorCorrect + listOfIncubators[1].incubatorCorrect)) /
                                 totalEggs * 100;
-            Debug.Log("percent correct is " + percentCorrect);
+            double adjustedPercentCorrect = Math.Floor(percentCorrect);
+            Debug.Log("percent correct is " + adjustedPercentCorrect);
+            percent.text = adjustedPercentCorrect.ToString();
         } 
     }
 
