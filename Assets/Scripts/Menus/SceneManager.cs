@@ -60,6 +60,11 @@ public class SceneSwap : MonoBehaviour
         SceneManager.LoadScene("Gameplay");
     }
 
+    public void Playground()
+    {
+        SceneManager.LoadScene("Playground");
+    }
+
     // Update is called once per frame
     public void QuitGame()
     {

@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: c8f9d66b20b3a459ea024dcfa703a5eb
   - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 73c6ed5a69dfdd24db23208bd0c4fce4
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: a30710e0bc810734f99fac282c5811ec
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b0962937f0c024d69a762dd442db9c28
   - enabled: 1
@@ -35,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1Test.unity
     guid: 72b3a5d8e329a498081e603b0c9c9629
+  - enabled: 1
+    path: Assets/Scenes/Playground.unity
+    guid: 5fd1725d130114ecd8b86106b35a353d
   - enabled: 1
     path: Assets/Scenes/TutorialRetry.unity
     guid: e59595ce74e134e42ba6fee6f9f1c2b0

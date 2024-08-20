@@ -3237,6 +3237,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7044105033849196163, guid: 8f256d4e781347746aacddaf77cac86e, type: 3}
   m_PrefabInstance: {fileID: 720613122}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1312858999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3174797439880260052, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+  m_PrefabInstance: {fileID: 8170202695491329395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1312859004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312858999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0483e1a063aadb14190c8785f7a8dd75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1320490742 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1314986871109142179, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
@@ -4548,7 +4565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: timeToSpawn
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: Eggs.Array.size
@@ -6563,6 +6580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ANo
       objectReference: {fileID: 0}
+    - target: {fileID: 3174797439880260052, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_Name
+      value: PlaygroundButton
+      objectReference: {fileID: 0}
     - target: {fileID: 3320883142367923478, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: m_text
       value: 'Eggs sorted correctly:          /      (     %)'
@@ -6589,11 +6610,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5803260444624507958, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5816993069218100056, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: m_Name
       value: BYes
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1312859004}
+    - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Playground
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneSwap, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7270557304399344855, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_text
+      value: Playground
       objectReference: {fileID: 0}
     - target: {fileID: 7814354299068416246, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: newText
@@ -6701,7 +6738,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3997326243602645309, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       insertIndex: 2
       addedObject: {fileID: 517539739}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3174797439880260052, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1312859004}
   m_SourcePrefab: {fileID: 100100000, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
 --- !u!114 &8173976776455724548
 MonoBehaviour:

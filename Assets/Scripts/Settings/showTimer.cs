@@ -31,10 +31,12 @@ public class showTimer : MonoBehaviour
     public void UpdateTimerVisibility()
     {
         if (timerVisible) {
+            Debug.Log("Timer is turned on");
             TimeInfo.SetActive(true);
             GameObject.Find("TimeInfo").transform.localScale = new Vector3(30, 30, 30);
         }
         else {
+            Debug.Log("Timer is turned off");
             //Timer still needs to be ongoing even if it is not physcially visible, so set the size of the timer text to 0
             GameObject.Find("TimeInfo").transform.localScale = new Vector3(0, 0, 0);
             //Source: https://discussions.unity.com/t/how-can-i-hide-a-gameobject-without-active-false/64919
