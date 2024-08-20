@@ -146,11 +146,13 @@ public class LvlManager : MonoBehaviour
         if(currManEggs >= requiredManEggs)
         {
             quotaManager.CompleteMandatory();
+            PlayGround.IncreaseDragonScore();
         }
 
         if(currOptEggs >= reqeuiredoptEggs)
         {
             quotaManager.CompleteOpt();
+            PlayGround.IncreaseDinoScore();
         }
 
     }
