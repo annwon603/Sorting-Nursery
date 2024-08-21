@@ -104,6 +104,7 @@ MonoBehaviour:
   isDragging: 0
   finished: 0
   isWaiting: 0
+  resetPosition: {x: 0, y: 0, z: 0}
   trait: {fileID: 11400000, guid: e19b9edbc79425d4d9e80b60935d44a7, type: 2}
   isPaused: 0
   size: {fileID: 11400000, guid: 086a9c60b7899ff488d696f00e950c9c, type: 2}
@@ -128,6 +129,7 @@ MonoBehaviour:
   doesTurn: 0
   changedNode: 0
   doesMove: 1
+  isNearChicken: 0
 --- !u!50 &3100770143452376686
 Rigidbody2D:
   serializedVersion: 4

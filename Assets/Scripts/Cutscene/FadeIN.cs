@@ -17,6 +17,11 @@ public class FadeIN : MonoBehaviour
 
     public GameObject PlayerInput;
 
+    public GameObject Player;
+    public GameObject BigCecil;
+
+    public Color greyTint;
+
     private void Start()
     {
         // Start the fade-in effect when the scene starts
@@ -25,6 +30,8 @@ public class FadeIN : MonoBehaviour
         StartCoroutine(TriggerFadeOutAfterDelay(5f));
 
         dialogueManager.endDialogueDelegate = PutName;
+
+        greyTint = new Color(167f/255f,167f/255f,167f/255f);
     }
 
     // Coroutine for fading in
@@ -85,21 +92,33 @@ public class FadeIN : MonoBehaviour
         yield return new WaitForSeconds(5.0f);
         dialogueManager.TextBox.SetActive(true);
         GameObject.Find("IntroDialougue").GetComponent<DialogueTrigger>().enabled = true;
+        Player.SetActive(true);
+        BigCecil.SetActive(true);
 
     }
 
     public void PutName()
     {
         PlayerInput.SetActive(true);
+        dialogueManager.TextBox.SetActive(false);
+        Player.GetComponent<SpriteRenderer>().color = greyTint;
+        BigCecil.GetComponent<SpriteRenderer>().color = greyTint;
     }
 
     public void Update()
     {
         if(dialogueManager.counter == 1 )
         {
-            PutName();
+            dialogueManager.nextButton.SetActive(true);
+            dialogueManager.endDialogueDelegate = PutName;
+        }
+
+        if(dialogueManager.counter == 2)
+        {
             dialogueManager.nextButton.SetActive(true);
             dialogueManager.endDialogueDelegate = StartTutorial;
+            Player.GetComponent<SpriteRenderer>().color = new Color(1,1,1);
+            BigCecil.GetComponent<SpriteRenderer>().color = new Color(1,1,1);
         }
     }
 
