@@ -724,9 +724,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sort the eggs into the incubators. Try to get as many correct as possible.
-    There is one required and one optional objective in each level. If you finish
-    the required objective, you will unlock the next level. [FINISH THIS LATER]
+  m_text: Sort the eggs into the incubators, either by directly dragging them into
+    the incubators or by using the buttons on the baskets. Try to get as many correct
+    as possible. There is one required and one optional objective in each level.
+    If you finish the required objective, you'll unlock a dinosaur and the next level.
+    For each optional objective you complete, you'll unlock a dragon in the playground
+    at the end. Use chickens to help you guide which way the eggs should go on the
+    conveyor belt.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -753,8 +757,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
