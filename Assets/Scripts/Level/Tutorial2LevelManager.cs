@@ -89,6 +89,7 @@ public class Tutorial2LevelManager : MonoBehaviour
         isScoreOpen = true;
         quotaManager.CompleteMandatory();
         int score = int.Parse(scorePanel.GetComponent<TextSetter>().newText.text);
+
         if(score >= 5){
             quotaManager.CompleteOpt();
             GameObject.Find("Congratz").GetComponent<DialogueTrigger>().enabled = true;
@@ -109,7 +110,7 @@ public class Tutorial2LevelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
         if(GameObject.Find("DialougeUI") == null && GameObject.FindWithTag("Egg") == null){
-            GameObject.Find("TextBox").transform.GetChild(0).gameObject.SetActive(true);
+            dialogueManager.TextBox.transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("CheckScoreDialouge").GetComponent<DialogueTrigger>().enabled = true;
             dialogueManager.endDialogueDelegate = CheckScore;
         }
@@ -129,7 +130,7 @@ public class Tutorial2LevelManager : MonoBehaviour
     void goNextLevel()
     {
         retry.SetActive(true);
-        nextLvl.SetActive(true);
+        //nextLvl.SetActive(true);
     }
 
 

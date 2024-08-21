@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEditor.SearchService;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -31,7 +32,10 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<Text>();
-        nextButton = GameObject.Find("NextButton");
+        if(gameObject.scene.name != "IntroCutScene")
+        {
+           nextButton = GameObject.Find("NextButton");
+        }
     }
 
    public void StartDialouge (Dialogue dialogue)
@@ -72,7 +76,7 @@ public class DialogueManager : MonoBehaviour
 
    public void hideButton()
    {
-        nextButton.SetActive(false);
+     nextButton.SetActive(false);
    }
 
    public void showButton()

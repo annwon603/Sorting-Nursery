@@ -67,8 +67,8 @@ public class resultsScript : MonoBehaviour
             BYes.text = listOfIncubators[1].incubatorCorrect.ToString();
             ANo.text = listOfIncubators[0].incubatorIncorrect.ToString();
             BNo.text = listOfIncubators[1].incubatorIncorrect.ToString(); 
-            QuotaPanel.SetActive(false);
-            TextBox.SetActive(false);
+            // QuotaPanel.SetActive(false);
+            //TextBox.SetActive(false);
             PauseButton.SetActive(false);
             // Debug.Log("Status AYes " + AYes.text);
             // Debug.Log("Status BYes " + BYes.text);

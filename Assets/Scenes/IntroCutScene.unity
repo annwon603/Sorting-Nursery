@@ -238,7 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 495419313}
   dialogueText: {fileID: 1096740585}
-  nextButton: {fileID: 495419311}
+  nextButton: {fileID: 1594910047}
   retryButton: {fileID: 0}
   nextLevelButton: {fileID: 0}
   counter: -1
@@ -259,17 +259,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &495419311 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5139505627092320001, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
-  m_PrefabInstance: {fileID: 502873685}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &495419313 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1321696809685168857, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
   m_PrefabInstance: {fileID: 502873685}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495419311}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -286,6 +281,10 @@ PrefabInstance:
     - target: {fileID: 700439052390384044, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680534525573821445, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2710391044266022502, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
       propertyPath: m_BlocksRaycasts
@@ -723,7 +722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1105692305
 RectTransform:
   m_ObjectHideFlags: 0
@@ -750,7 +749,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105692304}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 235f8ecdf2811d943a8e23d4d2a603f4, type: 3}
   m_Name: 
@@ -1240,6 +1239,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6824079773105967807, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
   m_PrefabInstance: {fileID: 502873685}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1594910047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7769484044725027595, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
+  m_PrefabInstance: {fileID: 502873685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1906829468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,9 +1345,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1105692304}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 1105692306}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

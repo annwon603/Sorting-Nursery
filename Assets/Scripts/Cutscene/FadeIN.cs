@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class FadeIN : MonoBehaviour
 {
@@ -89,5 +91,20 @@ public class FadeIN : MonoBehaviour
     public void PutName()
     {
         PlayerInput.SetActive(true);
+    }
+
+    public void Update()
+    {
+        if(dialogueManager.counter == 1 )
+        {
+            PutName();
+            dialogueManager.nextButton.SetActive(true);
+            dialogueManager.endDialogueDelegate = StartTutorial;
+        }
+    }
+
+    public void StartTutorial()
+    {
+        SceneManager.LoadScene("Gameplay");
     }
 }

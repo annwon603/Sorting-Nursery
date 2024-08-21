@@ -13,4 +13,6 @@ public class Obj : ScriptableObject
     public Traits typeOfEgg; // What type of egg to fulfill that objective 
 
     public TraitType eggType; // What catoergy of type to search for
+
+    public bool needCorrect; // Whether need to check for correctness
 }

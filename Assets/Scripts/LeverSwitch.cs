@@ -9,13 +9,13 @@ public class LeverSwitch : MonoBehaviour
     //public Sprite oldSprite;
     bool isSwitched = false;
 
-    
+    public Transform target;
 
     // Update is called once per frame
-    // void Start()
-    // {
-    //     oldSprite = GetComponent<SpriteRenderer>().sprite;
-    // }
+    void Start()
+    {
+        transform.position = target.position;
+    }
 
     // void OnMouseDown()
     // {
@@ -46,6 +46,8 @@ public class LeverSwitch : MonoBehaviour
         if(other.CompareTag("Egg") && isSwitched == true)
         {
             other.GetComponent<Move>().doesTurn = true;
+            other.GetComponent<Move>().isNearChicken = true;
+            other.GetComponent<Move>().changedNode = true;
             Debug.Log("Egg Switching");
         }
 
@@ -58,6 +60,7 @@ public class LeverSwitch : MonoBehaviour
         if(other.CompareTag("Egg") && isSwitched == false && other.gameObject.GetComponent<Move>().changedNode)
         {
             other.GetComponent<Move>().doesTurn = false;
+            Debug.Log("Egg not turning");
         }
     }
 }

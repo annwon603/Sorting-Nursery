@@ -30,7 +30,7 @@ public class Move : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Chicken"))
+        if(other.CompareTag("Chicken") || other.name == "lever")
         {
             isNearChicken = true;
         }
@@ -67,9 +67,14 @@ public class Move : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        changedNode = false;
-        //Debug.Log("ChangedNode " + changedNode);
-        isNearChicken = false;
+        if(other.name != "lever")
+        {
+            changedNode = false;
+            isNearChicken = false;
+        }
+        // changedNode = false;
+        // //Debug.Log("ChangedNode " + changedNode);
+        // isNearChicken = false;
 
     }
 
