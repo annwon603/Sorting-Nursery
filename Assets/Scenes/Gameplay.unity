@@ -787,7 +787,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633856756}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a11463aea446deb46b845265c1433ffb, type: 3}
   m_Name: 
@@ -2796,7 +2796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1517989284
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3774,6 +3774,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2241727501716701368, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
+      propertyPath: canShow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241727501716701368, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       propertyPath: inventoryUI
       value: 
       objectReference: {fileID: 1410735382}
@@ -4046,7 +4050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &2369393235778957209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4244,6 +4248,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1008198660252558362, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241727501716701368, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
+      propertyPath: canShow
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2241727501716701368, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
@@ -4673,7 +4681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6824079773105967807, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 7.734833
+      value: 7.7348022
       objectReference: {fileID: 0}
     - target: {fileID: 6824079773105967807, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
