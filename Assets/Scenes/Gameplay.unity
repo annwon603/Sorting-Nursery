@@ -592,6 +592,7 @@ GameObject:
   - component: {fileID: 587611367}
   - component: {fileID: 587611370}
   - component: {fileID: 587611371}
+  - component: {fileID: 587611372}
   m_Layer: 0
   m_Name: lever
   m_TagString: TutorialTask1
@@ -640,7 +641,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4a0c5c153c25b774794e98fa40b1e58d, type: 3}
+  m_Sprite: {fileID: -958163741, guid: 493e63c89afc5714dbcb53e65637b302, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -660,9 +661,9 @@ Transform:
   m_GameObject: {fileID: 587611365}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.45, y: 3.84, z: 0.053985253}
-  m_LocalScale: {x: 0.15534875, y: 0.15534875, z: 0.15534875}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -1.4, y: 3.24, z: 0.053985253}
+  m_LocalScale: {x: 0.5696568, y: 0.5696568, z: 0.5696568}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1349599796}
   m_Father: {fileID: 888069485}
@@ -696,14 +697,14 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.37, y: 2.84}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 12}
+    oldSize: {x: 1.91, y: 1.96}
     newSize: {x: 19.2, y: 12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -711,11 +712,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -3.2687955, y: -7.9785557}
-      - {x: -4.264215, y: -1.3375491}
-      - {x: -3.771031, y: -1.1403155}
-      - {x: 3.7542162, y: -1.2773104}
-      - {x: 4.3451867, y: -7.7983227}
+    - - {x: -0.865, y: -0.41}
+      - {x: -0.935, y: 0.97999996}
+      - {x: 0.91499996, y: 0.95}
+      - {x: 0.875, y: -0.41}
   m_UseDelaunayMesh: 0
 --- !u!114 &587611371
 MonoBehaviour:
@@ -729,9 +729,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd459aa5f6f8a914cb0bf89dd2f5c968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newSprite: {fileID: 21300000, guid: 591ea35fa8c64e5498f46cc5ffbfb345, type: 3}
-  oldSprite: {fileID: 21300000, guid: 4a0c5c153c25b774794e98fa40b1e58d, type: 3}
+  newSprite: {fileID: -1985407904, guid: 1e5e9c21538a0244387dae42b701e07b, type: 3}
+  oldSprite: {fileID: -958163741, guid: 493e63c89afc5714dbcb53e65637b302, type: 3}
   isSwitched: 0
+--- !u!114 &587611372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587611365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1830312860
+      Data2: 1097856023
+      Data3: -851459660
+      Data4: -1786100739
+    Path: event:/UI/Lever
+  Event: 
+  PlayEvent: 16
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &633856756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,11 +1560,6 @@ MonoBehaviour:
   BYes: {fileID: 1759075468}
   BNo: {fileID: 1216300086}
   percent: {fileID: 1194281924}
---- !u!1 &966234999 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 240851219769371347, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
-  m_PrefabInstance: {fileID: 870536044625883040}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &966235000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1008198660252558362, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
@@ -2228,8 +2254,8 @@ Transform:
   m_GameObject: {fileID: 1349599795}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4, y: -6.88773, z: -0.6980642}
-  m_LocalScale: {x: 6.43713, y: 6.43713, z: 6.43713}
+  m_LocalPosition: {x: 0.579296, y: -0.61440486, z: -1.2254118}
+  m_LocalScale: {x: 1.7554429, y: 1.7554429, z: 1.7554429}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 587611368}
@@ -3509,6 +3535,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 888069486}
+    - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoNextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7844802395142051197, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: newText
       value: 
@@ -3681,15 +3719,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1008198660252558362, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.17999999
+      value: 1.5240599
       objectReference: {fileID: 0}
     - target: {fileID: 1008198660252558362, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.16348377
+      value: 1.384217
       objectReference: {fileID: 0}
     - target: {fileID: 1008198660252558362, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.16348377
+      value: 1.384217
       objectReference: {fileID: 0}
     - target: {fileID: 1008198660252558362, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3746,10 +3784,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 240851219769371347, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6892165840511235280}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
 --- !u!1001 &904969871384490978
 PrefabInstance:
@@ -4011,7 +4046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1001 &2369393235778957209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4157,15 +4192,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1008198660252558362, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.18000004
+      value: 1.3395063
       objectReference: {fileID: 0}
     - target: {fileID: 1008198660252558362, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1634838
+      value: 1.2165974
       objectReference: {fileID: 0}
     - target: {fileID: 1008198660252558362, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1634838
+      value: 1.2165974
       objectReference: {fileID: 0}
     - target: {fileID: 1008198660252558362, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4225,9 +4260,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 240851219769371347, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3672278792758710160}
-    - targetCorrespondingSourceObject: {fileID: 240851219769371347, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4589781059450788160}
   m_SourcePrefab: {fileID: 100100000, guid: 03e17e4cf6af55d428b118714c91703b, type: 3}
 --- !u!1 &3149694838912182817
@@ -4247,21 +4279,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &3672278792758710160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775033698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2855c58b8192cbc45b6af60e24ac20c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryUI: {fileID: 1410735382}
-  canShow: 0
-  inventorySize: 0
 --- !u!1 &3935882841234142827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4291,6 +4308,7 @@ GameObject:
   - component: {fileID: 7473419486763742161}
   - component: {fileID: 7506833072652301656}
   - component: {fileID: 6389533015724603367}
+  - component: {fileID: 7506833072652301657}
   m_Layer: 0
   m_Name: Left
   m_TagString: Node
@@ -4345,8 +4363,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.63, y: 1.7566359}
-  m_Size: {x: 9.463896, y: 6.906738}
+  m_Offset: {x: -0.051527623, y: 0.17185229}
+  m_Size: {x: 1.3804468, y: 0.4716396}
   m_Direction: 1
 --- !u!4 &4791354405449697914
 Transform:
@@ -4463,6 +4481,10 @@ PrefabInstance:
     - target: {fileID: 4716979532733248821, guid: 3907ba5612cbf1a4c80612e4a79152f2, type: 3}
       propertyPath: m_Name
       value: BasketUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716979532733248821, guid: 3907ba5612cbf1a4c80612e4a79152f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8202994832806484935, guid: 3907ba5612cbf1a4c80612e4a79152f2, type: 3}
       propertyPath: m_Pivot.x
@@ -4651,7 +4673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6824079773105967807, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 7.734619
+      value: 7.734833
       objectReference: {fileID: 0}
     - target: {fileID: 6824079773105967807, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4694,6 +4716,7 @@ GameObject:
   - component: {fileID: 7301354042317484527}
   - component: {fileID: 7712407782518512930}
   - component: {fileID: 7031412891217914348}
+  - component: {fileID: 7712407782518512931}
   m_Layer: 0
   m_Name: Right1
   m_TagString: Node
@@ -4779,21 +4802,6 @@ MonoBehaviour:
   right:
     pos: {x: 0, y: 0}
   b: {fileID: 0}
---- !u!114 &6892165840511235280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966234999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2855c58b8192cbc45b6af60e24ac20c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryUI: {fileID: 1410735382}
-  canShow: 0
-  inventorySize: 0
 --- !u!70 &7031412891217914348
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4898,6 +4906,37 @@ MonoBehaviour:
   isFull: 0
   counter: 0
   listOfEggs: []
+--- !u!114 &7506833072652301657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4429576791560456591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Egg
+  EventReference:
+    Guid:
+      Data1: 913237542
+      Data2: 1151939031
+      Data3: 1275653799
+      Data4: -1675637460
+    Path: event:/UI/Egg Drop
+  Event: 
+  PlayEvent: 5
+  StopEvent: 6
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &7688956265303587336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4932,6 +4971,37 @@ MonoBehaviour:
   isFull: 0
   counter: 0
   listOfEggs: []
+--- !u!114 &7712407782518512931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977202938225328820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Egg
+  EventReference:
+    Guid:
+      Data1: 913237542
+      Data2: 1151939031
+      Data3: 1275653799
+      Data4: -1675637460
+    Path: event:/UI/Egg Drop
+  Event: 
+  PlayEvent: 5
+  StopEvent: 6
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!58 &8170087454420559363
 CircleCollider2D:
   m_ObjectHideFlags: 0

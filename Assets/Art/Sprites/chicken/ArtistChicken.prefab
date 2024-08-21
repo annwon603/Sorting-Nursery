@@ -86,7 +86,7 @@ MonoBehaviour:
   doesTurn: 0
   ChickTrait: {fileID: 11400000, guid: ffa8aa7026dc19c4bbe2f2d14d30dddc, type: 2}
   doesMatch: 0
-  adjustProp: 0
+  adjustProp: 0.44
   ranBool: 0
 --- !u!114 &5604794981047686070
 MonoBehaviour:
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   oldSprite: {fileID: 21300000, guid: b07ff9762c71d714fa166c6d2cfba672, type: 3}
-  newSprite: {fileID: 21300000, guid: b07ff9762c71d714fa166c6d2cfba672, type: 3}
+  newSprite: {fileID: 21300000, guid: 5445dade1c6d98948b5dc66422369160, type: 3}
 --- !u!1 &2719000905001595225
 GameObject:
   m_ObjectHideFlags: 0
