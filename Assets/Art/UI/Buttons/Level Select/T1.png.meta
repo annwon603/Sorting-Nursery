@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c0ff21b85556b4553a26122a65746fba
+guid: 55ee1a3841ab84ddea52e69780514636
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pause Menu_0
+      name: T1_0
       rect:
         serializedVersion: 2
-        x: 647
-        y: 114
-        width: 1073
-        height: 1486
+        x: 351
+        y: 550
+        width: 342
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fe89fd04f5a8446c9e11e638f837fd7
-      internalID: 1708139952
+      spriteID: 5d64aa1bfd94847c987cb2aa514caf11
+      internalID: 1507150374
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pause Menu_0: 1708139952
+      T1_0: 1507150374
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

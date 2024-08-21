@@ -92,4 +92,9 @@ public class resultsScript : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelect");
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

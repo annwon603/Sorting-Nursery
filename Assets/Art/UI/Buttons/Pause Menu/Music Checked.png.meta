@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c0ff21b85556b4553a26122a65746fba
+guid: 56bf57420606a4d98aebf2eec859d0c7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pause Menu_0
+      name: Music Checked_0
       rect:
         serializedVersion: 2
-        x: 647
-        y: 114
-        width: 1073
-        height: 1486
+        x: 1221
+        y: 238
+        width: 116
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fe89fd04f5a8446c9e11e638f837fd7
-      internalID: 1708139952
+      spriteID: d8d12b24ef55949619fa73f79c953914
+      internalID: 578921979
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pause Menu_0: 1708139952
+      Music Checked_0: 578921979
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
