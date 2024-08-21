@@ -25,10 +25,10 @@ public class SceneSwap : MonoBehaviour
         SceneManager.LoadScene("Controls");
     }
 
-    public void Settings()
-    {
-        SceneManager.LoadScene("Settings");
-    }
+    // public void Settings()
+    // {
+    //     SceneManager.LoadScene("Settings");
+    // }
 
     public void HowToPlay()
     {
