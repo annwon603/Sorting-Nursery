@@ -17,7 +17,7 @@ public class SceneSwap : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("IntroCutScene");
     }
 
     public void Controls()
