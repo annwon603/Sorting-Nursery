@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efd88f8dc0cb1d499896fce5758f3c0, type: 3}
+  m_Name: PangolinZilant
+  m_EditorClassIdentifier: 
+  creatureName: Pangolin Zilant
+  description: 'The pangolin zilant is an aquatic burrowing zilant. It will curl
+    into a protective ball and use its keratin scales to shield and hide itself from
+    predators. This creature is a gentle giant who uses its huge claws to dig and
+    mark territory instead of hunt or fight. The pangolin zilant also boasts a prehensile
+    tail, which it uses mostly to swim more efficiently.
+
+'

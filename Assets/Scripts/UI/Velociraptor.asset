@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efd88f8dc0cb1d499896fce5758f3c0, type: 3}
+  m_Name: Velociraptor
+  m_EditorClassIdentifier: 
+  creatureName: Velociraptor
+  description: 'Velociraptor seems to be the most fitting choice out of the listed
+    options, given that it is a recognizable dinosaur and also has the feathers we
+    have made the key indicator of a dino being a dino. Otherwise, if we were to
+    include a more obscure/scaled dino, we run the risk of them being confused for
+    dragons.
+
+'
