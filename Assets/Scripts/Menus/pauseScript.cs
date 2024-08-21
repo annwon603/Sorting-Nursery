@@ -106,7 +106,7 @@ public class pauseScript : MonoBehaviour {
         SceneManager.LoadScene("LevelSelect");
     }
 
-    public void RestartTesting1()
+    public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
