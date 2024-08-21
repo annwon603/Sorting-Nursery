@@ -21,6 +21,9 @@ public class LvlManager : MonoBehaviour
     [SerializeField]
     private string nextLevelName;
 
+    bool justIncreaseDinoScore = false;
+    bool justIncreaseDragonScore = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,13 +52,13 @@ public class LvlManager : MonoBehaviour
             // quotaManager.quotaPanel.GetComponent<QuotaTrigger>().enabled = true;
             //Debug.Log("I'm in Gameplay State");
             eggManager.enabled = true;
-            StartCoroutine(CheckIfEggGone());
             StartCoroutine(CheckIfCompleteObj());
 
     
         }else if(Global.CurrentGameState == Global.GameState.Score)
         {
             scorePanel.SetActive(true);
+
             Debug.Log("You finished");
         }
     }
@@ -67,7 +70,7 @@ public class LvlManager : MonoBehaviour
 
     IEnumerator CheckIfEggGone()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(eggManager.timeToSpawn);
         if(GameObject.FindWithTag("Egg") == null)
         {
             Global.CurrentGameState = Global.GameState.Score;
@@ -146,13 +149,27 @@ public class LvlManager : MonoBehaviour
         if(currManEggs >= requiredManEggs)
         {
             quotaManager.CompleteMandatory();
-            PlayGround.IncreaseDragonScore();
+            if(justIncreaseDinoScore == false)
+            {
+                PlayGround.IncreaseDragonScore();
+                justIncreaseDinoScore = true;
+            }
+            
         }
 
         if(currOptEggs >= reqeuiredoptEggs)
         {
             quotaManager.CompleteOpt();
-            PlayGround.IncreaseDinoScore();
+            if(justIncreaseDragonScore == false)
+            {
+                PlayGround.IncreaseDinoScore();
+                justIncreaseDragonScore = true;
+            }
+        }
+
+        if(IncabatorA.Count + IncabatorB.Count == eggManager.counter)
+        {
+            StartCoroutine(CheckIfEggGone());
         }
 
     }

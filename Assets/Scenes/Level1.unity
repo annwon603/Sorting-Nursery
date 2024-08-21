@@ -2142,7 +2142,7 @@ MonoBehaviour:
   ANo: {fileID: 6858521237079120431}
   BYes: {fileID: 4999247242068325340}
   BNo: {fileID: 1620860798795663823}
-  percent: {fileID: 0}
+  percent: {fileID: 2034247749}
 --- !u!1001 &920830459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3842,7 +3842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: timeToSpawn
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6203398994968153725, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
       propertyPath: Eggs.Array.size
@@ -3917,6 +3917,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 235c0da67af7b8e43948a605b2fda7a0, type: 3}
+--- !u!114 &2034247749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3637339501467619015, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+  m_PrefabInstance: {fileID: 8170202695491329395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2100107029 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3009242637763944182, guid: 3907ba5612cbf1a4c80612e4a79152f2, type: 3}
@@ -5804,6 +5815,14 @@ PrefabInstance:
     - target: {fileID: 5816993069218100056, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: m_Name
       value: BYes
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 888069486}
+    - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
       objectReference: {fileID: 0}
     - target: {fileID: 7814354299068416246, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: newText
