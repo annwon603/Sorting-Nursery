@@ -70,7 +70,7 @@ public class LvlManager : MonoBehaviour
 
     IEnumerator CheckIfEggGone()
     {
-        yield return new WaitForSeconds(eggManager.timeToSpawn);
+        yield return new WaitForSeconds(3.0f);
         if(GameObject.FindWithTag("Egg") == null)
         {
             Global.CurrentGameState = Global.GameState.Score;
@@ -101,7 +101,8 @@ public class LvlManager : MonoBehaviour
         Traits requiredOptTrait = opt.typeOfEgg;
         Traits IncubatorATrait = Result.listOfIncubators[0].IncuTrait;   //Dragon
         Traits IncubatorBTrait = Result.listOfIncubators[1].IncuTrait;   //Dino
-
+        bool needCorrect = man.needCorrect;
+        
         int currManEggs = 0;
         int currOptEggs = 0;
 
@@ -111,10 +112,17 @@ public class LvlManager : MonoBehaviour
             Traits eggTypeTrait = SearchTypeCategory(requiredManType, egg.GetComponent<DragDrop>());
             Traits eggTypeTraitOpt = SearchTypeCategory(requiredOptType, egg.GetComponent<DragDrop>());
             //If the requireManTrait is null that means anytype, egg match the mandatory trait, or match the incubator
-            if(requiredManTrait == null || eggTrait == IncubatorATrait || eggTypeTrait == requiredManTrait)
+            if(needCorrect == true)
+            {
+                if(eggTrait == IncubatorATrait || eggTypeTrait == requiredManTrait)
+                {
+                    currManEggs++;
+                }
+            } else if( requiredManTrait == null || eggTrait == IncubatorATrait || eggTypeTrait == requiredManTrait)
             {
                 currManEggs++;
             }
+
             //If OptTrait is null that means any tyep, but need to check if egg match incubator trait
             //Or check if egg is sorted correctly and match the opt trait
             if ((requiredOptTrait == null && eggTrait == IncubatorATrait) ||
@@ -130,10 +138,17 @@ public class LvlManager : MonoBehaviour
             Traits eggTypeTrait = SearchTypeCategory(requiredManType, egg.GetComponent<DragDrop>());
             Traits eggTypeTraitOpt = SearchTypeCategory(requiredOptType, egg.GetComponent<DragDrop>());
             //If the requireManTrait is null that means anytype, egg match the mandatory trait, or match the incubator
-            if(requiredManTrait == null || eggTrait == IncubatorBTrait || eggTypeTrait == requiredManTrait)
+            if(needCorrect == true)
+            {
+                if(eggTrait == IncubatorBTrait || eggTypeTrait == requiredManTrait)
+                {
+                    currManEggs++;
+                }
+            } else if( requiredManTrait == null || eggTrait == IncubatorBTrait || eggTypeTrait == requiredManTrait)
             {
                 currManEggs++;
             }
+
             //If OptTrait is null that means any tyep, but need to check if egg match incubator trait
             //Or check if egg is sorted correctly and match the opt trait
             if ((requiredOptTrait == null && eggTrait == IncubatorBTrait) ||
@@ -167,7 +182,7 @@ public class LvlManager : MonoBehaviour
             }
         }
 
-        if(IncabatorA.Count + IncabatorB.Count == eggManager.counter)
+        if(IncabatorA.Count + IncabatorB.Count == eggManager.Eggs.Length)
         {
             StartCoroutine(CheckIfEggGone());
         }

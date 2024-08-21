@@ -14,6 +14,16 @@ public class DnDSpawn : MonoBehaviour
     {
         dragonsToSpawn = PlayGround.numOfDragons;
         dinoToSpawn = PlayGround.numOfDinos;
+        
+        if (dinoToSpawn > 3)
+        {
+            dinoToSpawn = 3;
+        }
+
+        if (dragonsToSpawn > 3)
+        {
+            dinoToSpawn = 3;
+        }
 
         for(int i = 0; i < dragonsToSpawn; i++)
         {

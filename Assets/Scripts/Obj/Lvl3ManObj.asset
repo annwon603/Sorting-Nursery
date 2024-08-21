@@ -16,3 +16,4 @@ MonoBehaviour:
   numOfEggs: 5
   typeOfEgg: {fileID: 0}
   eggType: 0
+  needCorrect: 1

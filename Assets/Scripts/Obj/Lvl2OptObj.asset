@@ -16,3 +16,4 @@ MonoBehaviour:
   numOfEggs: 5
   typeOfEgg: {fileID: 11400000, guid: 17bbe229af5e7b34a82fc55395222ae0, type: 2}
   eggType: 0
+  needCorrect: 1

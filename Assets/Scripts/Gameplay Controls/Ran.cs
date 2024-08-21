@@ -20,7 +20,7 @@ public class Ran : MonoBehaviour
 
     private void Start()
     {
-        adjustProp = 0.25f;        //Default probablity is 20%
+        //adjustProp = 0.25f;        //Default probablity is 20%
     }
     public void OnTriggerEnter2D(Collider2D other)
     {

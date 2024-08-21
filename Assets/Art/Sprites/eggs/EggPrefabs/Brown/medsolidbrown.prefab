@@ -104,6 +104,7 @@ MonoBehaviour:
   isDragging: 0
   finished: 0
   isWaiting: 0
+  resetPosition: {x: 0, y: 0, z: 0}
   trait: {fileID: 11400000, guid: 94ee6eb7543b3464a817b3a365e05f1c, type: 2}
   isPaused: 0
   size: {fileID: 11400000, guid: 1f9769a38887c8445a01f9bd33479d63, type: 2}
@@ -128,6 +129,7 @@ MonoBehaviour:
   doesTurn: 0
   changedNode: 0
   doesMove: 1
+  isNearChicken: 0
 --- !u!58 &5097708468002930675
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -162,7 +164,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.2858301}
   serializedVersion: 2
-  m_Radius: 2.7141697
+  m_Radius: 3.22
 --- !u!70 &5816911540510989762
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -196,7 +198,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.015365403, y: -2.6569977}
-  m_Size: {x: 3.7571318, y: 0.5604427}
+  m_Size: {x: 3.476378, y: 0.8333954}
   m_Direction: 1
 --- !u!50 &4439492464406241720
 Rigidbody2D:
