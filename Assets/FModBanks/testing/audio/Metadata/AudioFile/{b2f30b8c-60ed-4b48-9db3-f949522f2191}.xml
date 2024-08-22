@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b2f30b8c-60ed-4b48-9db3-f949522f2191}">
+		<property name="assetPath">
+			<value>Birb.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6.8702040816326528</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{284c4414-9430-4d4d-9cd7-df4d0bec0ff2}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e20583ec-6bac-4668-a104-ed24b1cb44d1}">
+		<property name="assetPath">
+			<value>t-rex_calls.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>46.271999999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{284c4414-9430-4d4d-9cd7-df4d0bec0ff2}</destination>
+		</relationship>
+	</object>
+</objects>

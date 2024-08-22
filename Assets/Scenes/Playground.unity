@@ -135,13 +135,14 @@ GameObject:
   - component: {fileID: 28612853}
   - component: {fileID: 28612855}
   - component: {fileID: 28612856}
+  - component: {fileID: 28612857}
   m_Layer: 0
   m_Name: OarfishNaga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &28612853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -319,6 +320,37 @@ PolygonCollider2D:
       - {x: 0.235, y: -1.115}
       - {x: 0.375, y: -0.995}
   m_UseDelaunayMesh: 0
+--- !u!114 &28612857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28612852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1846438235
+      Data2: 1116803069
+      Data3: -1256027505
+      Data4: -1794745161
+    Path: event:/UI/OarfishNagaSFX
+  Event: 
+  PlayEvent: 16
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &72244025
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +666,7 @@ MonoBehaviour:
       Data4: -2040185880
     Path: event:/UI/Button Click
   Event: 
-  PlayEvent: 19
+  PlayEvent: 20
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -1296,13 +1328,14 @@ GameObject:
   - component: {fileID: 880043034}
   - component: {fileID: 880043036}
   - component: {fileID: 880043037}
+  - component: {fileID: 880043038}
   m_Layer: 0
   m_Name: PangolinZilant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &880043034
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1494,6 +1527,37 @@ PolygonCollider2D:
       - {x: 0.72499996, y: -0.645}
       - {x: 0.775, y: -0.375}
   m_UseDelaunayMesh: 0
+--- !u!114 &880043038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880043033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1627556773
+      Data2: 1113399100
+      Data3: -2077346882
+      Data4: 39127596
+    Path: event:/UI/Pangolin
+  Event: 
+  PlayEvent: 16
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &881506920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,13 +1570,14 @@ GameObject:
   - component: {fileID: 881506921}
   - component: {fileID: 881506923}
   - component: {fileID: 881506924}
+  - component: {fileID: 881506925}
   m_Layer: 0
   m_Name: Velociraptor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &881506921
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1746,6 +1811,37 @@ PolygonCollider2D:
       - {x: 0.61, y: -1.26}
       - {x: 0.62, y: -1.26}
   m_UseDelaunayMesh: 0
+--- !u!114 &881506925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881506920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1904288207
+      Data2: 1282977426
+      Data3: -1504243542
+      Data4: -1736798201
+    Path: event:/UI/Velociraptor
+  Event: 
+  PlayEvent: 16
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &915505656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,6 +1854,7 @@ GameObject:
   - component: {fileID: 915505659}
   - component: {fileID: 915505658}
   - component: {fileID: 915505657}
+  - component: {fileID: 915505661}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1853,6 +1950,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &915505661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915505656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1218702058
+      Data2: 1177686225
+      Data3: -914524233
+      Data4: -1137581081
+    Path: event:/Music/Playground
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &932846665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,13 +1993,14 @@ GameObject:
   - component: {fileID: 932846666}
   - component: {fileID: 932846668}
   - component: {fileID: 932846669}
+  - component: {fileID: 932846670}
   m_Layer: 0
   m_Name: Sinosauropteryx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &932846666
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2022,6 +2151,37 @@ PolygonCollider2D:
       - {x: 0.225, y: -0.45499998}
       - {x: 0.345, y: -0.255}
   m_UseDelaunayMesh: 0
+--- !u!114 &932846670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932846665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1459163768
+      Data2: 1102700783
+      Data3: -2074974791
+      Data4: -417869131
+    Path: event:/UI/SinosaurSFX
+  Event: 
+  PlayEvent: 16
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1082602073
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,13 +2655,14 @@ GameObject:
   - component: {fileID: 1619798865}
   - component: {fileID: 1619798867}
   - component: {fileID: 1619798868}
+  - component: {fileID: 1619798869}
   m_Layer: 0
   m_Name: FrilledLizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1619798865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2655,6 +2816,37 @@ PolygonCollider2D:
       - {x: 0.475, y: -0.47}
       - {x: 0.575, y: -0.34}
   m_UseDelaunayMesh: 0
+--- !u!114 &1619798869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619798864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1134012476
+      Data2: 1332149054
+      Data3: 917148290
+      Data4: -238077975
+    Path: event:/UI/FrilledLizardSFX
+  Event: 
+  PlayEvent: 16
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1644883948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2667,13 +2859,14 @@ GameObject:
   - component: {fileID: 1644883949}
   - component: {fileID: 1644883951}
   - component: {fileID: 1644883952}
+  - component: {fileID: 1644883953}
   m_Layer: 0
   m_Name: wulong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1644883949
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2845,6 +3038,37 @@ PolygonCollider2D:
       - {x: -0.33499998, y: -0.39999998}
       - {x: -0.375, y: -0.31}
   m_UseDelaunayMesh: 0
+--- !u!114 &1644883953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644883948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 492647774
+      Data2: 1166238987
+      Data3: -902454366
+      Data4: -1501206212
+    Path: event:/UI/BirdSFX
+  Event: 
+  PlayEvent: 16
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1877779289
 GameObject:
   m_ObjectHideFlags: 0
