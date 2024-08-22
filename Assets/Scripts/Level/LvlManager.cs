@@ -82,6 +82,12 @@ public class LvlManager : MonoBehaviour
             Global.CurrentGameState = Global.GameState.Score;
             Debug.Log("Eggs are gone");
         }
+        if(justIncreaseDinoScore == false)
+        {
+            dialogueManager.retryButton.SetActive(true);
+            dialogueManager.nextButton.SetActive(false);
+        }
+
     }
 
     IEnumerator CheckIfCompleteObj()
@@ -173,7 +179,7 @@ public class LvlManager : MonoBehaviour
 
             if(justIncreaseDinoScore == false)
             {
-                PlayGround.IncreaseDragonScore();
+                PlayGround.IncreaseDinoScore();
                 justIncreaseDinoScore = true;
                 FMODUnity.RuntimeManager.PlayOneShot(CompleteMan);
             }
@@ -186,7 +192,7 @@ public class LvlManager : MonoBehaviour
 
             if(justIncreaseDragonScore == false)
             {
-                PlayGround.IncreaseDinoScore();
+                PlayGround.IncreaseDragonScore();
                 justIncreaseDragonScore = true;
                 FMODUnity.RuntimeManager.PlayOneShot(CompleteObj);
             }
