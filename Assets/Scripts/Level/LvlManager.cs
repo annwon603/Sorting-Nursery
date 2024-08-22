@@ -15,6 +15,12 @@ public class LvlManager : MonoBehaviour
     public resultsScript Result;
     public GameObject beginLevel;
 
+    
+    public FMODUnity.EventReference CompleteMan;
+    public FMODUnity.EventReference CompleteObj;
+
+
+
     [SerializeField]
     Objective objective;
 
@@ -164,10 +170,12 @@ public class LvlManager : MonoBehaviour
         if(currManEggs >= requiredManEggs)
         {
             quotaManager.CompleteMandatory();
+
             if(justIncreaseDinoScore == false)
             {
                 PlayGround.IncreaseDragonScore();
                 justIncreaseDinoScore = true;
+                FMODUnity.RuntimeManager.PlayOneShot(CompleteMan);
             }
             
         }
@@ -175,10 +183,12 @@ public class LvlManager : MonoBehaviour
         if(currOptEggs >= reqeuiredoptEggs)
         {
             quotaManager.CompleteOpt();
+
             if(justIncreaseDragonScore == false)
             {
                 PlayGround.IncreaseDinoScore();
                 justIncreaseDragonScore = true;
+                FMODUnity.RuntimeManager.PlayOneShot(CompleteObj);
             }
         }
 

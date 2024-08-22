@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 1237055048436319860}
   - component: {fileID: 6519783547210974346}
   - component: {fileID: 6832915195262363467}
+  - component: {fileID: -2115291758827208355}
   m_Layer: 5
   m_Name: ItemUI
   m_TagString: Untagged
@@ -136,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 4696837361393723528}
   trait: {fileID: 0}
+  scale: {x: 0, y: 0, z: 0}
   eggPrefab: {fileID: 0}
 --- !u!114 &6832915195262363467
 MonoBehaviour:
@@ -214,3 +216,34 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &-2115291758827208355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8815899004035989381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -931098336
+      Data2: 1214565742
+      Data3: -400195160
+      Data4: -551751436
+    Path: event:/UI/Incubator
+  Event: 
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
