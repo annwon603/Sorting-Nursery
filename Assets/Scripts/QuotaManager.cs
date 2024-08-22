@@ -12,6 +12,8 @@ public class QuotaManager : MonoBehaviour
 
     public GameObject quotaPanel;
 
+
+
     void Start()
     {
         
@@ -31,10 +33,12 @@ public class QuotaManager : MonoBehaviour
     public void CompleteMandatory()
     {
         manQuotaText.fontStyle = FontStyles.Strikethrough; 
+
     }
 
     public void CompleteOpt()
     {
         optQuotaText.fontStyle = FontStyles.Strikethrough;
+
     }
 }

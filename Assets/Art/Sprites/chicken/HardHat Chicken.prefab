@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 6880011572645715489}
   - component: {fileID: 1872673158309640462}
   - component: {fileID: 5130880444776758405}
+  - component: {fileID: 5745270868794758222}
   m_Layer: 0
   m_Name: ChickenBox
   m_TagString: Untagged
@@ -267,3 +268,34 @@ MonoBehaviour:
   target: {fileID: 0}
   oldSprite: {fileID: 21300000, guid: 230c3884bc95d8541bd0856de2dfb01e, type: 3}
   newSprite: {fileID: 21300000, guid: b7fae5303c8e51c449fc35d3f3e6ffe7, type: 3}
+--- !u!114 &5745270868794758222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5772757983277535051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Egg
+  EventReference:
+    Guid:
+      Data1: 1863312791
+      Data2: 1269703558
+      Data3: -759468913
+      Data4: 1495246389
+    Path: event:/UI/Chicken SFX
+  Event: 
+  PlayEvent: 5
+  StopEvent: 6
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

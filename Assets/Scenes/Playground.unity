@@ -722,9 +722,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'asidfkjsd
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 005ea51e972e19a42a89b004f019609d, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 3249ecb6a1d3b7649a36acc21bec68bd, type: 2}
@@ -875,8 +873,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2134978205}
   m_HandleRect: {fileID: 2134978204}
   m_Direction: 2
-  m_Value: 0.79885125
-  m_Size: 0.17355388
+  m_Value: 0.7988513
+  m_Size: 0.17355387
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2885,7 +2883,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: blah
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 005ea51e972e19a42a89b004f019609d, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 3249ecb6a1d3b7649a36acc21bec68bd, type: 2}
