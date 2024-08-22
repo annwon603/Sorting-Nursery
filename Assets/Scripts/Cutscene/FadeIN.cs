@@ -23,7 +23,7 @@ public class FadeIN : MonoBehaviour
     public Color greyTint;
 
 
-    private void Start()
+    public void Awake()
     {
         // Start the fade-in effect when the scene starts
         StartCoroutine(FadeIn());
@@ -36,7 +36,7 @@ public class FadeIN : MonoBehaviour
     }
 
     // Coroutine for fading in
-    private IEnumerator FadeIn()
+    public IEnumerator FadeIn()
     {
         float timer = 0f;
         Color fadeColor = fadeImage.color;
@@ -82,7 +82,7 @@ public class FadeIN : MonoBehaviour
         StartCoroutine(FadeOut());
     }
 
-    private IEnumerator TriggerFadeOutAfterDelay(float delay)
+    public IEnumerator TriggerFadeOutAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         TriggerFadeOut();
@@ -126,6 +126,8 @@ public class FadeIN : MonoBehaviour
 
     public void StartTutorial()
     {
+        StopAllCoroutines();
+        AfterOneCutScene.haveCutScenePlay = true;
         SceneManager.LoadScene("Gameplay");
     }
 }

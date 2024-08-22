@@ -71,6 +71,11 @@ public class SceneSwap : MonoBehaviour
         Application.Quit();
     }
 
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
+
     public void testing()
     {
         Debug.Log("You Click Me!");

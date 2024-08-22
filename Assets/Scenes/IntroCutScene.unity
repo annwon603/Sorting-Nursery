@@ -435,6 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 264520123}
   - component: {fileID: 264520122}
+  - component: {fileID: 264520124}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -477,6 +478,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &264520124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264520121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc0aa7b73e235c4786aed98c0022f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeImage: {fileID: 581667314}
+  fadeDuration: 3
+  Cecil: {fileID: 1246590213}
+  SPLAT: {fileID: 11117394}
+  dialogueManager: {fileID: 264520122}
+  PlayerInput: {fileID: 1568494802}
+  Player: {fileID: 892478201}
+  BigCecil: {fileID: 84426060}
+  greyTint: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &367537977
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,55 +745,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1594910048}
   m_SourcePrefab: {fileID: 100100000, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
---- !u!1 &551405495
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 551405497}
-  - component: {fileID: 551405496}
-  m_Layer: 0
-  m_Name: Timeline
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!320 &551405496
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551405495}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 04662fe4de782744ea1b28d5db446538, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings: []
-  m_ExposedReferences:
-    m_References: []
---- !u!4 &551405497
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551405495}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1214149, y: 0.32838082, z: 439.2703}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &559493603
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +755,6 @@ GameObject:
   m_Component:
   - component: {fileID: 559493606}
   - component: {fileID: 559493605}
-  - component: {fileID: 559493604}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -790,14 +762,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &559493604
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559493603}
-  m_Enabled: 1
 --- !u!20 &559493605
 Camera:
   m_ObjectHideFlags: 0
@@ -1596,7 +1560,6 @@ GameObject:
   - component: {fileID: 1462957980}
   - component: {fileID: 1462957979}
   - component: {fileID: 1462957978}
-  - component: {fileID: 1462957977}
   - component: {fileID: 1462957982}
   m_Layer: 5
   m_Name: Canvas
@@ -1605,27 +1568,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1462957977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462957976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fc0aa7b73e235c4786aed98c0022f67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeImage: {fileID: 581667314}
-  fadeDuration: 3
-  Cecil: {fileID: 1246590213}
-  SPLAT: {fileID: 11117394}
-  dialogueManager: {fileID: 264520122}
-  PlayerInput: {fileID: 1568494802}
-  Player: {fileID: 892478201}
-  BigCecil: {fileID: 84426060}
-  greyTint: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1462957978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2550,6 +2492,5 @@ SceneRoots:
   - {fileID: 264520123}
   - {fileID: 1462957981}
   - {fileID: 573355478}
-  - {fileID: 551405497}
   - {fileID: 892478203}
   - {fileID: 84426062}
