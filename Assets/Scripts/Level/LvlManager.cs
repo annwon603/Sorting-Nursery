@@ -166,7 +166,7 @@ public class LvlManager : MonoBehaviour
             quotaManager.CompleteMandatory();
             if(justIncreaseDinoScore == false)
             {
-                PlayGround.IncreaseDragonScore();
+                PlayGround.IncreaseDinoScore();
                 justIncreaseDinoScore = true;
             }
             
@@ -177,7 +177,7 @@ public class LvlManager : MonoBehaviour
             quotaManager.CompleteOpt();
             if(justIncreaseDragonScore == false)
             {
-                PlayGround.IncreaseDinoScore();
+                PlayGround.IncreaseDragonScore();
                 justIncreaseDragonScore = true;
             }
         }
