@@ -107,7 +107,7 @@ public class LevelManager : MonoBehaviour
         }else{
             GameObject.Find("Conditon2").GetComponent<DialogueTrigger>().enabled = true;
             FindObjectOfType<DialogueManager>().retryButton.SetActive(true);
-            FindObjectOfType<DialogueManager>().nextLevelButton.SetActive(true);
+            // FindObjectOfType<DialogueManager>().nextLevelButton.SetActive(true);
         }
     }
 

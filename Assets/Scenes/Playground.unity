@@ -905,8 +905,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2134978205}
   m_HandleRect: {fileID: 2134978204}
   m_Direction: 2
-  m_Value: 0.7988513
-  m_Size: 0.17355387
+  m_Value: 0.79885125
+  m_Size: 0.17355384
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2375,6 +2375,7 @@ GameObject:
   - component: {fileID: 1320832301}
   - component: {fileID: 1320832303}
   - component: {fileID: 1320832304}
+  - component: {fileID: 1320832305}
   m_Layer: 0
   m_Name: Main Menu Button
   m_TagString: Untagged
@@ -2559,6 +2560,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0483e1a063aadb14190c8785f7a8dd75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1320832305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320832298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1238103522
+      Data2: 1297275475
+      Data3: 1931956882
+      Data4: -2040185880
+    Path: event:/UI/Button Click
+  Event: 
+  PlayEvent: 20
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1433358007
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class Snap : MonoBehaviour
     public List<Transform> snapHitPoints;
     public List<DragChick> dragScripts; //Scripts that are attached to the chicken object 
 
+    public FMODUnity.EventReference stool;
     public float snapRange = 0.5f;
 
     public bool isSnapped = false;
@@ -37,7 +38,7 @@ public class Snap : MonoBehaviour
                 obj.GetChild(0).position = snapHitPoints[i].position;
                 obj.GetChild(0).GetComponent<CircleCollider2D>().radius = snapHitPoints[i].GetComponent<CircleCollider2D>().radius;
                 obj.GetChild(0).GetComponent<ChickenHitBox>().target = snapHitPoints[i];
-
+                FMODUnity.RuntimeManager.PlayOneShot(stool);
                 
                 return;
             }

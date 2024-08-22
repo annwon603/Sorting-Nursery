@@ -22,6 +22,7 @@ public class FadeIN : MonoBehaviour
 
     public Color greyTint;
 
+
     private void Start()
     {
         // Start the fade-in effect when the scene starts
@@ -94,6 +95,7 @@ public class FadeIN : MonoBehaviour
         GameObject.Find("IntroDialougue").GetComponent<DialogueTrigger>().enabled = true;
         Player.SetActive(true);
         BigCecil.SetActive(true);
+
 
     }
 

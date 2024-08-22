@@ -48,8 +48,17 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  snapHitPoints: []
   dragScripts:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  stool:
+    Guid:
+      Data1: 265183027
+      Data2: 1217112754
+      Data3: -336719691
+      Data4: -684510076
+    Path: event:/UI/Stool
   snapRange: 1.5
+  isSnapped: 0
