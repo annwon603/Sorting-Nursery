@@ -97,4 +97,9 @@ public class resultsScript : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void RetryLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

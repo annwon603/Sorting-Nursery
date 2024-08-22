@@ -1564,7 +1564,7 @@ MonoBehaviour:
   nameText: {fileID: 648850187}
   dialogueText: {fileID: 364648528}
   nextButton: {fileID: 1006841418}
-  retryButton: {fileID: 1906631288}
+  retryButton: {fileID: 8170202695491329397}
   nextLevelButton: {fileID: 1371349680}
   counter: -1
   scorePanel: {fileID: 5231493096030337610}
@@ -4837,11 +4837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76cf278e6105a364da888a56aa359609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1906631288 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1174076732000210842, guid: 14f231c855a722347a44a6d05d8111ba, type: 3}
-  m_PrefabInstance: {fileID: 5217405710276614461}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1960874232
 GameObject:
   m_ObjectHideFlags: 0
@@ -7327,26 +7322,62 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 915505660}
     m_Modifications:
+    - target: {fileID: 1151442341987929418, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 915505667}
+    - target: {fileID: 1151442341987929418, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430656625101436839, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 915505667}
+    - target: {fileID: 1430656625101436839, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 2154137075829903696, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: newText
       value: 
       objectReference: {fileID: 745038363}
+    - target: {fileID: 2374995971072720394, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4192380082060623278, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: newText
       value: 
       objectReference: {fileID: 745038363}
+    - target: {fileID: 4770383455401538951, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 915505667}
+    - target: {fileID: 4770383455401538951, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RetryLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 5803260444624507958, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: m_Name
       value: NewScorePanel
       objectReference: {fileID: 0}
     - target: {fileID: 5803260444624507958, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 888069486}
+    - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291223265489818994, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LvlManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7814354299068416246, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
       propertyPath: newText
       value: 
@@ -7458,6 +7489,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8170202695491329397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2374995971072720394, guid: 02285e05c93e8441cb86ef43bd61a1aa, type: 3}
+  m_PrefabInstance: {fileID: 8170202695491329395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8173976776455724548
 MonoBehaviour:
   m_ObjectHideFlags: 0

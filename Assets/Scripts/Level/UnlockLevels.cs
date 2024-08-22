@@ -17,6 +17,7 @@ public class UnlockLevels : MonoBehaviour
     void Start()
     {
         levelsComplete = PlayGround.numOfDinos;
+        
         if (levelsComplete == 1) {
             Level2Btn.GetComponent<Button>().interactable = true;
         }

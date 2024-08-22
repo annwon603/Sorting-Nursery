@@ -20,6 +20,11 @@ public class SceneSwap : MonoBehaviour
         SceneManager.LoadScene("IntroCutScene");
     }
 
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
+
     public void Controls()
     {
         SceneManager.LoadScene("Controls");
