@@ -80,4 +80,14 @@ public class SceneSwap : MonoBehaviour
     {
         Debug.Log("You Click Me!");
     }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+    
+    public void Level3()
+    {
+        SceneManager.LoadScene("Level3");
+    }
 }
